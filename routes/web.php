@@ -4,32 +4,32 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home.index');
-});
+})->name('home.index');
 
 Route::get('/about', function () {
     return view('about.index');
-});
+})->name('about.index');
 
 Route::get('/contact', function () {
     return view('contact-us.index');
-});
+})->name('contact.index');
 
 Route::get('/services', function () {
     return view('services.index');
-}); 
+})->name('services.index'); 
 
 Route::get('/blog', function () {
     return view('blog.index');
-});
+})->name('blog.index');
 
 Route::get('/blog/{slug}', function ($slug) {
     return view('blog.show', ['slug' => $slug]);
-});
+})->name('blog.show');
 
 Route::get('/portfolio', function () {
     return view('portfolio.index');
-});
+})->name('portfolio.index');
 
 Route::get('/portfolio/{slug}', function ($slug) {
     return view('portfolio.show', ['slug' => $slug]);
-});
+})->name('portfolio.show');
