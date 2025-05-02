@@ -11,6 +11,11 @@
 
             @include('layout.partials.navbar')
 
+            <!-- actions -->
+            <div class="ul-header-actions">
+                <button class="ul-header-sidebar-opener"><i class="flaticon-menu-button"></i></button>
+            </div>
+
             <!-- sidebar opener -->
             <div class="d-none">
                 <button class="ul-header-sidebar-opener"><i class="flaticon-menu-button"></i></button>
