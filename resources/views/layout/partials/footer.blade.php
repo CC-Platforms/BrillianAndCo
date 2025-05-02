@@ -21,13 +21,15 @@
                 <!-- <div class="col-7"> -->
                 <div class="single-column">
                     <div class="ul-footer-widget">
-                        <h3 class="ul-footer-widget-title">SELL A HOME</h3>
+                        <h3 class="ul-footer-widget-title">USEFUL LINKS</h3>
 
                         <div class="ul-footer-widget-links">
-                            <a href="#">Request an offer</a>
-                            <a href="pricing.html">Pricing</a>
-                            <a href="#">Reviews</a>
-                            <a href="#">Stories</a>
+                            <a href="#">Home</a>
+                            <a href="pricing.html">About</a>
+                            <a href="pricing.html">Services</a>
+                            <a href="pricing.html">Team</a>
+                            <a href="pricing.html">Contact Us</a>
+                            <a href="#">Properties</a>
                         </div>
                     </div>
                     <div class="ul-footer-widget">
