@@ -1338,7 +1338,6 @@ button {
   justify-content: space-between;
   width: 100%;
   left: 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
   z-index: 1;
   padding: clamp(20px, 2.1vw, 40px) clamp(15px, 3.15vw, 60px);
   max-width: 1920px;
@@ -1392,12 +1391,9 @@ button {
 .ul-banner-slider-pagination::before {
   position: absolute;
   content: "";
-  top: 40%;
   transform: translateY(-50%);
   left: calc(100% + 10px);
   width: clamp(54px, 4.94vw, 94px);
-  height: 1px;
-  background-color: rgba(255, 255, 255, 0.25);
 }
 @media screen and (max-width: 575px) {
   .ul-banner-slider-pagination::before {
@@ -1408,7 +1404,7 @@ button {
   color: rgba(255, 255, 255, 0.25);
   font-size: clamp(13px, 0.84vw, 16px);
   width: auto;
-  height: auto;
+  /* height: auto; */
   opacity: 1;
   background: transparent;
   padding-bottom: 5px;
@@ -2409,8 +2405,9 @@ button {
   display: block;
   text-align: center;
   font-weight: 600;
-  font-size: clamp(10px, 0.79vw, 15px);
-  margin-bottom: clamp(25px, 3.15vw, 60px);
+  font-size: clamp(20px, 0.79vw, 15px);
+  margin: clamp(25px, 3.15vw, 60px);
+  color: var(--ul-primary);
 }
 
 .ul-app-ad {
