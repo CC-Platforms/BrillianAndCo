@@ -2,12 +2,377 @@
 
 @section('content')
 <main>
+    <!-- BANNER SECTION START -->
+    <section class="ul-banner">
+        <!-- top -->
+        <div class="top">
+            <div class="ul-banner-slider swiper">
+                <div class="swiper-wrapper">
+                    <!-- single slide -->
+                    <div class="swiper-slide">
+                        <div class="ul-banner-slide">
+                            <div class="ul-banner-container">
+                                <div class="row align-items-center flex-sm-row flex-column-reverse">
+                                    <!-- banner text -->
+                                    <div class="col-md-9 col-sm-8">
+                                        <span class="ul-banner-slide-shadow-title">REALESTICS</span>
+                                        <div class="ul-banner-slide-txt wow animate__fadeInUp">
+                                            <span class="ul-banner-slide-sub-title">your Luxury Residence</span>
+                                            <h1 class="ul-banner-slide-title">Top Notch Living Space For Life</h1>
+                                            <p class="ul-banner-slide-descr">Over 1 million+ homes for sale available on the website, we can match you with a house you will want to call home.</p>
+                                            <div class="ul-banner-slide-btns">
+                                                <a href="projects.html" class="ul-btn">Explore Properties</a>
+                                            </div>
+                                        </div>
+                                    </div>
 
-    @include('home.sections.banner')
-    @include('home.sections.cities')
-    @include('home.sections.why-choose-us')
-    @include('home.sections.featured-properties')
+                                    <!-- banner image -->
+                                    <div class="col-md-3 col-sm-4">
+                                        <div class="ul-banner-slide-img wow animate__fadeInUp">
+                                            <img src="assets/img/banner-img-1.png" alt="Banner Image">
+                                            <a href="https://youtu.be/4jnzf1yj48M?si=owDQ6MQLmVy0r56E" data-fslightbox="video" class="ul-banner-slide-video-btn"><i class="flaticon-play"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- single slide -->
+                    <div class="swiper-slide">
+                        <div class="ul-banner-slide">
+                            <div class="ul-banner-container">
+                                <div class="row align-items-center flex-sm-row flex-column-reverse">
+                                    <!-- banner text -->
+                                    <div class="col-md-9 col-sm-8">
+                                        <span class="ul-banner-slide-shadow-title">REALESTICS</span>
+                                        <div class="ul-banner-slide-txt wow animate__fadeInUp">
+                                            <span class="ul-banner-slide-sub-title">your Luxury Residence</span>
+                                            <h1 class="ul-banner-slide-title">Top Notch Living Space For Life</h1>
+                                            <p class="ul-banner-slide-descr">Over 1 million+ homes for sale available on the website, we can match you with a house you will want to call home.</p>
+                                            <div class="ul-banner-slide-btns">
+                                                <a href="projects.html" class="ul-btn">Explore Properties</a>
+                                            </div>
+                                        </div>
+                                    </div>
 
+                                    <!-- banner image -->
+                                    <div class="col-md-3 col-sm-4">
+                                        <div class="ul-banner-slide-img wow animate__fadeInUp">
+                                            <img src="assets/img/banner-img-1.png" alt="Banner Image">
+                                            <a href="https://youtu.be/4jnzf1yj48M?si=owDQ6MQLmVy0r56E" data-fslightbox="video" class="ul-banner-slide-video-btn"><i class="flaticon-play"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- single slide -->
+                    <div class="swiper-slide">
+                        <div class="ul-banner-slide">
+                            <div class="ul-banner-container">
+                                <div class="row align-items-center flex-sm-row flex-column-reverse">
+                                    <!-- banner text -->
+                                    <div class="col-md-9 col-sm-8">
+                                        <span class="ul-banner-slide-shadow-title">REALESTICS</span>
+                                        <div class="ul-banner-slide-txt wow animate__fadeInUp">
+                                            <span class="ul-banner-slide-sub-title">your Luxury Residence</span>
+                                            <h1 class="ul-banner-slide-title">Top Notch Living Space For Life</h1>
+                                            <p class="ul-banner-slide-descr">Over 1 million+ homes for sale available on the website, we can match you with a house you will want to call home.</p>
+                                            <div class="ul-banner-slide-btns">
+                                                <a href="projects.html" class="ul-btn">Explore Properties</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- banner image -->
+                                    <div class="col-md-3 col-sm-4">
+                                        <div class="ul-banner-slide-img wow animate__fadeInUp">
+                                            <img src="assets/img/banner-img-1.png" alt="Banner Image">
+                                            <a href="https://youtu.be/4jnzf1yj48M?si=owDQ6MQLmVy0r56E" data-fslightbox="video" class="ul-banner-slide-video-btn"><i class="flaticon-play"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- bottom -->
+        <div class="bottom">
+            <div class="left wow animate__fadeInUp">
+                <div class="ul-banner-address-slider swiper">
+                    <div class="swiper-wrapper">
+                        <!-- single slide -->
+                        <div class="swiper-slide">
+                            <span class="address-1">Los Angeles, CA</span>
+                            <span class="address-2">1901 Cutter Lane</span>
+                        </div>
+
+                        <!-- single slide -->
+                        <div class="swiper-slide">
+                            <span class="address-1">Los Angeles, LA</span>
+                            <span class="address-2">1901 Cutter Lane</span>
+                        </div>
+
+                        <!-- single slide -->
+                        <div class="swiper-slide">
+                            <span class="address-1">New York</span>
+                            <span class="address-2">1901 Cutter Lane</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="right wow animate__fadeInUp">
+                <div class="ul-banner-slider-pagination"></div>
+                <div class="ul-banner-slider-nav ul-slider-nav">
+                    <button class="prev"><i class="flaticon-left"></i></button>
+                    <button class="next"><i class="flaticon-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- BANNER SECTION END -->
+
+
+    <!-- CITIES SECTION START -->
+    <section class="ul-cities ul-section-spacing">
+        <div class="ul-container wow animate__fadeInUp">
+            <!-- section heading -->
+            <div class="ul-section-heading">
+                <div class="left">
+                    <h2 class="ul-section-title">Find Properties in These Cities</h2>
+                    <p class="ul-section-descr">There are many variations of passages of Lorem Ipsum available,</p>
+                </div>
+                <div class="right">
+                    <a href="projects.html" class="ul-btn">See All Properties</a>
+                </div>
+            </div>
+
+            <!-- cities -->
+            <div class="row row-cols-xl-4 row-cols-md-3 row-cols-2 row-cols-xxs-1 g-4 mx-auto">
+                <!-- single city -->
+                <div class="col">
+                    <div class="ul-city">
+                        <div class="img"><a href="projects.html"><img src="assets/img/city-1.jpg" alt="City Image"></a></div>
+                        <div class="txt">
+                            <h3 class="ul-city-title"><a href="projects.html">New York</a></h3>
+                            <span class="ul-city-count">15 Properties</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- single city -->
+                <div class="col">
+                    <div class="ul-city">
+                        <div class="img"><a href="projects.html"><img src="assets/img/city-2.jpg" alt="City Image"></a></div>
+                        <div class="txt">
+                            <h3 class="ul-city-title"><a href="projects.html">Los Angeles</a></h3>
+                            <span class="ul-city-count">15 Properties</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- single city -->
+                <div class="col">
+                    <div class="ul-city">
+                        <div class="img"><a href="projects.html"><img src="assets/img/city-3.jpg" alt="City Image"></a></div>
+                        <div class="txt">
+                            <h3 class="ul-city-title"><a href="projects.html">Chicago</a></h3>
+                            <span class="ul-city-count">15 Properties</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- single city -->
+                <div class="col">
+                    <div class="ul-city">
+                        <div class="img"><a href="projects.html"><img src="assets/img/city-4.jpg" alt="City Image"></a></div>
+                        <div class="txt">
+                            <h3 class="ul-city-title"><a href="projects.html">Houston</a></h3>
+                            <span class="ul-city-count">15 Properties</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- single city -->
+                <div class="col">
+                    <div class="ul-city">
+                        <div class="img"><a href="projects.html"><img src="assets/img/city-5.jpg" alt="City Image"></a></div>
+                        <div class="txt">
+                            <h3 class="ul-city-title"><a href="projects.html">San Diego</a></h3>
+                            <span class="ul-city-count">15 Properties</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- single city -->
+                <div class="col">
+                    <div class="ul-city">
+                        <div class="img"><a href="projects.html"><img src="assets/img/city-6.jpg" alt="City Image"></a></div>
+                        <div class="txt">
+                            <h3 class="ul-city-title"><a href="projects.html">Columbus</a></h3>
+                            <span class="ul-city-count">15 Properties</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- single city -->
+                <div class="col">
+                    <div class="ul-city">
+                        <div class="img"><a href="projects.html"><img src="assets/img/city-7.jpg" alt="City Image"></a></div>
+                        <div class="txt">
+                            <h3 class="ul-city-title"><a href="projects.html">Columbus</a></h3>
+                            <span class="ul-city-count">15 Properties</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- single city -->
+                <div class="col">
+                    <div class="ul-city">
+                        <div class="img"><a href="projects.html"><img src="assets/img/city-8.jpg" alt="City Image"></a></div>
+                        <div class="txt">
+                            <h3 class="ul-city-title"><a href="projects.html">Las Vegas</a></h3>
+                            <span class="ul-city-count">15 Properties</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- vector -->
+        <div class="ul-cities-vectors">
+            <img src="assets/img/cities-vector-1.svg" alt="vector" class="vector-1 wow animate__fadeInLeft">
+            <img src="assets/img/cities-vector-2.svg" alt="vector" class="vector-2 wow animate__fadeInUp">
+        </div>
+    </section>
+    <!-- CITIES SECTION END -->
+
+
+    <!-- WHY CHOOSE US SECTION START -->
+    <section class="ul-why-choose-us ul-section-spacing wow animate__fadeInUp">
+        <div class="ul-container">
+            <div class="row row-cols-lg-2 row-cols-1 align-items-center">
+                <div class="col">
+                    <!-- <div class="d-flex justify-content-end"> -->
+                    <div class="ul-why-choose-us-imgs">
+                        <div class="img"><img src="assets/img/why-choose-img-1.jpg" alt="image"></div>
+                        <div class="img">
+                            <img src="assets/img/why-choose-img-2.jpg" alt="image">
+                            <!-- icon -->
+                            <div class="icon"><i class="flaticon-home-agreement"></i></div>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                </div>
+
+                <!-- txt -->
+                <div class="col">
+                    <div class="ul-why-choose-us-txt">
+                        <span class="ul-section-sub-title">Why choose us</span>
+                        <h2 class="ul-section-title">We Bring Your Dream Homes to Reality</h2>
+                        <p class="ul-why-choose-us-heading-descr">We offer perfect real estate services</p>
+
+                        <div class="ul-why-choose-us-list">
+                            <div class="ul-why-choose-us-list-item">
+                                <div class="icon"><i class="flaticon-property"></i></div>
+                                <div class="txt">
+                                    <h3 class="ul-why-choose-us-list-item-title">Property Management</h3>
+                                    <p class="ul-why-choose-us-list-item-descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit perspiciatis adipisci quas facere a!</p>
+                                </div>
+                            </div>
+
+                            <div class="ul-why-choose-us-list-item">
+                                <div class="icon"><i class="flaticon-list-1"></i></div>
+                                <div class="txt">
+                                    <h3 class="ul-why-choose-us-list-item-title">Mortgage Services</h3>
+                                    <p class="ul-why-choose-us-list-item-descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit perspiciatis adipisci quas facere a!</p>
+                                </div>
+                            </div>
+
+                            <div class="ul-why-choose-us-list-item">
+                                <div class="icon"><i class="flaticon-change"></i></div>
+                                <div class="txt">
+                                    <h3 class="ul-why-choose-us-list-item-title">Financing made easy</h3>
+                                    <p class="ul-why-choose-us-list-item-descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit perspiciatis adipisci quas facere a!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- WHY CHOOSE US SECTION END -->
+
+
+    <!-- FACILITY SECTION START -->
+    <section class="ul-facilities ul-section-spacing">
+        <div class="ul-container">
+            <div class="row ul-bs-row row-cols-lg-2 row-cols-1 wow animate__fadeInUp">
+                <!-- text -->
+                <div class="col">
+                    <div class="ul-facilities-txt">
+                        <h6 class="ul-section-sub-title">Our Top Facilities</h6>
+                        <h2 class="ul-section-title">Making living spaces More Beautiful</h2>
+                        <p class="ul-facilities-descr">Over 39,000 people work for us in more than 70 countries all over the This breadth of global coverage, combined with specialist services</p>
+
+                        <div class="ul-facilities-stats">
+                            <!-- single stat -->
+                            <div class="ul-facilities-stat">
+                                <span class="number">80%</span>
+                                <span class="txt">Completed Property</span>
+                            </div>
+                            <!-- single stat -->
+                            <div class="ul-facilities-stat">
+                                <span class="number">99%</span>
+                                <span class="txt">Satisfied Customers</span>
+                            </div>
+                            <!-- single stat -->
+                            <div class="ul-facilities-stat">
+                                <span class="number">50%</span>
+                                <span class="txt">Home ownership</span>
+                            </div>
+                        </div>
+
+                        <div class="ul-facilities-list">
+                            <ul>
+                                <li>Living rooms are pre-wired for Surround</li>
+                                <li>Luxurious interior design and amenities</li>
+                                <li>Private balconies with stunning views</li>
+                                <li>A rare combination of inspired architecture</li>
+                            </ul>
+                        </div>
+
+                        <div class="ul-facilities-img-slider-wrapper">
+                            <div class="ul-facilities-img-slider-nav ul-slider-nav">
+                                <button class="prev"><i class="flaticon-arrow"></i></button>
+                                <button class="next"><i class="flaticon-right-arrow"></i></button>
+                            </div>
+                            <div class="ul-facilities-img-slider swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="assets/img/project-1.jpg" alt="Facility Image"></div>
+                                    <div class="swiper-slide"><img src="assets/img/project-2.jpg" alt="Facility Image"></div>
+                                    <div class="swiper-slide"><img src="assets/img/project-3.jpg" alt="Facility Image"></div>
+                                    <div class="swiper-slide"><img src="assets/img/project-4.jpg" alt="Facility Image"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- img -->
+                <div class="col">
+                    <div class="ul-facilities-img"><img src="assets/img/facility-img.jpg" alt="Facility Image"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FACILITY SECTION END -->
 
 
     <!-- PROPERTIES SECTION START -->
@@ -21,11 +386,11 @@
                 </div>
             </div>
 
-            <div class="ul-properties-tab-navs wow animate__fadeInUp">
+            {{-- <div class="ul-properties-tab-navs wow animate__fadeInUp">
                 <button class="tab-nav active" data-tab="tab-rent"><i class="flaticon-key"></i> Rent</button>
                 <button class="tab-nav" data-tab="tab-buy"><i class="flaticon-buy"></i> Buy</button>
                 <button class="tab-nav" data-tab="tab-sell"><i class="flaticon-house-2"></i> Sell</button>
-            </div>
+            </div> --}}
 
             <div class="tabs-wrapper wow animate__fadeInUp">
                 <!-- 1st tab / rent -->
@@ -34,20 +399,17 @@
                         <!-- single project -->
                         <div class="col">
                             <div class="ul-project">
-                                <div class="ul-project-img"><img src="assets/img/project-1.jpg" alt="Project Image">
-                                </div>
+                                <div class="ul-project-img"><img src="assets/img/project-1.jpg" alt="Project Image"></div>
                                 <div class="ul-project-txt">
                                     <span class="ul-project-tag">Popular</span>
                                     <div class="top">
                                         <div class="left">
-                                            <span class="ul-project-price"><span
-                                                    class="number">$4,500</span>/Month</span>
+                                            <span class="ul-project-price"><span class="number">$4,500</span>/Month</span>
                                             <a href="project-details.html" class="ul-project-title">Palm Harbor</a>
                                             <p class="ul-project-location">2821 Lake Sevilla, Palm Harbor, TX</p>
                                         </div>
                                         <div class="right">
-                                            <button class="ul-project-add-to-favorites-btn"><i
-                                                    class="flaticon-heart"></i></button>
+                                            <button class="ul-project-add-to-favorites-btn"><i class="flaticon-heart"></i></button>
                                         </div>
                                     </div>
 
@@ -76,21 +438,17 @@
                         <!-- single project -->
                         <div class="col">
                             <div class="ul-project">
-                                <div class="ul-project-img"><img src="assets/img/project-2.jpg" alt="Project Image">
-                                </div>
+                                <div class="ul-project-img"><img src="assets/img/project-2.jpg" alt="Project Image"></div>
                                 <div class="ul-project-txt">
                                     <span class="ul-project-tag">Popular</span>
                                     <div class="top">
                                         <div class="left">
-                                            <span class="ul-project-price"><span
-                                                    class="number">$4,500</span>/Month</span>
-                                            <a href="project-details.html" class="ul-project-title">Beverly
-                                                Springfield</a>
+                                            <span class="ul-project-price"><span class="number">$4,500</span>/Month</span>
+                                            <a href="project-details.html" class="ul-project-title">Beverly Springfield</a>
                                             <p class="ul-project-location">2821 Lake Sevilla, Palm Harbor, TX</p>
                                         </div>
                                         <div class="right">
-                                            <button class="ul-project-add-to-favorites-btn"><i
-                                                    class="flaticon-heart"></i></button>
+                                            <button class="ul-project-add-to-favorites-btn"><i class="flaticon-heart"></i></button>
                                         </div>
                                     </div>
 
@@ -119,20 +477,17 @@
                         <!-- single project -->
                         <div class="col">
                             <div class="ul-project">
-                                <div class="ul-project-img"><img src="assets/img/project-3.jpg" alt="Project Image">
-                                </div>
+                                <div class="ul-project-img"><img src="assets/img/project-3.jpg" alt="Project Image"></div>
                                 <div class="ul-project-txt">
                                     <span class="ul-project-tag">Popular</span>
                                     <div class="top">
                                         <div class="left">
-                                            <span class="ul-project-price"><span
-                                                    class="number">$4,500</span>/Month</span>
+                                            <span class="ul-project-price"><span class="number">$4,500</span>/Month</span>
                                             <a href="project-details.html" class="ul-project-title">Faulkner Ave</a>
                                             <p class="ul-project-location">2821 Lake Sevilla, Palm Harbor, TX</p>
                                         </div>
                                         <div class="right">
-                                            <button class="ul-project-add-to-favorites-btn"><i
-                                                    class="flaticon-heart"></i></button>
+                                            <button class="ul-project-add-to-favorites-btn"><i class="flaticon-heart"></i></button>
                                         </div>
                                     </div>
 
@@ -161,20 +516,17 @@
                         <!-- single project -->
                         <div class="col">
                             <div class="ul-project">
-                                <div class="ul-project-img"><img src="assets/img/project-4.jpg" alt="Project Image">
-                                </div>
+                                <div class="ul-project-img"><img src="assets/img/project-4.jpg" alt="Project Image"></div>
                                 <div class="ul-project-txt">
                                     <span class="ul-project-tag">Popular</span>
                                     <div class="top">
                                         <div class="left">
-                                            <span class="ul-project-price"><span
-                                                    class="number">$4,500</span>/Month</span>
+                                            <span class="ul-project-price"><span class="number">$4,500</span>/Month</span>
                                             <a href="project-details.html" class="ul-project-title">St. Crystal</a>
                                             <p class="ul-project-location">2821 Lake Sevilla, Palm Harbor, TX</p>
                                         </div>
                                         <div class="right">
-                                            <button class="ul-project-add-to-favorites-btn"><i
-                                                    class="flaticon-heart"></i></button>
+                                            <button class="ul-project-add-to-favorites-btn"><i class="flaticon-heart"></i></button>
                                         </div>
                                     </div>
 
@@ -203,20 +555,17 @@
                         <!-- single project -->
                         <div class="col">
                             <div class="ul-project">
-                                <div class="ul-project-img"><img src="assets/img/project-5.jpg" alt="Project Image">
-                                </div>
+                                <div class="ul-project-img"><img src="assets/img/project-5.jpg" alt="Project Image"></div>
                                 <div class="ul-project-txt">
                                     <span class="ul-project-tag">Popular</span>
                                     <div class="top">
                                         <div class="left">
-                                            <span class="ul-project-price"><span
-                                                    class="number">$4,500</span>/Month</span>
+                                            <span class="ul-project-price"><span class="number">$4,500</span>/Month</span>
                                             <a href="project-details.html" class="ul-project-title">Cove Red</a>
                                             <p class="ul-project-location">2821 Lake Sevilla, Palm Harbor, TX</p>
                                         </div>
                                         <div class="right">
-                                            <button class="ul-project-add-to-favorites-btn"><i
-                                                    class="flaticon-heart"></i></button>
+                                            <button class="ul-project-add-to-favorites-btn"><i class="flaticon-heart"></i></button>
                                         </div>
                                     </div>
 
@@ -245,20 +594,17 @@
                         <!-- single project -->
                         <div class="col">
                             <div class="ul-project">
-                                <div class="ul-project-img"><img src="assets/img/project-6.jpg" alt="Project Image">
-                                </div>
+                                <div class="ul-project-img"><img src="assets/img/project-6.jpg" alt="Project Image"></div>
                                 <div class="ul-project-txt">
                                     <span class="ul-project-tag">Popular</span>
                                     <div class="top">
                                         <div class="left">
-                                            <span class="ul-project-price"><span
-                                                    class="number">$4,500</span>/Month</span>
+                                            <span class="ul-project-price"><span class="number">$4,500</span>/Month</span>
                                             <a href="project-details.html" class="ul-project-title">Tarpon Bay</a>
                                             <p class="ul-project-location">2821 Lake Sevilla, Palm Harbor, TX</p>
                                         </div>
                                         <div class="right">
-                                            <button class="ul-project-add-to-favorites-btn"><i
-                                                    class="flaticon-heart"></i></button>
+                                            <button class="ul-project-add-to-favorites-btn"><i class="flaticon-heart"></i></button>
                                         </div>
                                     </div>
 
@@ -292,20 +638,17 @@
                         <!-- single project -->
                         <div class="col">
                             <div class="ul-project">
-                                <div class="ul-project-img"><img src="assets/img/project-4.jpg" alt="Project Image">
-                                </div>
+                                <div class="ul-project-img"><img src="assets/img/project-4.jpg" alt="Project Image"></div>
                                 <div class="ul-project-txt">
                                     <span class="ul-project-tag">Popular</span>
                                     <div class="top">
                                         <div class="left">
-                                            <span class="ul-project-price"><span
-                                                    class="number">$4,500</span>/Month</span>
+                                            <span class="ul-project-price"><span class="number">$4,500</span>/Month</span>
                                             <a href="project-details.html" class="ul-project-title">St. Crystal</a>
                                             <p class="ul-project-location">2821 Lake Sevilla, Palm Harbor, TX</p>
                                         </div>
                                         <div class="right">
-                                            <button class="ul-project-add-to-favorites-btn"><i
-                                                    class="flaticon-heart"></i></button>
+                                            <button class="ul-project-add-to-favorites-btn"><i class="flaticon-heart"></i></button>
                                         </div>
                                     </div>
 
@@ -334,20 +677,17 @@
                         <!-- single project -->
                         <div class="col">
                             <div class="ul-project">
-                                <div class="ul-project-img"><img src="assets/img/project-5.jpg" alt="Project Image">
-                                </div>
+                                <div class="ul-project-img"><img src="assets/img/project-5.jpg" alt="Project Image"></div>
                                 <div class="ul-project-txt">
                                     <span class="ul-project-tag">Popular</span>
                                     <div class="top">
                                         <div class="left">
-                                            <span class="ul-project-price"><span
-                                                    class="number">$4,500</span>/Month</span>
+                                            <span class="ul-project-price"><span class="number">$4,500</span>/Month</span>
                                             <a href="project-details.html" class="ul-project-title">Cove Red</a>
                                             <p class="ul-project-location">2821 Lake Sevilla, Palm Harbor, TX</p>
                                         </div>
                                         <div class="right">
-                                            <button class="ul-project-add-to-favorites-btn"><i
-                                                    class="flaticon-heart"></i></button>
+                                            <button class="ul-project-add-to-favorites-btn"><i class="flaticon-heart"></i></button>
                                         </div>
                                     </div>
 
@@ -376,20 +716,17 @@
                         <!-- single project -->
                         <div class="col">
                             <div class="ul-project">
-                                <div class="ul-project-img"><img src="assets/img/project-6.jpg" alt="Project Image">
-                                </div>
+                                <div class="ul-project-img"><img src="assets/img/project-6.jpg" alt="Project Image"></div>
                                 <div class="ul-project-txt">
                                     <span class="ul-project-tag">Popular</span>
                                     <div class="top">
                                         <div class="left">
-                                            <span class="ul-project-price"><span
-                                                    class="number">$4,500</span>/Month</span>
+                                            <span class="ul-project-price"><span class="number">$4,500</span>/Month</span>
                                             <a href="project-details.html" class="ul-project-title">Tarpon Bay</a>
                                             <p class="ul-project-location">2821 Lake Sevilla, Palm Harbor, TX</p>
                                         </div>
                                         <div class="right">
-                                            <button class="ul-project-add-to-favorites-btn"><i
-                                                    class="flaticon-heart"></i></button>
+                                            <button class="ul-project-add-to-favorites-btn"><i class="flaticon-heart"></i></button>
                                         </div>
                                     </div>
 
@@ -418,20 +755,17 @@
                         <!-- single project -->
                         <div class="col">
                             <div class="ul-project">
-                                <div class="ul-project-img"><img src="assets/img/project-1.jpg" alt="Project Image">
-                                </div>
+                                <div class="ul-project-img"><img src="assets/img/project-1.jpg" alt="Project Image"></div>
                                 <div class="ul-project-txt">
                                     <span class="ul-project-tag">Popular</span>
                                     <div class="top">
                                         <div class="left">
-                                            <span class="ul-project-price"><span
-                                                    class="number">$4,500</span>/Month</span>
+                                            <span class="ul-project-price"><span class="number">$4,500</span>/Month</span>
                                             <a href="project-details.html" class="ul-project-title">Palm Harbor</a>
                                             <p class="ul-project-location">2821 Lake Sevilla, Palm Harbor, TX</p>
                                         </div>
                                         <div class="right">
-                                            <button class="ul-project-add-to-favorites-btn"><i
-                                                    class="flaticon-heart"></i></button>
+                                            <button class="ul-project-add-to-favorites-btn"><i class="flaticon-heart"></i></button>
                                         </div>
                                     </div>
 
@@ -460,21 +794,17 @@
                         <!-- single project -->
                         <div class="col">
                             <div class="ul-project">
-                                <div class="ul-project-img"><img src="assets/img/project-2.jpg" alt="Project Image">
-                                </div>
+                                <div class="ul-project-img"><img src="assets/img/project-2.jpg" alt="Project Image"></div>
                                 <div class="ul-project-txt">
                                     <span class="ul-project-tag">Popular</span>
                                     <div class="top">
                                         <div class="left">
-                                            <span class="ul-project-price"><span
-                                                    class="number">$4,500</span>/Month</span>
-                                            <a href="project-details.html" class="ul-project-title">Beverly
-                                                Springfield</a>
+                                            <span class="ul-project-price"><span class="number">$4,500</span>/Month</span>
+                                            <a href="project-details.html" class="ul-project-title">Beverly Springfield</a>
                                             <p class="ul-project-location">2821 Lake Sevilla, Palm Harbor, TX</p>
                                         </div>
                                         <div class="right">
-                                            <button class="ul-project-add-to-favorites-btn"><i
-                                                    class="flaticon-heart"></i></button>
+                                            <button class="ul-project-add-to-favorites-btn"><i class="flaticon-heart"></i></button>
                                         </div>
                                     </div>
 
@@ -503,20 +833,17 @@
                         <!-- single project -->
                         <div class="col">
                             <div class="ul-project">
-                                <div class="ul-project-img"><img src="assets/img/project-3.jpg" alt="Project Image">
-                                </div>
+                                <div class="ul-project-img"><img src="assets/img/project-3.jpg" alt="Project Image"></div>
                                 <div class="ul-project-txt">
                                     <span class="ul-project-tag">Popular</span>
                                     <div class="top">
                                         <div class="left">
-                                            <span class="ul-project-price"><span
-                                                    class="number">$4,500</span>/Month</span>
+                                            <span class="ul-project-price"><span class="number">$4,500</span>/Month</span>
                                             <a href="project-details.html" class="ul-project-title">Faulkner Ave</a>
                                             <p class="ul-project-location">2821 Lake Sevilla, Palm Harbor, TX</p>
                                         </div>
                                         <div class="right">
-                                            <button class="ul-project-add-to-favorites-btn"><i
-                                                    class="flaticon-heart"></i></button>
+                                            <button class="ul-project-add-to-favorites-btn"><i class="flaticon-heart"></i></button>
                                         </div>
                                     </div>
 
@@ -550,20 +877,17 @@
                         <!-- single project -->
                         <div class="col">
                             <div class="ul-project">
-                                <div class="ul-project-img"><img src="assets/img/project-3.jpg" alt="Project Image">
-                                </div>
+                                <div class="ul-project-img"><img src="assets/img/project-3.jpg" alt="Project Image"></div>
                                 <div class="ul-project-txt">
                                     <span class="ul-project-tag">Popular</span>
                                     <div class="top">
                                         <div class="left">
-                                            <span class="ul-project-price"><span
-                                                    class="number">$4,500</span>/Month</span>
+                                            <span class="ul-project-price"><span class="number">$4,500</span>/Month</span>
                                             <a href="project-details.html" class="ul-project-title">Faulkner Ave</a>
                                             <p class="ul-project-location">2821 Lake Sevilla, Palm Harbor, TX</p>
                                         </div>
                                         <div class="right">
-                                            <button class="ul-project-add-to-favorites-btn"><i
-                                                    class="flaticon-heart"></i></button>
+                                            <button class="ul-project-add-to-favorites-btn"><i class="flaticon-heart"></i></button>
                                         </div>
                                     </div>
 
@@ -592,20 +916,17 @@
                         <!-- single project -->
                         <div class="col">
                             <div class="ul-project">
-                                <div class="ul-project-img"><img src="assets/img/project-4.jpg" alt="Project Image">
-                                </div>
+                                <div class="ul-project-img"><img src="assets/img/project-4.jpg" alt="Project Image"></div>
                                 <div class="ul-project-txt">
                                     <span class="ul-project-tag">Popular</span>
                                     <div class="top">
                                         <div class="left">
-                                            <span class="ul-project-price"><span
-                                                    class="number">$4,500</span>/Month</span>
+                                            <span class="ul-project-price"><span class="number">$4,500</span>/Month</span>
                                             <a href="project-details.html" class="ul-project-title">St. Crystal</a>
                                             <p class="ul-project-location">2821 Lake Sevilla, Palm Harbor, TX</p>
                                         </div>
                                         <div class="right">
-                                            <button class="ul-project-add-to-favorites-btn"><i
-                                                    class="flaticon-heart"></i></button>
+                                            <button class="ul-project-add-to-favorites-btn"><i class="flaticon-heart"></i></button>
                                         </div>
                                     </div>
 
@@ -634,20 +955,17 @@
                         <!-- single project -->
                         <div class="col">
                             <div class="ul-project">
-                                <div class="ul-project-img"><img src="assets/img/project-1.jpg" alt="Project Image">
-                                </div>
+                                <div class="ul-project-img"><img src="assets/img/project-1.jpg" alt="Project Image"></div>
                                 <div class="ul-project-txt">
                                     <span class="ul-project-tag">Popular</span>
                                     <div class="top">
                                         <div class="left">
-                                            <span class="ul-project-price"><span
-                                                    class="number">$4,500</span>/Month</span>
+                                            <span class="ul-project-price"><span class="number">$4,500</span>/Month</span>
                                             <a href="project-details.html" class="ul-project-title">Palm Harbor</a>
                                             <p class="ul-project-location">2821 Lake Sevilla, Palm Harbor, TX</p>
                                         </div>
                                         <div class="right">
-                                            <button class="ul-project-add-to-favorites-btn"><i
-                                                    class="flaticon-heart"></i></button>
+                                            <button class="ul-project-add-to-favorites-btn"><i class="flaticon-heart"></i></button>
                                         </div>
                                     </div>
 
@@ -676,21 +994,17 @@
                         <!-- single project -->
                         <div class="col">
                             <div class="ul-project">
-                                <div class="ul-project-img"><img src="assets/img/project-2.jpg" alt="Project Image">
-                                </div>
+                                <div class="ul-project-img"><img src="assets/img/project-2.jpg" alt="Project Image"></div>
                                 <div class="ul-project-txt">
                                     <span class="ul-project-tag">Popular</span>
                                     <div class="top">
                                         <div class="left">
-                                            <span class="ul-project-price"><span
-                                                    class="number">$4,500</span>/Month</span>
-                                            <a href="project-details.html" class="ul-project-title">Beverly
-                                                Springfield</a>
+                                            <span class="ul-project-price"><span class="number">$4,500</span>/Month</span>
+                                            <a href="project-details.html" class="ul-project-title">Beverly Springfield</a>
                                             <p class="ul-project-location">2821 Lake Sevilla, Palm Harbor, TX</p>
                                         </div>
                                         <div class="right">
-                                            <button class="ul-project-add-to-favorites-btn"><i
-                                                    class="flaticon-heart"></i></button>
+                                            <button class="ul-project-add-to-favorites-btn"><i class="flaticon-heart"></i></button>
                                         </div>
                                     </div>
 
@@ -719,20 +1033,17 @@
                         <!-- single project -->
                         <div class="col">
                             <div class="ul-project">
-                                <div class="ul-project-img"><img src="assets/img/project-5.jpg" alt="Project Image">
-                                </div>
+                                <div class="ul-project-img"><img src="assets/img/project-5.jpg" alt="Project Image"></div>
                                 <div class="ul-project-txt">
                                     <span class="ul-project-tag">Popular</span>
                                     <div class="top">
                                         <div class="left">
-                                            <span class="ul-project-price"><span
-                                                    class="number">$4,500</span>/Month</span>
+                                            <span class="ul-project-price"><span class="number">$4,500</span>/Month</span>
                                             <a href="project-details.html" class="ul-project-title">Cove Red</a>
                                             <p class="ul-project-location">2821 Lake Sevilla, Palm Harbor, TX</p>
                                         </div>
                                         <div class="right">
-                                            <button class="ul-project-add-to-favorites-btn"><i
-                                                    class="flaticon-heart"></i></button>
+                                            <button class="ul-project-add-to-favorites-btn"><i class="flaticon-heart"></i></button>
                                         </div>
                                     </div>
 
@@ -761,20 +1072,17 @@
                         <!-- single project -->
                         <div class="col">
                             <div class="ul-project">
-                                <div class="ul-project-img"><img src="assets/img/project-6.jpg" alt="Project Image">
-                                </div>
+                                <div class="ul-project-img"><img src="assets/img/project-6.jpg" alt="Project Image"></div>
                                 <div class="ul-project-txt">
                                     <span class="ul-project-tag">Popular</span>
                                     <div class="top">
                                         <div class="left">
-                                            <span class="ul-project-price"><span
-                                                    class="number">$4,500</span>/Month</span>
+                                            <span class="ul-project-price"><span class="number">$4,500</span>/Month</span>
                                             <a href="project-details.html" class="ul-project-title">Tarpon Bay</a>
                                             <p class="ul-project-location">2821 Lake Sevilla, Palm Harbor, TX</p>
                                         </div>
                                         <div class="right">
-                                            <button class="ul-project-add-to-favorites-btn"><i
-                                                    class="flaticon-heart"></i></button>
+                                            <button class="ul-project-add-to-favorites-btn"><i class="flaticon-heart"></i></button>
                                         </div>
                                     </div>
 
@@ -818,12 +1126,12 @@
             <div class="ul-stats-item">
                 <i class="flaticon-excavator"></i>
                 <span class="number">260+</span>
-                <span class="txt">Total Construction</span>
+                <span class="txt">Satisfied Clients</span>
             </div>
             <div class="ul-stats-item">
                 <i class="flaticon-interior-design"></i>
                 <span class="number">110+</span>
-                <span class="txt">Apartio Rooms</span>
+                <span class="txt"></span>
             </div>
             <div class="ul-stats-item">
                 <i class="flaticon-buildings"></i>
@@ -887,9 +1195,7 @@
                                                 <img src="assets/img/quotation-icon.svg" alt="quotaion-icon">
                                             </div>
                                         </div>
-                                        <p class="ul-testimony-txt">Consectetur adipiscing elit. Integer nunc viverra
-                                            laoreet est the is porta pretium metus aliquam eget maecenas porta is nunc
-                                            viverra Aenean pulvinar maximus leo ”</p>
+                                        <p class="ul-testimony-txt">Consectetur adipiscing elit. Integer nunc viverra laoreet est the is porta pretium metus aliquam eget maecenas porta is nunc viverra Aenean pulvinar maximus leo ”</p>
                                     </div>
                                 </div>
 
@@ -917,9 +1223,7 @@
                                                 <img src="assets/img/quotation-icon.svg" alt="quotaion-icon">
                                             </div>
                                         </div>
-                                        <p class="ul-testimony-txt">Consectetur adipiscing elit. Integer nunc viverra
-                                            laoreet est the is porta pretium metus aliquam eget maecenas porta is nunc
-                                            viverra Aenean pulvinar maximus leo ”</p>
+                                        <p class="ul-testimony-txt">Consectetur adipiscing elit. Integer nunc viverra laoreet est the is porta pretium metus aliquam eget maecenas porta is nunc viverra Aenean pulvinar maximus leo ”</p>
                                     </div>
                                 </div>
 
@@ -947,9 +1251,7 @@
                                                 <img src="assets/img/quotation-icon.svg" alt="quotaion-icon">
                                             </div>
                                         </div>
-                                        <p class="ul-testimony-txt">Consectetur adipiscing elit. Integer nunc viverra
-                                            laoreet est the is porta pretium metus aliquam eget maecenas porta is nunc
-                                            viverra Aenean pulvinar maximus leo ”</p>
+                                        <p class="ul-testimony-txt">Consectetur adipiscing elit. Integer nunc viverra laoreet est the is porta pretium metus aliquam eget maecenas porta is nunc viverra Aenean pulvinar maximus leo ”</p>
                                     </div>
                                 </div>
                             </div>
@@ -966,7 +1268,7 @@
 
 
     <!-- BLOG SECTION START -->
-    {{-- <section class="ul-blogs ul-section-spacing">
+    <section class="ul-blogs ul-section-spacing">
         <div class="ul-container wow animate__fadeInUp">
             <!-- section heading -->
             <div class="ul-section-heading">
@@ -1000,12 +1302,9 @@
                                         <span class="text font-normal text-[14px] text-etGray">Jun 24, 2024</span>
                                     </div>
                                 </div>
-                                <a href="blog-details.html" class="ul-blog-title">What to Look for When Buying a
-                                    Pre-Owned Car Cars Which is Right for You</a>
-                                <p class="ul-blog-excerpt">From luxury and economy cars and find out which best suits
-                                    your lifestyle economy cars and find</p>
-                                <a href="blog-details.html" class="ul-blog-btn">Read More <span class="icon"><i
-                                            class="flaticon-aro-left"></i></span></a>
+                                <a href="blog-details.html" class="ul-blog-title">What to Look for When Buying a Pre-Owned Car Cars Which is Right for You</a>
+                                <p class="ul-blog-excerpt">From luxury and economy cars and find out which best suits your lifestyle economy cars and find</p>
+                                <a href="blog-details.html" class="ul-blog-btn">Read More <span class="icon"><i class="flaticon-aro-left"></i></span></a>
                             </div>
                         </div>
                     </div>
@@ -1031,8 +1330,7 @@
                                 </div>
                                 <a href="blog-details.html" class="ul-blog-title">What to Look for When Buying a</a>
                                 <p class="ul-blog-excerpt">From luxury and economy cars and find out which best</p>
-                                <a href="blog-details.html" class="ul-blog-btn">Read More <span class="icon"><i
-                                            class="flaticon-aro-left"></i></span></a>
+                                <a href="blog-details.html" class="ul-blog-btn">Read More <span class="icon"><i class="flaticon-aro-left"></i></span></a>
                             </div>
                         </div>
 
@@ -1053,22 +1351,21 @@
                                 </div>
                                 <a href="blog-details.html" class="ul-blog-title">What to Look for When Buying a</a>
                                 <p class="ul-blog-excerpt">From luxury and economy cars and find out which best</p>
-                                <a href="blog-details.html" class="ul-blog-btn">Read More <span class="icon"><i
-                                            class="flaticon-aro-left"></i></span></a>
+                                <a href="blog-details.html" class="ul-blog-btn">Read More <span class="icon"><i class="flaticon-aro-left"></i></span></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section> --}}
+    </section>
     <!-- BLOG SECTION END -->
 
 
     <!-- PARTNERS AREA START -->
     <div class="ul-partners-area">
         <div class="ul-container wow animate__fadeInUp">
-            <h1 class="ul-partners-area-title">Our Core Partners</h1>
+            <span class="ul-partners-area-title">Trusted by The World's Best</span>
 
             <div class="ul-partners-slider swiper">
                 <div class="swiper-wrapper align-items-center">
@@ -1105,5 +1402,60 @@
         </div>
     </div>
     <!-- PARTNERS AREA END -->
+
+
+    <!-- APP AD SECTION START -->
+    <div class="ul-app-ad wow animate__fadeInUp">
+        <div class="ul-app-ad-container">
+            <div class="ul-app-ad-content">
+                <div class="row align-items-start gy-5">
+                    <!-- txt -->
+                    <div class="col-lg-7">
+                        <div class="ul-app-ad-txt">
+                            <span class="ul-section-sub-title">Download App</span>
+                            <h2 class="ul-section-title">Download Our Real Estate Mobile App <span class="colored">15% Off</span></h2>
+                            <div class="ul-app-ad-btns">
+                                <button>
+                                    <i class="flaticon-play"></i>
+                                    <span>
+                                        <span class="sub-title">Get in on</span>
+                                        <span class="title">Apps Store</span>
+                                    </span>
+                                </button>
+                                <button>
+                                    <i class="flaticon-play"></i>
+                                    <span>
+                                        <span class="sub-title">Get in on</span>
+                                        <span class="title">Google Play</span>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- img -->
+                    <div class="col-lg-5">
+                        <div class="ul-app-ad-imgs">
+                            <div class="ul-app-ad-img">
+                                <!-- qr code -->
+                                <img src="assets/img/app-ad-qr-code.jpg" alt="QR Code" class="ul-app-ad-qr-code">
+                                <!-- app screenshot 1 -->
+                                <img src="assets/img/app-ad-ss-1.png" alt="App screenshot" class="ul-app-ad-ss-1">
+                            </div>
+                            <div class="ul-app-ad-img">
+                                <!-- app screenshot 2 -->
+                                <img src="assets/img/app-ad-ss-2.png" alt="App Screenshot" class="ul-app-ad-ss-2">
+                            </div>
+
+                            <!-- vector -->
+                            <img src="assets/img/app-ad-img-vector.svg" alt="vector" class="vector">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- APP AD SECTION END -->
 </main>
+
 @endsection

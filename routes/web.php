@@ -18,6 +18,10 @@ Route::get('/services', function () {
     return view('services.index');
 })->name('services.index'); 
 
+Route::get('/services/{slug}', function ($slug) {
+    return view('services.show', ['slug' => $slug]);
+})->name('services.show');
+
 Route::get('/blog', function () {
     return view('blog.index');
 })->name('blog.index');
@@ -33,3 +37,11 @@ Route::get('/portfolio', function () {
 Route::get('/portfolio/{slug}', function ($slug) {
     return view('portfolio.show', ['slug' => $slug]);
 })->name('portfolio.show');
+
+Route::get('/team', function () {
+    return view('team.index');
+})->name('team.index');
+
+Route::get('/team/{slug}', function ($slug) {
+    return view('team.show', ['slug' => $slug]);
+})->name('team.details');
