@@ -8,7 +8,7 @@
         <div class="wow animate__fadeInUp">
             <h2 class="ul-breadcrumb-title">Our Projects</h2>
             <div class="ul-breadcrumb-nav">
-                <a href="index.html">Home</a>
+                <a href="{{ route('home.index') }}">Home</a>
                 <span class="separator"><i class="flaticon-aro-left"></i></span>
                 <span class="current-page">Our Projects</span>
             </div>
@@ -18,8 +18,8 @@
 
     <div class="ul-inner-page-content-wrapper ul-projects-page-content-wrapper">
         <div class="ul-inner-page-container">
-            <!-- search filters -->
-            <form action="#" class="ul-projects-search-filters">
+             <!-- search filters -->
+             <form action="#" class="ul-projects-search-filters">
                 <div class="row row-cols-lg-4 row-cols-sm-3 row-cols-2 row-cols-xxs-1 justify-content-center wow animate__fadeInUp">
                     <div class="col">
                         <select name="keyword" id="keyword">
@@ -91,17 +91,18 @@
 
             <!-- project cards grid -->
             <div class="row row-cols-md-3 row-cols-2 row-cols-xxs-1 ul-bs-row">
+                @foreach($projects as $project)
                 <!-- single project -->
                 <div class="col wow animate__fadeInUp">
                     <div class="ul-project">
-                        <div class="ul-project-img"><img src="assets/img/project-1.jpg" alt="Project Image"></div>
+                        <div class="ul-project-img"><img src="{{ $project['image'] }}" alt="{{ $project['title'] }}"></div>
                         <div class="ul-project-txt">
-                            <span class="ul-project-tag">Popular</span>
+                            <span class="ul-project-tag">{{ $project['tag'] }}</span>
                             <div class="top">
                                 <div class="left">
-                                    <span class="ul-project-price"><span class="number">$4,500</span>/Month</span>
-                                    <a href="project-details.html" class="ul-project-title">Palm Harbor</a>
-                                    <p class="ul-project-location">2821 Lake Sevilla, Palm Harbor, TX</p>
+                                    <span class="ul-project-price"><span class="number">{{ $project['price'] }}</span>/{{ $project['period'] }}</span>
+                                    <a href="{{ route('projects.show', $project['slug']) }}" class="ul-project-title">{{ $project['title'] }}</a>
+                                    <p class="ul-project-location">{{ $project['location'] }}</p>
                                 </div>
                                 <div class="right">
                                     <button class="ul-project-add-to-favorites-btn"><i class="flaticon-heart"></i></button>
@@ -113,222 +114,26 @@
                                 <!-- single info -->
                                 <div class="ul-project-info">
                                     <span class="icon"><i class="flaticon-bed-color"></i></span>
-                                    <span class="text">3 Beds</span>
+                                    <span class="text">{{ $project['beds'] }} Beds</span>
                                 </div>
                                 <!-- single info -->
                                 <div class="ul-project-info">
                                     <span class="icon"><i class="flaticon-bath"></i></span>
-                                    <span class="text">2 Bathrooms</span>
+                                    <span class="text">{{ $project['bathrooms'] }} Bathrooms</span>
                                 </div>
                                 <!-- single info -->
                                 <div class="ul-project-info">
                                     <span class="icon"><i class="flaticon-scale"></i></span>
-                                    <span class="text">6x7.5 m²</span>
+                                    <span class="text">{{ $project['area'] }}</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- single project -->
-                <div class="col wow animate__fadeInUp">
-                    <div class="ul-project">
-                        <div class="ul-project-img"><img src="assets/img/project-2.jpg" alt="Project Image"></div>
-                        <div class="ul-project-txt">
-                            <span class="ul-project-tag">Popular</span>
-                            <div class="top">
-                                <div class="left">
-                                    <span class="ul-project-price"><span class="number">$4,500</span>/Month</span>
-                                    <a href="project-details.html" class="ul-project-title">Beverly Springfield</a>
-                                    <p class="ul-project-location">2821 Lake Sevilla, Palm Harbor, TX</p>
-                                </div>
-                                <div class="right">
-                                    <button class="ul-project-add-to-favorites-btn"><i class="flaticon-heart"></i></button>
-                                </div>
-                            </div>
-
-                            <!-- bottom -->
-                            <div class="ul-project-infos">
-                                <!-- single info -->
-                                <div class="ul-project-info">
-                                    <span class="icon"><i class="flaticon-bed-color"></i></span>
-                                    <span class="text">3 Beds</span>
-                                </div>
-                                <!-- single info -->
-                                <div class="ul-project-info">
-                                    <span class="icon"><i class="flaticon-bath"></i></span>
-                                    <span class="text">2 Bathrooms</span>
-                                </div>
-                                <!-- single info -->
-                                <div class="ul-project-info">
-                                    <span class="icon"><i class="flaticon-scale"></i></span>
-                                    <span class="text">6x7.5 m²</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- single project -->
-                <div class="col wow animate__fadeInUp">
-                    <div class="ul-project">
-                        <div class="ul-project-img"><img src="assets/img/project-3.jpg" alt="Project Image"></div>
-                        <div class="ul-project-txt">
-                            <span class="ul-project-tag">Popular</span>
-                            <div class="top">
-                                <div class="left">
-                                    <span class="ul-project-price"><span class="number">$4,500</span>/Month</span>
-                                    <a href="project-details.html" class="ul-project-title">Faulkner Ave</a>
-                                    <p class="ul-project-location">2821 Lake Sevilla, Palm Harbor, TX</p>
-                                </div>
-                                <div class="right">
-                                    <button class="ul-project-add-to-favorites-btn"><i class="flaticon-heart"></i></button>
-                                </div>
-                            </div>
-
-                            <!-- bottom -->
-                            <div class="ul-project-infos">
-                                <!-- single info -->
-                                <div class="ul-project-info">
-                                    <span class="icon"><i class="flaticon-bed-color"></i></span>
-                                    <span class="text">3 Beds</span>
-                                </div>
-                                <!-- single info -->
-                                <div class="ul-project-info">
-                                    <span class="icon"><i class="flaticon-bath"></i></span>
-                                    <span class="text">2 Bathrooms</span>
-                                </div>
-                                <!-- single info -->
-                                <div class="ul-project-info">
-                                    <span class="icon"><i class="flaticon-scale"></i></span>
-                                    <span class="text">6x7.5 m²</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- single project -->
-                <div class="col wow animate__fadeInUp">
-                    <div class="ul-project">
-                        <div class="ul-project-img"><img src="assets/img/project-4.jpg" alt="Project Image"></div>
-                        <div class="ul-project-txt">
-                            <span class="ul-project-tag">Popular</span>
-                            <div class="top">
-                                <div class="left">
-                                    <span class="ul-project-price"><span class="number">$4,500</span>/Month</span>
-                                    <a href="project-details.html" class="ul-project-title">St. Crystal</a>
-                                    <p class="ul-project-location">2821 Lake Sevilla, Palm Harbor, TX</p>
-                                </div>
-                                <div class="right">
-                                    <button class="ul-project-add-to-favorites-btn"><i class="flaticon-heart"></i></button>
-                                </div>
-                            </div>
-
-                            <!-- bottom -->
-                            <div class="ul-project-infos">
-                                <!-- single info -->
-                                <div class="ul-project-info">
-                                    <span class="icon"><i class="flaticon-bed-color"></i></span>
-                                    <span class="text">3 Beds</span>
-                                </div>
-                                <!-- single info -->
-                                <div class="ul-project-info">
-                                    <span class="icon"><i class="flaticon-bath"></i></span>
-                                    <span class="text">2 Bathrooms</span>
-                                </div>
-                                <!-- single info -->
-                                <div class="ul-project-info">
-                                    <span class="icon"><i class="flaticon-scale"></i></span>
-                                    <span class="text">6x7.5 m²</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- single project -->
-                <div class="col wow animate__fadeInUp">
-                    <div class="ul-project">
-                        <div class="ul-project-img"><img src="assets/img/project-5.jpg" alt="Project Image"></div>
-                        <div class="ul-project-txt">
-                            <span class="ul-project-tag">Popular</span>
-                            <div class="top">
-                                <div class="left">
-                                    <span class="ul-project-price"><span class="number">$4,500</span>/Month</span>
-                                    <a href="project-details.html" class="ul-project-title">Cove Red</a>
-                                    <p class="ul-project-location">2821 Lake Sevilla, Palm Harbor, TX</p>
-                                </div>
-                                <div class="right">
-                                    <button class="ul-project-add-to-favorites-btn"><i class="flaticon-heart"></i></button>
-                                </div>
-                            </div>
-
-                            <!-- bottom -->
-                            <div class="ul-project-infos">
-                                <!-- single info -->
-                                <div class="ul-project-info">
-                                    <span class="icon"><i class="flaticon-bed-color"></i></span>
-                                    <span class="text">3 Beds</span>
-                                </div>
-                                <!-- single info -->
-                                <div class="ul-project-info">
-                                    <span class="icon"><i class="flaticon-bath"></i></span>
-                                    <span class="text">2 Bathrooms</span>
-                                </div>
-                                <!-- single info -->
-                                <div class="ul-project-info">
-                                    <span class="icon"><i class="flaticon-scale"></i></span>
-                                    <span class="text">6x7.5 m²</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- single project -->
-                <div class="col wow animate__fadeInUp">
-                    <div class="ul-project">
-                        <div class="ul-project-img"><img src="assets/img/project-6.jpg" alt="Project Image"></div>
-                        <div class="ul-project-txt">
-                            <span class="ul-project-tag">Popular</span>
-                            <div class="top">
-                                <div class="left">
-                                    <span class="ul-project-price"><span class="number">$4,500</span>/Month</span>
-                                    <a href="project-details.html" class="ul-project-title">Tarpon Bay</a>
-                                    <p class="ul-project-location">2821 Lake Sevilla, Palm Harbor, TX</p>
-                                </div>
-                                <div class="right">
-                                    <button class="ul-project-add-to-favorites-btn"><i class="flaticon-heart"></i></button>
-                                </div>
-                            </div>
-
-                            <!-- bottom -->
-                            <div class="ul-project-infos">
-                                <!-- single info -->
-                                <div class="ul-project-info">
-                                    <span class="icon"><i class="flaticon-bed-color"></i></span>
-                                    <span class="text">3 Beds</span>
-                                </div>
-                                <!-- single info -->
-                                <div class="ul-project-info">
-                                    <span class="icon"><i class="flaticon-bath"></i></span>
-                                    <span class="text">2 Bathrooms</span>
-                                </div>
-                                <!-- single info -->
-                                <div class="ul-project-info">
-                                    <span class="icon"><i class="flaticon-scale"></i></span>
-                                    <span class="text">6x7.5 m²</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
-
-
 
     <!-- APP AD SECTION START -->
     <div class="ul-app-ad ul-app-ad--2 wow animate__fadeInUp">
