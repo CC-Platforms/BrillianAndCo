@@ -10,6 +10,10 @@ Route::get('/about', function () {
     return view('about.index');
 })->name('about.index');
 
+Route::get('/team', function () {
+    return view('team.index');
+})->name('team.index');
+
 Route::get('/contact', function () {
     return view('contact-us.index');
 })->name('contact.index');
@@ -26,10 +30,14 @@ Route::get('/blog/{slug}', function ($slug) {
     return view('blog.show', ['slug' => $slug]);
 })->name('blog.show');
 
-Route::get('/portfolio', function () {
-    return view('portfolio.index');
-})->name('portfolio.index');
+Route::get('/projects', function () {
+    return view('projects.index');
+})->name('projects.index');
 
-Route::get('/portfolio/{slug}', function ($slug) {
-    return view('portfolio.show', ['slug' => $slug]);
-})->name('portfolio.show');
+Route::get('/projects/{slug}', function ($slug) {
+    return view('projects.show', ['slug' => $slug]);
+})->name('projects.show');
+
+Route::get('/test', function() {
+    return view('test');
+});
