@@ -3,10 +3,8 @@
     <div class="ul-footer-top">
         <div class="ul-container">
             <div class="ul-footer-top-wrapper wow animate__fadeInUp">
-                <!-- <div class="row ul-bs-row"> -->
-                <!-- <div class="col-4"> -->
                 <div class="ul-footer-about">
-                    <a href="index.html"><img src="assets/img/logo-dark.svg" alt="logo"></a>
+                    <a href="{{ route('home.index') }}"><img src="{{ asset('assets/img/logo-dark.svg') }}" alt="logo"></a>
                     <p class="ul-footer-about-txt">over 1 million+ homes for sale available on the website, we can match
                         you with a house you will want to call home.</p>
                     <div class="ul-footer-socials">
@@ -16,104 +14,82 @@
                         <a href="#"><i class="flaticon-linkedin"></i></a>
                     </div>
                 </div>
-                <!-- </div> -->
 
-                <!-- <div class="col-7"> -->
                 <div class="single-column">
                     <div class="ul-footer-widget">
                         <h3 class="ul-footer-widget-title">USEFUL LINKS</h3>
 
                         <div class="ul-footer-widget-links">
-                            <a href="#">Home</a>
-                            <a href="pricing.html">About</a>
-                            <a href="pricing.html">Services</a>
-                            <a href="pricing.html">Team</a>
-                            <a href="pricing.html">Contact Us</a>
-                            <a href="#">Properties</a>
-                        </div>
-                    </div>
-                    <div class="ul-footer-widget">
-                        <h3 class="ul-footer-widget-title">BUY A HOME</h3>
-
-                        <div class="ul-footer-widget-links">
-                            <a href="pricing.html">Buy</a>
-                            <a href="#">Finance</a>
+                            <a href="{{ route('home.index') }}">Home</a>
+                            <a href="{{ route('about.index') }}">About</a>
+                            <a href="{{ route('services.index') }}">Services</a>
+                            <a href="{{ route('portfolio.index') }}">Portfolio</a>
+                            <a href="{{ route('blog.index') }}">Blog</a>
+                            <a href="{{ route('contact.index') }}">Contact Us</a>
                         </div>
                     </div>
                 </div>
                 <div class="single-column">
                     <div class="ul-footer-widget">
-                        <h3 class="ul-footer-widget-title">BUY, RENT AND SELL</h3>
+                        <h3 class="ul-footer-widget-title">OUR SERVICES</h3>
 
                         <div class="ul-footer-widget-links">
-                            <a href="#">Buy and sell properties</a>
-                            <a href="#">Rent home</a>
-                            <a href="#">Builder trade-up</a>
-                        </div>
-                    </div>
-                    <div class="ul-footer-widget">
-                        <h3 class="ul-footer-widget-title">TERMS & PRIVACY</h3>
-
-                        <div class="ul-footer-widget-links">
-                            <a href="#">Trust & Safety</a>
-                            <a href="#">Terms of Service</a>
-                            <a href="#">Privacy Policy</a>
+                            <a href="{{ route('services.index') }}">Buy and sell properties</a>
+                            <a href="{{ route('services.show', ['slug' => 'rent-home'])  }}">Rent home</a>
+                            <a href="{{ route('services.index') }}">Builder trade-up</a>
+                            <a href="{{ route('services.index') }}">Property Management</a>
+                            <a href="{{ route('services.index') }}">Real Estate Consulting</a>
                         </div>
                     </div>
                 </div>
                 <div class="single-column">
                     <div class="ul-footer-widget">
-                        <h3 class="ul-footer-widget-title">ABOUT</h3>
+                        <h3 class="ul-footer-widget-title">ABOUT COMPANY</h3>
 
                         <div class="ul-footer-widget-links">
-                            <a href="#">Company</a>
-                            <a href="how-it-works.html">How it works</a>
-                            <a href="contact.html">Contact</a>
-                            <a href="#">Investors</a>
-                        </div>
-                    </div>
-                    <div class="ul-footer-widget">
-                        <h3 class="ul-footer-widget-title">RESOURCES</h3>
-
-                        <div class="ul-footer-widget-links">
-                            <a href="blog.html">Blog</a>
-                            <a href="#">Guide</a>
-                            <a href="#">FAQ</a>
-                            <a href="#">Help Center</a>
+                            <a href="{{ route('about.index') }}">Company</a>
+                            <a href="{{ route('team.index') }}">Our Team</a>
+                            <a href="{{ route('about.index') }}">Investors</a>
+                            <a href="{{ route('about.index') }}">Terms & Privacy</a>
                         </div>
                     </div>
                 </div>
-                <!-- </div> -->
-                <!-- </div> -->
+                <div class="single-column">
+                    <div class="ul-footer-widget">
+                        <h3 class="ul-footer-widget-title">CONTACT US</h3>
+
+                        <div class="ul-footer-widget-links">
+                            <a href="{{ route('contact.index') }}">Contact</a>
+                            <a href="{{ route('contact.index') }}">Help Center</a>
+                            <a href="{{ route('contact.index') }}">FAQ</a>
+                            <a href="{{ route('contact.index') }}">Support</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- footer bottom -->
     <div class="ul-footer-bottom">
-        <p class="copyright-txt">&copy;2024 Realestics. All rights reserved</p>
+        <p class="copyright-txt">&copy;{{ date('Y') }} Realestics. All rights reserved</p>
     </div>
 
     <!-- vector -->
     <div class="ul-footer-vectors">
-        <img src="assets/img/footer-vector-img-1.png" alt="Footer Image" class="ul-footer-vector-1">
-        <img src="assets/img/footer-vector-img-2.png" alt="Footer Image" class="ul-footer-vector-2">
+        <img src="{{ asset('assets/img/footer-vector-img-1.png') }}" alt="Footer Image" class="ul-footer-vector-1">
+        <img src="{{ asset('assets/img/footer-vector-img-2.png') }}" alt="Footer Image" class="ul-footer-vector-2">
     </div>
 </footer>
 <!-- FOOTER SECTION END -->
 
 <!-- libraries JS -->
-<script src="assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/splide/splide.min.js"></script>
-<script src="assets/vendor/splide/splide-extension-auto-scroll.min.js"></script>
-<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script src="assets/vendor/slim-select/slimselect.min.js"></script>
-<script src="assets/vendor/animate-wow/wow.min.js"></script>
-<script src="assets/vendor/splittype/index.min.js"></script>
-<script src="assets/vendor/mixitup/mixitup.min.js"></script>
-<script src="assets/vendor/fslightbox/fslightbox.js"></script>
+<script src="{{ asset('assets/vendor/bootstrap/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('assets/vendor/splide/splide.min.js') }}"></script>
+<script src="{{ asset('assets/vendor/splide/splide-extension-auto-scroll.min.js') }}"></script>
+<script src="{{ asset('assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
+<script src="{{ asset('assets/vendor/slim-select/slimselect.min.js') }}"></script>
 
-<!-- custom JS -->
-<script src="assets/js/main.js"></script>
-<script src="assets/js/tab.js"></script>
-<!-- <script src="assets/js/countdown.js"></script> -->
+<script src="{{ asset('assets/js/main.js') }}"></>
+<script src="{{ asset('assets/js/tab.js') }}"></script>
+<script src="{{ asset('assets/js/countdown.js') }}"></script>
