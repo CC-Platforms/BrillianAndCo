@@ -25,24 +25,6 @@
                 </div>
 
                 <div class="right">
-                    <div class="ul-project-details-actions">
-                        <!-- save -->
-                        <button class="ul-project-details-action">
-                            <span class="icon"><i class="flaticon-heart"></i></span>
-                            <span>Save</span>
-                        </button>
-                        <!-- compare -->
-                        <button class="ul-project-details-action">
-                            <span class="icon"><i class="flaticon-compare-2"></i></span>
-                            <span>Compare</span>
-                        </button>
-                        <!-- share -->
-                        <button class="ul-project-details-action">
-                            <span class="icon"><i class="flaticon-share-1"></i></span>
-                            <span>Share</span>
-                        </button>
-                    </div>
-
                     <div class="ul-project-details-price"><span class="number">{{ $project['price'] }}</span> {{ $project['period'] }}</div>
                 </div>
             </div>
@@ -56,35 +38,21 @@
                         <div class="ul-project-details-slider-wrapper wow animate__fadeInUp">
                             <div class="swiper ul-project-details-img-slider">
                                 <div class="swiper-wrapper">
+                                    @foreach($project['images'] as $image)
                                     <div class="swiper-slide">
-                                        <img src="{{ asset($project['image']) }}" alt="{{ $project['title'] }}">
+                                        <img src="{{ asset($image) }}" alt="{{ $project['title'] }}">
                                     </div>
-                                    <div class="swiper-slide">
-                                        <img src="assets/img/project-details-img-big-2.jpg" alt="Project Image">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="assets/img/project-details-img-big-3.jpg" alt="Project Image">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="assets/img/project-details-img-big-4.jpg" alt="Project Image">
-                                    </div>
+                                    @endforeach
                                 </div>
                             </div>
 
                             <div class="swiper ul-project-details-img-slider-thumb">
                                 <div class="swiper-wrapper">
+                                    @foreach($project['images'] as $image)
                                     <div class="swiper-slide">
-                                        <img src="{{ asset($project['image']) }}" alt="{{ $project['title'] }}">
+                                        <img src="{{ asset($image) }}" alt="{{ $project['title'] }}">
                                     </div>
-                                    <div class="swiper-slide">
-                                        <img src="assets/img/project-details-img-big-2.jpg" alt="Project Image">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="assets/img/project-details-img-big-3.jpg" alt="Project Image">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="assets/img/project-details-img-big-4.jpg" alt="Project Image">
-                                    </div>
+                                    @endforeach
                                 </div>
 
                                 <!-- navigation -->
@@ -209,15 +177,6 @@
                             </div>
                         </div>
 
-                        <!-- preview video -->
-                        <div class="ul-project-details-block wow animate__fadeIn">
-                            <h3 class="ul-project-details-title">Video Preview</h3>
-                            <div class="ul-project-details-video wow animate__fadeInUp">
-                                <img src="assets/img/project-video-cover.jpg" alt="Video Cover" class="video-cover">
-                                <a href="https://youtu.be/4jnzf1yj48M?si=tSUQuTCnqTSjrab8" data-fslightbox="video"><i class="flaticon-play"></i></a>
-                            </div>
-                        </div>
-
                         <!-- Features & aminities -->
                         <div class="ul-project-details-block wow animate__fadeIn">
                             <h3 class="ul-project-details-title">Features & Aminities</h3>
@@ -237,124 +196,6 @@
                                 <span class="feature"><span class="icon"><i class="flaticon-check-4"></i></span><span class="txt">Window Coverings</span></span>
                                 <span class="feature"><span class="icon"><i class="flaticon-check-4"></i></span><span class="txt">Heating</span></span>
                             </div>
-                        </div>
-
-                        <!-- location -->
-                        <div class="ul-project-details-block wow animate__fadeIn">
-                            <h3 class="ul-project-details-title">Location</h3>
-                            <div class="ul-project-details-map wow animate__fadeInUp">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2170.7025865590476!2d90.41431874020503!3d23.79468996086054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7a494861707%3A0x59ab371b6ff2e0fd!2zR3Vsc2hhbiBTcXVhcmUg4KaX4KeB4Kay4Ka24Ka-4KaoIOCmuOCnjeCmleCmr-CmvOCmvuCmsA!5e0!3m2!1sen!2sbd!4v1730960865419!5m2!1sen!2sbd" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                            </div>
-                        </div>
-
-                        <!-- customer review -->
-                        <div class="ul-project-details-block wow animate__fadeIn">
-                            <h3 class="ul-project-details-title">Customer Review</h3>
-                            <div class="wow animate__fadeInUp">
-                                <!-- single review -->
-                                <div class="ul-project-details-review">
-                                    <!-- reviewer image -->
-                                    <div class="ul-project-details-review-reviewer-img">
-                                        <img src="assets/img/reviewer-img-1.png" alt="Reviewer Image">
-                                    </div>
-
-                                    <div class="ul-project-details-review-txt">
-                                        <div class="header">
-                                            <div class="left">
-                                                <h4 class="reviewer-name">Leslie Alexander</h4>
-                                                <h5 class="review-date">March 20, 2023 at 2:37 pm</h5>
-                                            </div>
-
-                                            <div class="right">
-                                                <div class="rating">
-                                                    <i class="flaticon-star"></i>
-                                                    <i class="flaticon-star"></i>
-                                                    <i class="flaticon-star"></i>
-                                                    <i class="flaticon-star"></i>
-                                                    <i class="flaticon-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <p>Phasellus eget fermentum mauris. Suspendisse nec dignissim nulla. Integer non quam commodo, scelerisque felis id, eleifend turpis. Phasellus in nulla quis erat tempor tristique eget vel purus.</p>
-                                    </div>
-                                </div>
-
-                                <!-- single review -->
-                                <div class="ul-project-details-review">
-                                    <!-- reviewer image -->
-                                    <div class="ul-project-details-review-reviewer-img">
-                                        <img src="assets/img/reviewer-img-2.png" alt="Reviewer Image">
-                                    </div>
-
-                                    <div class="ul-project-details-review-txt">
-                                        <div class="header">
-                                            <div class="left">
-                                                <h4 class="reviewer-name">Leslie Alexander</h4>
-                                                <h5 class="review-date">March 20, 2023 at 2:37 pm</h5>
-                                            </div>
-
-                                            <div class="right">
-                                                <div class="rating">
-                                                    <i class="flaticon-star"></i>
-                                                    <i class="flaticon-star"></i>
-                                                    <i class="flaticon-star"></i>
-                                                    <i class="flaticon-star"></i>
-                                                    <i class="flaticon-star"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <p>Phasellus eget fermentum mauris. Suspendisse nec dignissim nulla. Integer non quam commodo, scelerisque felis id, eleifend turpis. Phasellus in nulla quis erat tempor tristique eget vel purus.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Add a review -->
-                        <div class="ul-project-details-block ul-project-details-review-form-wrapper wow animate__fadeIn">
-                            <h3 class="ul-project-details-title">Add a Review</h3>
-                            <form class="ul-project-details-review-form wow animate__fadeInUp">
-                                <div class="form-group rating-field-wrapper">
-                                    <span class="title">Your Rating:</span>
-                                    <div class="rating-field">
-                                        <button type="button"><i class="flaticon-star-1"></i></button>
-                                        <button type="button"><i class="flaticon-star-1"></i></button>
-                                        <button type="button"><i class="flaticon-star-1"></i></button>
-                                        <button type="button"><i class="flaticon-star-1"></i></button>
-                                        <button type="button"><i class="flaticon-star-1"></i></button>
-                                    </div>
-                                </div>
-
-                                <div class="row row-cols-2 row-cols-xxs-1 ul-bs-row">
-                                    <div class="form-group">
-                                        <input type="text" name="review-name" id="review-name" placeholder="Your Name">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <input type="email" name="review-email" id="review-email" placeholder="Your Email">
-                                    </div>
-
-                                    <div class="form-group col-12">
-                                        <div class="review-highlight-point">
-                                            <select name="highlight-point" id="highlight-point">
-                                                <option value="1">Customer Support</option>
-                                                <option value="2">Flexibility</option>
-                                                <option value="3">Design Quality</option>
-                                                <option value="4">Feature Availability</option>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group col-12">
-                                        <textarea name="review-message" id="review-message" placeholder="Your Review"></textarea>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <button type="submit" class="ul-btn"><i class="flaticon-house-1"></i> Submit Message</button>
-                                </div>
-                            </form>
                         </div>
                     </div>
 
