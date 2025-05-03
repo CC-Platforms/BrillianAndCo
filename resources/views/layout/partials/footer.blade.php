@@ -4,8 +4,11 @@
         <div class="ul-container">
             <div class="ul-footer-top-wrapper wow animate__fadeInUp">
                 <div class="ul-footer-about">
-                    <a href="{{ route('home.index') }}"><img src="{{ asset('assets/img/logo-dark.svg') }}" alt="logo"></a>
-                    <p class="ul-footer-about-txt">over 1 million+ homes for sale available on the website, we can match
+                    <div class="header-bottom-left">
+                        <div class="logo-container">
+                            <a href="{{ route('home.index') }}" class="d-inline-block"><img src="{{ asset('assets/img/brillian/company_logo.jpg') }}" width="200" height="200"></a>
+                        </div>
+                    </div>                    <p class="ul-footer-about-txt">over 1 million+ homes for sale available on the website, we can match
                         you with a house you will want to call home.</p>
                     <div class="ul-footer-socials">
                         <a href="#"><i class="flaticon-facebook"></i></a>
