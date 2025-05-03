@@ -16,6 +16,11 @@ class ProjectService
                 'id' => 1,
                 'slug' => 'molyko-residence',
                 'image' => 'assets/img/project-1.jpg',
+                'images' => [
+                    'assets/img/project-1.jpg',
+                    'assets/img/project-details-img-big-2.jpg',
+                    'assets/img/project-details-img-big-3.jpg'
+                ],
                 'tag' => 'Featured',
                 'price' => '120,000 XAF',
                 'period' => 'Month',
@@ -29,6 +34,11 @@ class ProjectService
                 'id' => 2,
                 'slug' => 'petit-paris-apartments',
                 'image' => 'assets/img/project-2.jpg',
+                'images' => [
+                    'assets/img/project-2.jpg',
+                    'assets/img/project-details-img-big-2.jpg',
+                    'assets/img/project-details-img-big-4.jpg'
+                ],
                 'tag' => 'New',
                 'price' => '85,000 XAF',
                 'period' => 'Month',
@@ -42,6 +52,11 @@ class ProjectService
                 'id' => 3,
                 'slug' => 'mile-17-estate',
                 'image' => 'assets/img/project-3.jpg',
+                'images' => [
+                    'assets/img/project-3.jpg',
+                    'assets/img/project-details-img-big-3.jpg',
+                    'assets/img/project-details-img-big-4.jpg'
+                ],
                 'tag' => 'Popular',
                 'price' => '150,000 XAF',
                 'period' => 'Month',
@@ -55,6 +70,11 @@ class ProjectService
                 'id' => 4,
                 'slug' => 'bomaka-heights',
                 'image' => 'assets/img/project-4.jpg',
+                'images' => [
+                    'assets/img/project-4.jpg',
+                    'assets/img/project-details-img-big-2.jpg',
+                    'assets/img/project-details-img-big-3.jpg'
+                ],
                 'tag' => 'Luxury',
                 'price' => '180,000 XAF',
                 'period' => 'Month',
@@ -68,6 +88,11 @@ class ProjectService
                 'id' => 5,
                 'slug' => 'mount-view-residence',
                 'image' => 'assets/img/project-5.jpg',
+                'images' => [
+                    'assets/img/project-5.jpg',
+                    'assets/img/project-details-img-big-3.jpg',
+                    'assets/img/project-details-img-big-4.jpg'
+                ],
                 'tag' => 'Premium',
                 'price' => '200,000 XAF',
                 'period' => 'Month',
@@ -81,6 +106,11 @@ class ProjectService
                 'id' => 6,
                 'slug' => 'bokwango-gardens',
                 'image' => 'assets/img/project-6.jpg',
+                'images' => [
+                    'assets/img/project-6.jpg',
+                    'assets/img/project-details-img-big-2.jpg',
+                    'assets/img/project-details-img-big-4.jpg'
+                ],
                 'tag' => 'Featured',
                 'price' => '95,000 XAF',
                 'period' => 'Month',
