@@ -22,6 +22,10 @@ Route::get('/services', function () {
     return view('services.index');
 })->name('services.index'); 
 
+Route::get('/services/{slug}', function ($slug) {
+    return view('services.show', ['slug' => $slug]);
+})->name('services.show');
+
 Route::get('/blog', function () {
     return view('blog.index');
 })->name('blog.index');
