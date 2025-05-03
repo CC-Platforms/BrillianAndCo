@@ -1218,7 +1218,7 @@ button {
 }
 .ul-banner-slide {
   padding: clamp(250px, 16.29vw, 310px) clamp(15px, 5.25vw, 100px) clamp(180px, 12.61vw, 240px);
-  background: url(../img/banner-slide-1.jpg) no-repeat center center;
+  background: url(../img/brillian/properties/IMG-20250503-WA0121.jpg) no-repeat center center;
   background-size: cover;
   position: relative;
   z-index: 1;
@@ -1313,6 +1313,7 @@ button {
   width: clamp(178px, 12.51vw, 238px);
   aspect-ratio: 1/1;
   border-radius: 999px;
+  object-fit: cover;
 }
 .ul-banner-slide-img a {
   position: absolute;
@@ -2581,7 +2582,7 @@ button {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: url("../img/testimonial-bg.jpg") no-repeat center center/cover fixed;
+  background: url("../img/brillian/properties/IMG-20250503-WA0133.jpg") no-repeat center center/cover fixed;
   opacity: 10%;
 }
 .ul-testimonial-img {
@@ -2595,10 +2596,12 @@ button {
 .ul-testimonial-img img {
   border-radius: 0 999px 999px 0;
   overflow: hidden;
+  object-fit: cover;
 }
 @media screen and (max-width: 991px) {
   .ul-testimonial-img img {
     border-radius: 999px 999px 0 0;
+    object-fit: cover;
   }
 }
 .ul-testimonial .ul-section-title {
@@ -3251,6 +3254,7 @@ button {
 .ul-team-card-img img {
   width: 100%;
   aspect-ratio: 370/375;
+  object-fit: cover;
 }
 .ul-team-card-txt {
   background-color: var(--white);
@@ -3598,6 +3602,7 @@ button {
 .ul-project-img img {
   width: 100%;
   aspect-ratio: 365/208;
+  object-fit: cover;
 }
 .ul-project-txt {
   padding: clamp(15px, 1.58vw, 30px);
@@ -5421,7 +5426,6 @@ button {
   height: clamp(300px, 31.53vw, 600px);
   vertical-align: top;
   margin-top: clamp(60px, 6.31vw, 120px);
-  filter: grayscale(1);
 }
 
 .ul-app-ad--contact {

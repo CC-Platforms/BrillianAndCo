@@ -27,15 +27,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- Image -->
-                                    <div class="col-md-3 col-sm-4">
-                                        <div class="ul-banner-slide-img wow animate__fadeInUp">
-                                            <img src="assets/img/banner-img-1.png" alt="Banner Image">
-                                            <a href="https://youtu.be/4jnzf1yj48M?si=owDQ6MQLmVy0r56E"
-                                                data-fslightbox="video" class="ul-banner-slide-video-btn"><i
-                                                    class="flaticon-play"></i></a>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -60,13 +51,6 @@
                     </div>
                 </div>
             </div>
-            {{-- <div class="right wow animate__fadeInUp">
-                <div class="ul-banner-slider-pagination"></div>
-                <div class="ul-banner-slider-nav ul-slider-nav">
-                    <button class="prev"><i class="flaticon-left"></i></button>
-                    <button class="next"><i class="flaticon-right"></i></button>
-                </div>
-            </div> --}}
         </div>
     </section>
     <!-- BANNER SECTION END -->
@@ -77,7 +61,7 @@
     @include('sections.properties')
     @include('sections.stats')
     @include('sections.testimonials')
-    @include('sections.partners')
+    {{-- @include('sections.partners') --}}
 </main>
 
 @endsection
