@@ -4,7 +4,7 @@
     <div class="ul-sidebar-header">
         <div class="ul-sidebar-header-logo">
             <a href={{ route('home.index') }}>
-                <img src="assets/img/logo-dark.svg" alt="logo" class="logo">
+                <img src="{{ asset('assets/img/brillian/company_logo_circle.png') }}" alt="logo" class="logo">
             </a>
         </div>
         <!-- sidebar closer -->
@@ -23,10 +23,9 @@
         <span class="ul-sidebar-footer-title">Follow Us</span>
 
         <div class="ul-sidebar-footer-social">
-            <a href="#"><i class="flaticon-facebook"></i></a>
-            <a href="#"><i class="flaticon-twitter"></i></a>
-            <a href="#"><i class="flaticon-instagram"></i></a>
-            <a href="#"><i class="flaticon-linkedin"></i></a>
+            <a href="{{ url('https://www.facebook.com/share/15VZkFmxTA/?mibextid=wwXIfr') }}"><i class="flaticon-facebook"></i></a>
+            <a href="{{ url('https://www.instagram.com/agentbrillian1?igsh=NjVkMjQ4cGF2NXpp&utm_source=qr') }}"><i class="flaticon-instagram"></i></a>
+            <a href="{{ url('https://www.tiktok.com/@agentbrillian1?_t=ZM-8w12VJkFaSN&_r=1') }}"><i class="flaticon-">TikTok</i></a>
         </div>
     </div>
 </div>
