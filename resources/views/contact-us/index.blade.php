@@ -128,59 +128,5 @@
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41294.67553538239!2d90.4051752801728!3d23.81973204385709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c64e5249ad39%3A0x2392867b037e718e!2sKuril%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1732511385236!5m2!1sen!2sbd" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="ul-contact-map"></iframe>
     <!-- CONTACT SECTION END -->
 
-
-
-    <!-- APP AD SECTION START -->
-    <div class="ul-app-ad ul-app-ad--contact wow animate__fadeInUp">
-        <div class="ul-app-ad-container">
-            <div class="ul-app-ad-content">
-                <div class="row align-items-start gy-5">
-                    <!-- txt -->
-                    <div class="col-lg-7">
-                        <div class="ul-app-ad-txt">
-                            <span class="ul-section-sub-title">Download App</span>
-                            <h2 class="ul-section-title">Download Our Real Estate Mobile App <span class="colored">15% Off</span></h2>
-                            <div class="ul-app-ad-btns">
-                                <button>
-                                    <i class="flaticon-play"></i>
-                                    <span>
-                                        <span class="sub-title">Get in on</span>
-                                        <span class="title">Apps Store</span>
-                                    </span>
-                                </button>
-                                <button>
-                                    <i class="flaticon-play"></i>
-                                    <span>
-                                        <span class="sub-title">Get in on</span>
-                                        <span class="title">Google Play</span>
-                                    </span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- img -->
-                    <div class="col-lg-5">
-                        <div class="ul-app-ad-imgs">
-                            <div class="ul-app-ad-img">
-                                <!-- qr code -->
-                                <img src="assets/img/app-ad-qr-code.jpg" alt="QR Code" class="ul-app-ad-qr-code">
-                                <!-- app screenshot 1 -->
-                                <img src="assets/img/app-ad-ss-1.png" alt="App screenshot" class="ul-app-ad-ss-1">
-                            </div>
-                            <div class="ul-app-ad-img">
-                                <!-- app screenshot 2 -->
-                                <img src="assets/img/app-ad-ss-2.png" alt="App Screenshot" class="ul-app-ad-ss-2">
-                            </div>
-
-                            <!-- vector -->
-                            <img src="assets/img/app-ad-img-vector.svg" alt="vector" class="vector">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- APP AD SECTION END -->
 </main>
 @endsection
