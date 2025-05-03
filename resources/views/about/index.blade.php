@@ -74,44 +74,7 @@
         <!-- WHY CHOOSE US SECTION END -->
 
 
-        <!-- PARTNERS SECTION START -->
-        <div class="ul-inner-page-container ul-section-spacing">
-            <div class="wow animate__fadeInUp">
-                <div class="ul-partners-slider swiper">
-                    <div class="swiper-wrapper align-items-center">
-                        <!-- single slide -->
-                        <div class="swiper-slide">
-                            <img src="assets/img/partner-1.png" alt="Parter Logo">
-                        </div>
-                        <!-- single slide -->
-                        <div class="swiper-slide">
-                            <img src="assets/img/partner-2.png" alt="Parter Logo">
-                        </div>
-                        <!-- single slide -->
-                        <div class="swiper-slide">
-                            <img src="assets/img/partner-3.png" alt="Parter Logo">
-                        </div>
-                        <!-- single slide -->
-                        <div class="swiper-slide">
-                            <img src="assets/img/partner-4.png" alt="Parter Logo">
-                        </div>
-                        <!-- single slide -->
-                        <div class="swiper-slide">
-                            <img src="assets/img/partner-5.png" alt="Parter Logo">
-                        </div>
-                        <!-- single slide -->
-                        <div class="swiper-slide">
-                            <img src="assets/img/partner-6.png" alt="Parter Logo">
-                        </div>
-                        <!-- single slide -->
-                        <div class="swiper-slide">
-                            <img src="assets/img/partner-1.png" alt="Parter Logo">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- PARTNERS SECTION END -->
+        @include('sections.partners')
 
 
         <!-- ABOUT SECTION START -->
