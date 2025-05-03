@@ -36,6 +36,10 @@ Route::get('/projects', function () {
     return view('projects.index');
 })->name('projects.index');
 
+Route::get('/portfolio', function () {
+    return view('portfolio.index');
+})->name('portfolio.index');
+
 Route::get('/projects/{slug}', function ($slug) {
     return view('projects.show', ['slug' => $slug]);
 })->name('projects.show');
