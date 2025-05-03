@@ -354,7 +354,7 @@ button {
   content: "";
   position: absolute;
   inset: 0;
-  background: #3058af;
+  background: var(--ul-secondary);
   z-index: -1;
 }
 .ul-breadcrumb-title {
@@ -1198,11 +1198,11 @@ button {
   background-color: var(--ul-secondary);
 }
 .ul-header--home .ul-header-nav a:hover {
-  color: var(--ul-secondary);
+  color: #3058af;
 }
 .ul-header--home .ul-header-actions a:hover,
 .ul-header--home .ul-header-actions button:hover {
-  color: var(--ul-secondary);
+  color: #3058af;
 }
 
 .ul-sidebar.active .ul-header-nav {
