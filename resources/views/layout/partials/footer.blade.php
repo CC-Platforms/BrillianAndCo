@@ -6,15 +6,17 @@
                 <div class="ul-footer-about">
                     <div class="header-bottom-left">
                         <div class="logo-container">
-                            <a href="{{ route('home.index') }}" class="d-inline-block"><img src="{{ asset('assets/img/brillian/company_logo.jpg') }}" width="200" height="200"></a>
+                            <a href="{{ route('home.index') }}" class="d-inline-block"><img
+                                    src="{{ asset('assets/img/brillian/company_logo_circle.png') }}" width="200"
+                                    height="200"></a>
                         </div>
-                    </div>                    <p class="ul-footer-about-txt">over 1 million+ homes for sale available on the website, we can match
-                        you with a house you will want to call home.</p>
+                    </div>
+                    <p class="ul-footer-about-txt">Your premier Real Estate Enterprise, we deliver exceptional results
+                        and unparalleled service to our clients.</p>
                     <div class="ul-footer-socials">
-                        <a href="#"><i class="flaticon-facebook"></i></a>
-                        <a href="#"><i class="flaticon-instagram"></i></a>
-                        <a href="#"><i class="flaticon-twitter"></i></a>
-                        <a href="#"><i class="flaticon-linkedin"></i></a>
+                        <a href="{{ url('https://www.facebook.com/share/15VZkFmxTA/?mibextid=wwXIfr') }}"><i class="flaticon-facebook"></i></a>
+                        <a href="{{ url('https://www.instagram.com/agentbrillian1?igsh=NjVkMjQ4cGF2NXpp&utm_source=qr') }}"><i class="flaticon-instagram"></i></a>
+                        <a href="{{ url('https://www.tiktok.com/@agentbrillian1?_t=ZM-8w12VJkFaSN&_r=1') }}"><i class="flaticon-">TikTok</i></a>
                     </div>
                 </div>
 
@@ -26,8 +28,7 @@
                             <a href="{{ route('home.index') }}">Home</a>
                             <a href="{{ route('about.index') }}">About</a>
                             <a href="{{ route('services.index') }}">Services</a>
-                            <a href="{{ route('portfolio.index') }}">Portfolio</a>
-                            <a href="{{ route('blog.index') }}">Blog</a>
+                            <a href="{{ route('projects.index') }}">Portfolio</a>
                         </div>
                     </div>
                 </div>
@@ -74,7 +75,7 @@
 
     <!-- footer bottom -->
     <div class="ul-footer-bottom">
-        <p class="copyright-txt">&copy;{{ date('Y') }} Realestics. All rights reserved</p>
+        <p class="copyright-txt">&copy;{{ date('Y') }} Brillian and Co Real Estate. All rights reserved</p>
     </div>
 
     <!-- vector -->

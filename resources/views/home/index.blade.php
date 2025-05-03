@@ -51,7 +51,7 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <span class="address-1">Buea, Cameroon</span>
-                            <span class="address-2">TPPRR/RC/BUA/2022/A/0184</span>
+                            <span class="address-2">TPPRR/RC/BUA/ 2022/A/0184</span>
                         </div>
                         <div class="swiper-slide">
                             <span class="address-1">Real Estate Hub</span>
@@ -60,13 +60,13 @@
                     </div>
                 </div>
             </div>
-            <div class="right wow animate__fadeInUp">
+            {{-- <div class="right wow animate__fadeInUp">
                 <div class="ul-banner-slider-pagination"></div>
                 <div class="ul-banner-slider-nav ul-slider-nav">
                     <button class="prev"><i class="flaticon-left"></i></button>
                     <button class="next"><i class="flaticon-right"></i></button>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </section>
     <!-- BANNER SECTION END -->
