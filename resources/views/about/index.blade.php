@@ -24,9 +24,9 @@
                     <div class="col">
                         <!-- <div class="d-flex justify-content-end"> -->
                         <div class="ul-why-choose-us-imgs">
-                            <div class="img"><img src="assets/img/why-choose-img-1.jpg" alt="image"></div>
+                            <div class="img"><img src="{{ asset("assets/img/why-choose-img-1.jpg")}}" alt="image"></div>
                             <div class="img">
-                                <img src="assets/img/why-choose-img-2.jpg" alt="image">
+                                <img src="{{ asset("assets/img/brillia-ceo.jpg")}}" alt="image">
                                 <!-- icon -->
                                 <div class="icon"><i class="flaticon-home-agreement"></i></div>
                             </div>
@@ -153,7 +153,7 @@
 
                     <!-- img -->
                     <div class="col">
-                        <div class="ul-about-img ul-inner-about-img"><img src="assets/img/about-img.jpg" alt="About Image"></div>
+                        <div class="ul-about-img ul-inner-about-img"><img src="{{ asset("assets/img/brillia14.jpg")}}" alt="About Image"></div>
                     </div>
                 </div>
             </div>

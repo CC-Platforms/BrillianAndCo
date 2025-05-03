@@ -5,7 +5,7 @@
                 <!-- img -->
                 <div class="col">
                     <div class="ul-testimonial-img wow animate__fadeInUp">
-                        <img src="assets/img/testimonial-img.jpg" alt="Happy client giving a testimonial">
+                        <img src="{{ asset("assets/img/brillia13.jpg")}}" alt="Happy client giving a testimonial">
                     </div>
                 </div>
 
