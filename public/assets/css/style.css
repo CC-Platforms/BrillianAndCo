@@ -43,7 +43,7 @@ CSS INDEX
 :root {
   --black: #000;
   --white: #fff;
-  --ul-primary: #7065F0;
+  --ul-primary: #3058af;
   --ul-secondary: #000929;
   --ul-gray: #EBEBEB;
   --ul-black: #111111;
@@ -354,7 +354,7 @@ button {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(112, 101, 240, 0.85);
+  background: #3058af;
   z-index: -1;
 }
 .ul-breadcrumb-title {
@@ -1198,11 +1198,11 @@ button {
   background-color: var(--ul-secondary);
 }
 .ul-header--home .ul-header-nav a:hover {
-  color: var(--ul-primary);
+  color: var(--ul-secondary);
 }
 .ul-header--home .ul-header-actions a:hover,
 .ul-header--home .ul-header-actions button:hover {
-  color: var(--ul-primary);
+  color: var(--ul-secondary);
 }
 
 .ul-sidebar.active .ul-header-nav {
@@ -4199,7 +4199,7 @@ button {
   font-weight: 600;
   font-size: clamp(50px, 5.25vw, 100px);
   line-height: 0.7;
-  color: #7065F0;
+  color: #3058af;
   display: block;
   margin-bottom: clamp(48px, 6.31vw, 120px);
 }
