@@ -5,11 +5,13 @@
     <!-- BREADCRUMB SECTION START -->
     <div class="ul-breadcrumb">
         <div class="wow animate__fadeInUp">
-            <h2 class="ul-breadcrumb-title">Service Details</h2>
+            <h2 class="ul-breadcrumb-title">{{ $service['title'] }}</h2>
             <div class="ul-breadcrumb-nav">
-                <a href="index.html">Home</a>
+                <a href="{{ url('/') }}">Home</a>
                 <span class="separator"><i class="flaticon-aro-left"></i></span>
-                <span class="current-page">Service Details</span>
+                <a href="{{ url('/services') }}">Services</a>
+                <span class="separator"><i class="flaticon-aro-left"></i></span>
+                <span class="current-page">{{ $service['title'] }}</span>
             </div>
         </div>
     </div>
@@ -24,14 +26,11 @@
                 <div class="col-lg-4 order-1 order-lg-0">
                     <div class="ul-service-details-sidebar">
                         <div class="ul-service-details-sidebar-widget overflow-hidden">
-                            <h4 class="ul-service-details-sidebar-widget-title">Buy Home</h4>
+                            <h4 class="ul-service-details-sidebar-widget-title">Our Services</h4>
                             <ul class="service-list">
-                                <li><a href="service-details.html">Illustration Design <i class="flaticon-read-more-icon"></i></a></li>
-                                <li><a href="service-details.html">Business Branding <i class="flaticon-read-more-icon"></i></a></li>
-                                <li><a href="service-details.html">Packaging Design <i class="flaticon-read-more-icon"></i></a></li>
-                                <li><a href="service-details.html" class="current">Mobile Apps Design <i class="flaticon-read-more-icon"></i></a></li>
-                                <li><a href="service-details.html">Web UI/UX Design <i class="flaticon-read-more-icon"></i></a></li>
-                                <li><a href="service-details.html">Application Design <i class="flaticon-read-more-icon"></i></a></li>
+                                <li><a href="{{ url('/services/property-sales-purchase') }}" class="{{ $service['slug'] == 'property-sales-purchase' ? 'current' : '' }}">Property Sales & Purchase <i class="flaticon-read-more-icon"></i></a></li>
+                                <li><a href="{{ url('/services/rental-services') }}" class="{{ $service['slug'] == 'rental-services' ? 'current' : '' }}">Rental Services <i class="flaticon-read-more-icon"></i></a></li>
+                                <li><a href="{{ url('/services/investment-services') }}" class="{{ $service['slug'] == 'investment-services' ? 'current' : '' }}">Investment Services <i class="flaticon-read-more-icon"></i></a></li>
                             </ul>
                         </div>
 
@@ -46,15 +45,16 @@
                 <!-- right content -->
                 <div class="col-lg-8 order-0 order-lg-1">
                     <div class="ul-service-details-txt wow animate__fadeInUp">
-                        <h4 class="ul-service-details-title">We help you to buy your dream home.</h4>
-                        <p class="ul-service-details-descr">Suspendisse potenti. Nunc convallis nulla fringilla tellus dapibus lobor. Nam in bibendum mi, at molestie tellus. Quisque molestie vel elit nec ultrices. Pellentesque a ex id lectus sagittis bibendum. Mauris ante nunc, eleifend sed consectetur non, rutrum quis diam.</p>
-                        <p class="ul-service-details-descr">Suspendisse potenti. Nunc convallis nulla fringilla tellus dapibulobortis. Nam in bibendum mi, at molestie tellus. Quisque molestie vel elit nec ultrices. Pellentesque a ex id lectus sagittis bibendum. Mauris ante nunc, eleifend sed consectetur non, rutrum quis diam. Suspendisse ultricies molestie tellus dapibus maximus. Quisque interdum accumsan velit ac pellentesque.</p>
+                        <h4 class="ul-service-details-title">{{ $service['title'] }}</h4>
+                        <p class="ul-service-details-descr">{{ $service['full_description'] }}</p>
+                        
                         <div class="ul-service-details-cover-img">
-                            <img src="assets/img/service-details-1.jpg" alt="Image" class="img-1">
-                            <img src="assets/img/service-details-2.jpg" alt="Image" class="img-2">
+                            <img src="{{ asset('assets/img/service-details-1.jpg') }}" alt="Image" class="img-1">
+                            <img src="{{ asset('assets/img/service-details-2.jpg') }}" alt="Image" class="img-2">
                         </div>
-                        <h4 class="ul-service-details-title">Quick Processing.</h4>
-                        <p class="ul-service-details-descr">Suspendisse potenti. Nunc convallis nulla fringilla tellus dapibus lobor. Nam in bibendum mi, at molestie tellus. Quisque molestie vel elit nec ultrices. Pellentesque a ex</p>
+                        
+                        <h4 class="ul-service-details-title">Why Choose Brillia And Co Real Estate</h4>
+                        <p class="ul-service-details-descr">With a passion for innovation, a commitment to excellence, and deep understanding of the local market, we're revolutionizing the way people Buy, Sell, Rent and invest in Real Estate. Our team of experts ensures that your real estate journey is smooth, profitable, and stress-free. Your trust is our commitment, and we work tirelessly to exceed your expectations.</p>
                     </div>
 
                     <!-- faq -->
@@ -62,32 +62,32 @@
                         <div class="ul-accordion">
                             <div class="ul-single-accordion-item open">
                                 <div class="ul-single-accordion-item__header">
-                                    <h3 class="ul-single-accordion-item__title">Simple process for workflow?</h3>
+                                    <h3 class="ul-single-accordion-item__title">How does the process work?</h3>
                                     <i class="fa-regular fa-arrow-down"></i>
                                 </div>
 
                                 <div class="ul-single-accordion-item__body">
-                                    <p>All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over words, combined with a handful of model structures, to generate Lorem Ipsum which looks reasonable.</p>
+                                    <p>Our process begins with a consultation to understand your needs and goals. We then develop a customized plan tailored to your specific situation. Throughout the process, our team of experts guides you every step of the way, ensuring a smooth and successful real estate experience.</p>
                                 </div>
                             </div>
                             <div class="ul-single-accordion-item">
                                 <div class="ul-single-accordion-item__header">
-                                    <h3 class="ul-single-accordion-item__title">Unique brand identity and strategy</h3>
+                                    <h3 class="ul-single-accordion-item__title">What areas do you serve?</h3>
                                     <i class="fa-regular fa-arrow-down"></i>
                                 </div>
 
                                 <div class="ul-single-accordion-item__body">
-                                    <p>All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over words, combined with a handful of model structures, to generate Lorem Ipsum which looks reasonable.</p>
+                                    <p>Brillia And Co Real Estate serves various local markets with a deep understanding of each area's unique characteristics. Our expertise in these markets allows us to provide valuable insights and identify the best opportunities for our clients.</p>
                                 </div>
                             </div>
                             <div class="ul-single-accordion-item">
                                 <div class="ul-single-accordion-item__header">
-                                    <h3 class="ul-single-accordion-item__title">Tailor-made digital products</h3>
+                                    <h3 class="ul-single-accordion-item__title">What makes Brillia And Co different?</h3>
                                     <i class="fa-regular fa-arrow-down"></i>
                                 </div>
 
                                 <div class="ul-single-accordion-item__body">
-                                    <p>All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over words, combined with a handful of model structures, to generate Lorem Ipsum which looks reasonable.</p>
+                                    <p>What sets us apart is our commitment to innovation, excellence, and personalized service. We combine deep market knowledge with cutting-edge technology to deliver exceptional results. Our motto "Your Trust is Our Commitment" reflects our dedication to building lasting relationships with our clients based on trust and integrity.</p>
                                 </div>
                             </div>
                         </div>
@@ -98,8 +98,6 @@
         <!-- SERVICE DETAILS SECTION END -->
 
     </div>
-
-
 
     <!-- APP AD SECTION START -->
     <div class="ul-app-ad wow animate__fadeInUp">
@@ -135,17 +133,17 @@
                         <div class="ul-app-ad-imgs">
                             <div class="ul-app-ad-img">
                                 <!-- qr code -->
-                                <img src="assets/img/app-ad-qr-code.jpg" alt="QR Code" class="ul-app-ad-qr-code">
+                                <img src="{{ asset('assets/img/app-ad-qr-code.jpg') }}" alt="QR Code" class="ul-app-ad-qr-code">
                                 <!-- app screenshot 1 -->
-                                <img src="assets/img/app-ad-ss-1.png" alt="App screenshot" class="ul-app-ad-ss-1">
+                                <img src="{{ asset('assets/img/app-ad-ss-1.png') }}" alt="App screenshot" class="ul-app-ad-ss-1">
                             </div>
                             <div class="ul-app-ad-img">
                                 <!-- app screenshot 2 -->
-                                <img src="assets/img/app-ad-ss-2.png" alt="App Screenshot" class="ul-app-ad-ss-2">
+                                <img src="{{ asset('assets/img/app-ad-ss-2.png') }}" alt="App Screenshot" class="ul-app-ad-ss-2">
                             </div>
 
                             <!-- vector -->
-                            <img src="assets/img/app-ad-img-vector.svg" alt="vector" class="vector">
+                            <img src="{{ asset('assets/img/app-ad-img-vector.svg') }}" alt="vector" class="vector">
                         </div>
                     </div>
                 </div>
@@ -154,5 +152,4 @@
     </div>
     <!-- APP AD SECTION END -->
 </main>
-
 @endsection

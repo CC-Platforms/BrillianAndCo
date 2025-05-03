@@ -122,10 +122,10 @@
                                     <span class="text">{{ $project['bathrooms'] }} Bathrooms</span>
                                 </div>
                                 <!-- single info -->
-                                <div class="ul-project-info">
+                                {{-- <div class="ul-project-info">
                                     <span class="icon"><i class="flaticon-scale"></i></span>
                                     <span class="text">{{ $project['area'] }}</span>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>

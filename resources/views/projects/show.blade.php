@@ -149,10 +149,10 @@
                                     <div class="col">
                                         <div class="ul-project-details-overview-info">
                                             <div class="icon"><i class="flaticon-buildings"></i></div>
-                                            <div class="txt">
+                                            {{-- <div class="txt">
                                                 <span class="key">Area</span>
                                                 <span class="value">{{ $project['area'] }}</span>
-                                            </div>
+                                            </div> --}}
                                         </div>
                                     </div>
 
