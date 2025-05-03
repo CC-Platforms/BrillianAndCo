@@ -53,7 +53,7 @@
                             <img src="{{ asset('assets/img/service-details-2.jpg') }}" alt="Image" class="img-2">
                         </div>
                         
-                        <h4 class="ul-service-details-title">Why Choose Brillia And Co Real Estate</h4>
+                        <h4 class="ul-service-details-title">Why Choose Brillian And Co Real Estate</h4>
                         <p class="ul-service-details-descr">With a passion for innovation, a commitment to excellence, and deep understanding of the local market, we're revolutionizing the way people Buy, Sell, Rent and invest in Real Estate. Our team of experts ensures that your real estate journey is smooth, profitable, and stress-free. Your trust is our commitment, and we work tirelessly to exceed your expectations.</p>
                     </div>
 
@@ -77,12 +77,12 @@
                                 </div>
 
                                 <div class="ul-single-accordion-item__body">
-                                    <p>Brillia And Co Real Estate serves various local markets with a deep understanding of each area's unique characteristics. Our expertise in these markets allows us to provide valuable insights and identify the best opportunities for our clients.</p>
+                                    <p>Brillian And Co Real Estate serves various local markets with a deep understanding of each area's unique characteristics. Our expertise in these markets allows us to provide valuable insights and identify the best opportunities for our clients.</p>
                                 </div>
                             </div>
                             <div class="ul-single-accordion-item">
                                 <div class="ul-single-accordion-item__header">
-                                    <h3 class="ul-single-accordion-item__title">What makes Brillia And Co different?</h3>
+                                    <h3 class="ul-single-accordion-item__title">What makes Brillian And Co different?</h3>
                                     <i class="fa-regular fa-arrow-down"></i>
                                 </div>
 

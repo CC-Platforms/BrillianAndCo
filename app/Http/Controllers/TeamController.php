@@ -13,17 +13,18 @@ class TeamController extends Controller
             'name' => 'Pah Brillian Beng', // You might replace these with more local names if preferred
             'slug' => 'pah-brillian-beng',
             'position' => 'Chief Executive Officer',
-            'phone' => '++237652383694', 
+            'phone' => '+237 652383694', 
             'email' => 'john@example.com',
             'website' => 'https://johndoe.com',
             'experience' => '8 Years',
-            'availability' => 'Full Time Employee',
+            'availability' => 'Full Time',
             'description' => 'Pah Brillian Beng is a seasoned real estate agent with extensive experience in residential and commercial properties in Buea and Limbe.',
             'image' => 'assets/img/brillian/ceo_image.jpg',
             'social' => [
                 'facebook' => 'https://www.facebook.com/share/197AyYyroV/?mibextid=wwXIfr',
                 'tiktok' => 'https://www.tiktok.com/@agentbrillian1?_t=ZM-8w2zfFhyJ8P&_r=1',
-                'instagram' => 'https://www.instagram.com/agentbrillian1?igsh=NjVkMjQ4cGF2NXpp&utm_source=qr'
+                'instagram' => 'https://www.instagram.com/agentbrillian1?igsh=NjVkMjQ4cGF2NXpp&utm_source=qr',
+                'linkedin' => 'https://cm.linkedin.com/in/pah-brillian-beng-a3908b1a6',
             ],
             'skills' => [
                 ['title' => 'Property Negotiation', 'value' => 85],
