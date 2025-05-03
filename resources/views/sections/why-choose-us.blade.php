@@ -4,9 +4,9 @@
         <div class="row row-cols-lg-2 row-cols-1 align-items-center">
             <div class="col">
                 <div class="ul-why-choose-us-imgs">
-                    <div class="img"><img src="assets/img/why-choose-img-1.jpg" alt="image"></div>
+                    <div class="img"><img src="{{ asset('assets/img/brillian/properties/IMG-20250503-WA0124.jpg') }}" alt="image"></div>
                     <div class="img">
-                        <img src="assets/img/why-choose-img-2.jpg" alt="image">
+                        <img src="{{ asset('assets/img/brillian/ceo_image.jpg') }}" alt="image">
                         <div class="icon"><i class="flaticon-home-agreement"></i></div>
                     </div>
                 </div>
@@ -38,7 +38,7 @@
                         </div>
 
                         <div class="ul-why-choose-us-list-item">
-                            <div class="icon"><i class="flaticon-consulting"></i></div>
+                            <div class="icon"><i class="flaticon-property"></i></div>
                             <div class="txt">
                                 <h3 class="ul-why-choose-us-list-item-title">Real Estate Consulting</h3>
                                 <p class="ul-why-choose-us-list-item-descr">We provide guidance on investments,

@@ -16,7 +16,7 @@
     </div>
     <!-- BREADCRUMB SECTION END -->
 
-    @include('sections.team')
+    @include('sections.team', ['teamMembers' => $teamMembers])
 </main>
 
 @endsection

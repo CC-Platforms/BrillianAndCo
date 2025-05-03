@@ -29,22 +29,18 @@
                                 <h3 class="ul-contact-infos-title">Contact Information</h3>
                                 <span class="ul-contact-infos-sub-title">Say something to start a live chat!</span>
                             </div>
-
+    
                             <!-- infos -->
                             <div class="ul-contact-infos">
-                                <a href="tel:+10123456789" class="ul-contact-info"><i class="flaticon-telephone"></i> +1012 3456 789</a>
-                                <a href="mailto:demo@gmail.com" class="ul-contact-info"><i class="flaticon-mail"></i> demo@gmail.com</a>
+                                <a href="tel:+237652383694" class="ul-contact-info"><i class="flaticon-telephone"></i>
+                                    +237 652 383 694
+                                </a>
+                                <a href="mailto:info@realestics.com" class="ul-contact-info"><i class="flaticon-mail"></i>
+                                    bricore@gmail.com</a>
                                 <div class="ul-contact-info">
                                     <i class="flaticon-location-pin"></i>
-                                    <span class="txt">132 Dartmouth Street Boston, Massachusetts 02156 United States</span>
+                                    <span class="txt">Bonduma, Mercedes Entrance, Buea</span>
                                 </div>
-                            </div>
-
-                            <!-- socials -->
-                            <div class="ul-contact-socials">
-                                <a href="#"><i class="flaticon-twitter-1"></i></a>
-                                <a href="#"><i class="flaticon-instagram"></i></a>
-                                <a href="#"><i class="flaticon-linkedin"></i></a>
                             </div>
                         </div>
                     </div>
@@ -55,65 +51,32 @@
                             <form action="#">
                                 <div class="form-group">
                                     <label for="contact-first-name">First Name</label>
-                                    <input type="text" name="contact-first-name" id="contact-first-name" placeholder="John">
+                                    <input type="text" name="contact-first-name" id="contact-first-name"
+                                        placeholder="John">
                                 </div>
 
                                 <div class="form-group">
                                     <label for="contact-last-name">Last Name</label>
-                                    <input type="text" name="contact-last-name" id="contact-last-name" placeholder="Doe">
+                                    <input type="text" name="contact-last-name" id="contact-last-name"
+                                        placeholder="Doe">
                                 </div>
 
                                 <div class="form-group">
                                     <label for="contact-email">Email</label>
-                                    <input type="email" name="contact-email" id="contact-email" placeholder="demo@realestics.com">
+                                    <input type="email" name="contact-email" id="contact-email"
+                                        placeholder="demo@realestics.com">
                                 </div>
 
                                 <div class="form-group">
                                     <label for="contact-phone">Phone Number</label>
-                                    <input type="tel" name="contact-phone" id="contact-phone" placeholder="+1 012 3456 789">
-                                </div>
-
-                                <div class="form-group">
-                                    <span class="contact-inner-title">Select Subject?</span>
-                                    <div class="ul-contact-form-subjects">
-                                        <!-- subject 1 -->
-                                        <div class="ul-radio">
-                                            <label for="contact-subject-1">
-                                                <input type="radio" name="contact-subject" id="contact-subject-1" checked>
-                                                <span class="checkmark"><i class="flaticon-check-2"></i></span>
-                                                <span class="txt">General Inquiry</span>
-                                            </label>
-                                        </div>
-                                        <!-- subject 1 -->
-                                        <div class="ul-radio">
-                                            <label for="contact-subject-2">
-                                                <input type="radio" name="contact-subject" id="contact-subject-2">
-                                                <span class="checkmark"><i class="flaticon-check-2"></i></span>
-                                                <span class="txt">General Inquiry</span>
-                                            </label>
-                                        </div>
-                                        <!-- subject 1 -->
-                                        <div class="ul-radio">
-                                            <label for="contact-subject-3">
-                                                <input type="radio" name="contact-subject" id="contact-subject-3">
-                                                <span class="checkmark"><i class="flaticon-check-2"></i></span>
-                                                <span class="txt">General Inquiry</span>
-                                            </label>
-                                        </div>
-                                        <!-- subject 1 -->
-                                        <div class="ul-radio">
-                                            <label for="contact-subject-4">
-                                                <input type="radio" name="contact-subject" id="contact-subject-4">
-                                                <span class="checkmark"><i class="flaticon-check-2"></i></span>
-                                                <span class="txt">General Inquiry</span>
-                                            </label>
-                                        </div>
-                                    </div>
+                                    <input type="tel" name="contact-phone" id="contact-phone"
+                                        placeholder="+1 012 3456 789">
                                 </div>
 
                                 <div class="form-group">
                                     <label for="contact-message">Message</label>
-                                    <textarea name="contact-message" id="contact-message" placeholder="Write Message"></textarea>
+                                    <textarea name="contact-message" id="contact-message"
+                                        placeholder="Write Message"></textarea>
                                 </div>
 
                                 <button class="ul-btn">Send Message</button>
@@ -125,7 +88,10 @@
         </div>
     </div>
 
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41294.67553538239!2d90.4051752801728!3d23.81973204385709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c64e5249ad39%3A0x2392867b037e718e!2sKuril%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1732511385236!5m2!1sen!2sbd" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="ul-contact-map"></iframe>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.317104172501!2d9.268981899999998!3d4.1579204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x106133d14f5c1209%3A0xa3e943913fe6e83!2sBRILLIAN%20AND%20CO%20REAL%20-%20ESTATE!5e0!3m2!1sen!2scm!4v1746276244101!5m2!1sen!2scm"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade" class="ul-contact-map"></iframe>
     <!-- CONTACT SECTION END -->
 
 </main>

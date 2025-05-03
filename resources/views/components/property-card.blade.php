@@ -31,7 +31,7 @@
             <div class="top">
                 <div class="left">
                     <span class="ul-project-price">
-                        <span class="number">{{ $currency }} {{ $price }}</span>/{{ $period }}
+                        <span class="number"> {{ $price }} {{ $currency }}</span>/{{ $period }}
                     </span>
                     <a href="{{ route('projects.show', $slug) }}" class="ul-project-title">{{ $title }}</a>
                     <p class="ul-project-location">{{ $location }}</p>
