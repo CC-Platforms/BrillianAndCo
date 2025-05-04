@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="{{ asset("assets/vendor/slim-select/slimselect.css") }}">
         <link rel="stylesheet" href="{{ asset("assets/vendor/animate-wow/animate.min.css") }}">
 
+        <link rel="icon" href="{{ asset('assets/img/brillian/company_logo_circle.png') }}" type="image/x-icon">
         <!-- custom CSS -->
         <link rel="stylesheet" href="{{ asset("assets/css/style.css") }}">
     </head>

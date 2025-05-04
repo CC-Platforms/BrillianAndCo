@@ -40,13 +40,13 @@
                             </div>
                             <div class="ul-facilities-img-slider swiper">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide"><img src="assets/img/project-1.jpg" alt="Facility Image">
+                                    <div class="swiper-slide"><img src="{{ asset('assets/img/brillian/properties/IMG-20250503-WA0122.jpg') }}" alt="Facility Image">
                                     </div>
-                                    <div class="swiper-slide"><img src="assets/img/project-2.jpg" alt="Facility Image">
+                                    <div class="swiper-slide"><img src="{{ asset('assets/img/brillian/properties/IMG-20250503-WA0123.jpg') }}" alt="Facility Image">
                                     </div>
-                                    <div class="swiper-slide"><img src="assets/img/project-3.jpg" alt="Facility Image">
+                                    <div class="swiper-slide"><img src="{{ asset('assets/img/brillian/properties/IMG-20250503-WA0126.jpg') }}" alt="Facility Image">
                                     </div>
-                                    <div class="swiper-slide"><img src="assets/img/project-4.jpg" alt="Facility Image">
+                                    <div class="swiper-slide"><img src="{{ asset('assets/img/brillian/properties/IMG-20250503-WA0128.jpg') }}" alt="Facility Image">
                                     </div>
                                 </div>
                             </div>
@@ -55,7 +55,7 @@
                 </div>
 
                 <div class="col">
-                    <div class="ul-facilities-img"><img src="assets/img/facility-img.jpg" alt="Facility Image"></div>
+                    <div class="ul-facilities-img"><img src="{{ asset('assets/img/brillian/properties/IMG-20250503-WA0129.jpg') }}" alt="Facility Image"></div>
                 </div>
             </div>
         </div>

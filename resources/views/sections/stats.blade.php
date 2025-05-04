@@ -2,7 +2,7 @@
 <div class="ul-stats ul-section-spacing">
     <div class="ul-stats-wrapper wow animate__fadeInUp">
         <div class="ul-stats-item">
-            <i class="flaticon-excavator"></i>
+            <i class="flaticon-user-1"></i>
             <span class="number">260+</span>
             <span class="txt">Satisfied Clients</span>
         </div>
@@ -18,7 +18,7 @@
         </div>
         <div class="ul-stats-item">
             <i class="flaticon-map"></i>
-            <span class="number">560+</span>
+            <span class="number">50+</span>
             <span class="txt">Lands Sold</span>
         </div>
     </div>
