@@ -15,7 +15,7 @@
                                 <div class="row align-items-center flex-sm-row flex-column-reverse">
                                     <!-- Text -->
                                     <div class="col-md-9 col-sm-8">
-                                        <span class="ul-banner-slide-shadow-title">BRILLIAN & CO REAL ESTATE</span>
+                                        <span class="ul-banner-slide-shadow-title">BRILLIAN AND CO REAL ESTATE</span>
                                         <div class="ul-banner-slide-txt wow animate__fadeInUp">
                                             <span class="ul-banner-slide-sub-title">Your Premier Real Estate
                                                 Partner</span>
@@ -43,10 +43,6 @@
                         <div class="swiper-slide">
                             <span class="address-1">Buea, Cameroon</span>
                             <span class="address-2">TPPRR/RC/BUA/ 2022/A/0184</span>
-                        </div>
-                        <div class="swiper-slide">
-                            <span class="address-1">Real Estate Hub</span>
-                            <span class="address-2">Registered with MSME</span>
                         </div>
                     </div>
                 </div>
