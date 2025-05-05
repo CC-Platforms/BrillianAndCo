@@ -37,7 +37,7 @@
                         <div class="ul-service-details-cta">
                             <div class="icon"><i class="flaticon-telephone"></i></div>
                             <span class="title">Need Help? Call Here</span>
-                            <a href="tel:1234567890" class="number">+123 456 7890</a>
+                            <a href="tel:1234567890" class="number">+237 652383694</a>
                         </div>
                     </div>
                 </div>
@@ -49,8 +49,8 @@
                         <p class="ul-service-details-descr">{{ $service['full_description'] }}</p>
                         
                         <div class="ul-service-details-cover-img">
-                            <img src="{{ asset('assets/img/service-details-1.jpg') }}" alt="Image" class="img-1">
-                            <img src="{{ asset('assets/img/service-details-2.jpg') }}" alt="Image" class="img-2">
+                            <img src="{{ asset('assets/img/brillia6.jpg') }}" alt="Image" class="img-1">
+                            <img src="{{ asset('assets/img/brillia13.jpg') }}" alt="Image" class="img-2">
                         </div>
                         
                         <h4 class="ul-service-details-title">Why Choose Brillia And Co Real Estate</h4>
