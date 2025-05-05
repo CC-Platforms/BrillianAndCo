@@ -30,7 +30,7 @@
                             </div>
 
                             <div class="ul-contact-infos">
-                                <a href="https://wa.me/237652383694" class="ul-contact-info" target="_blank">
+                                <a href="{{ url('https://wa.me/237652383694') }}" class="ul-contact-info" target="_blank">
                                     <i class="fab fa-phone-alt"></i> +237 652 383 694
                                 </a>
                                 <a href="mailto:bricore@gmail.com" class="ul-contact-info">
@@ -42,13 +42,13 @@
                                 </div>
                                 {{-- include social media handles --}}
                                 <div class="ul-contact-socials">
-                                    <a href="https://www.facebook.com/share/197AyYyroV/?mibextid=wwXIfr" target="_blank">
+                                    <a href="{{ url('https://www.facebook.com/share/197AyYyroV/?mibextid=wwXIfr') }}" target="_blank">
                                         <i class="fab fa-facebook-f"></i>
                                     </a>
-                                    <a href="https://www.instagram.com/agentbrillian1?igsh=NjVkMjQ4cGF2NXpp&utm_source=qr" target="_blank">
+                                    <a href="{{ url('https://www.instagram.com/agentbrillian1?igsh=NjVkMjQ4cGF2NXpp&utm_source=qr') }}" target="_blank">
                                         <i class="fab fa-instagram"></i>
                                     </a>
-                                    <a href="https://www.tiktok.com/@agentbrillian1?_t=ZM-8w2zfFhyJ8P&_r=1" target="_blank">
+                                    <a href="{{ url('https://www.tiktok.com/@agentbrillian1?_t=ZM-8w2zfFhyJ8P&_r=1') }}" target="_blank">
                                         <i class="fab fa-tiktok"></i>
                                     </a>
                                 </div>
@@ -62,7 +62,7 @@
                             <div class="whatsapp-box">
                                 <h4>Send Us a Message on WhatsApp</h4>
                                 <p>Click the button below to start a WhatsApp chat with us. We're here to help you!</p>
-                                <a href="https://wa.me/237652383694" target="_blank" class="ul-btn whatsapp-btn">
+                                <a href="{{ url('https://wa.me/237652383694') }}" target="_blank" class="ul-btn whatsapp-btn">
                                     <i class="fab fa-whatsapp"></i> Chat on WhatsApp
                                 </a>
                             </div>
