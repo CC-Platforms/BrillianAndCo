@@ -1,12 +1,12 @@
-<!-- TESTIMONIAL SECTION START -->
-<section class="ul-testimonial ul-section-spacing">
-    <div class="ul-testimonial-container">
-        <div class="row row-cols-lg-2 row-cols-1 gx-0 align-items-center flex-lg-row flex-column-reverse gy-5">
-            <!-- img -->
-            <div class="col">
-                <div class="ul-testimonial-img wow animate__fadeInUp">
-                    <img src="{{ ('assets/img/brillian/properties/IMG-20250503-WA0135.jpg') }}"
-                        alt="Happy client giving a testimonial">
+    <!-- TESTIMONIAL SECTION START -->
+    <section class="ul-testimonial ul-section-spacing">
+        <div class="ul-testimonial-container">
+            <div class="row row-cols-lg-2 row-cols-1 gx-0 align-items-center flex-lg-row flex-column-reverse gy-5">
+                <!-- img -->
+                <div class="col">
+                    <div class="ul-testimonial-img wow animate__fadeInUp">
+                        <img src="{{ asset("assets/img/brillia13.jpg")}}" alt="Happy client giving a testimonial">
+                    </div>
                 </div>
             </div>
 

@@ -350,11 +350,13 @@ button {
   position: relative;
   z-index: 1;
 }
+
+
 .ul-breadcrumb::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: var(--ul-secondary);
+  background: rgba(0, 9, 41, 0.8);
   z-index: -1;
 }
 .ul-breadcrumb-title {
@@ -379,7 +381,7 @@ button {
   color: var(--white);
 }
 .ul-breadcrumb-nav a:hover {
-  color: var(--ul-secondary);
+  color: var(--ul-primary);
 }
 .ul-breadcrumb .separator {
   display: inline-flex;
@@ -3217,6 +3219,8 @@ button {
 }
 .ul-inner-about-img img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   aspect-ratio: 720/403;
 }
 
@@ -3601,6 +3605,8 @@ button {
 }
 .ul-project-img img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   aspect-ratio: 365/208;
   object-fit: cover;
 }
@@ -5347,17 +5353,24 @@ button {
   align-items: center;
 }
 .ul-contact-socials a {
-  background-color: var(--black);
-  border: 1px solid var(--black);
-  color: var(--white);
-  width: 30px;
-  aspect-ratio: 1/1;
-  border-radius: 999px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: clamp(11px, 0.74vw, 14px);
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--white);
+  color: var(--white);
+  font-size: 18px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  text-decoration: none;
 }
+
+.whatsapp-box i {
+  font-size: 25px;
+}
+
 .ul-contact-socials a:hover {
   background-color: var(--ul-primary);
   border-color: var(--white);

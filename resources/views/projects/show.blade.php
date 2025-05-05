@@ -9,6 +9,8 @@
             <div class="ul-breadcrumb-nav">
                 <a href="{{ route('home.index') }}">Home</a>
                 <span class="separator"><i class="flaticon-aro-left"></i></span>
+                <a href="{{ url('/projects') }}">Projects</a>
+                <span class="separator"><i class="flaticon-aro-left"></i></span>
                 <span class="current-page">Project Details</span>
             </div>
         </div>
@@ -202,23 +204,23 @@
                     <!-- right sidebar -->
                     <div class="col-lg-4">
                         <div class="ul-project-details-sidebar wow animate__fadeInUp">
-                            <h3 class="ul-project-details-sidebar-title">Contact the listing owner</h3>
+                            <h3 class="ul-project-details-sidebar-title">Contact Brillian & Co for this listing</h3>
 
-                            <div class="ul-project-details-listing-owner">
+                            <div class="ul-project-details-listing-owner mb-4">
                                 <div class="ul-project-details-listing-owner-img">
-                                    <img src="assets/img/reviewer-img-3.png" alt="Listing Owner Image">
+                                    <img src="{{ asset("assets/img/brillia-ceo.jpg")}}" alt="Listing Owner Image">
                                 </div>
                                 <div class="ul-project-details-listing-owner-txt">
-                                    <h4 class="ul-project-details-listing-owner-name">Leslie Alexander</h4>
+                                    <h4 class="ul-project-details-listing-owner-name">Pah Brillian Beng</h4>
                                     <span class="contact-infos d-block">Supervisor</span>
                                     <div class="contact-infos d-none">
-                                        <a href="tel:+406-555-0120">+406- 555-0120</a>
+                                        <a href="tel:+406-555-0120">+237 652383694</a>
                                         <a href="mailto:JqkZ0@example.com">JqkZ0@example.com</a>
                                     </div>
                                 </div>
                             </div>
 
-                            <form action="#" class="ul-project-details-owner-contact-form">
+                            {{-- <form action="#" class="ul-project-details-owner-contact-form">
                                 <div class="form-group">
                                     <input type="text" name="name" id="name" placeholder="Name*">
                                 </div>
@@ -234,9 +236,9 @@
                                 <div class="form-group">
                                     <button class="ul-btn">Submit Now</button>
                                 </div>
-                            </form>
+                            </form> --}}
 
-                            <button class="ul-btn ul-project-details-wa-btn"><i class="flaticon-telephone"></i>WhatsApp</button>
+                            <button class="ul-btn ul-project-details-wa-btn hover:opacity-75"><i class="flaticon-telephone"></i>WhatsApp</button>
                         </div>
                     </div>
                 </div>
