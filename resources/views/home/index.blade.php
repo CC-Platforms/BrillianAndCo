@@ -15,7 +15,7 @@
                                 <div class="row align-items-center flex-sm-row flex-column-reverse">
                                     <!-- Text -->
                                     <div class="col-md-9 col-sm-8">
-                                        <span class="ul-banner-slide-shadow-title">BRILLIAN & CO REAL ESTATE</span>
+                                        {{-- <span class="ul-banner-slide-shadow-title">BRILLIAN & CO REAL ESTATE</span> --}}
                                         <div class="ul-banner-slide-txt wow animate__fadeInUp">
                                             <span class="ul-banner-slide-sub-title">Your Premier Real Estate
                                                 Partner</span>
