@@ -6,7 +6,7 @@
                     <div class="ul-facilities-txt">
                         <h6 class="ul-section-sub-title">What We Offer</h6>
                         <h2 class="ul-section-title">Professional Real Estate Services in Buea</h2>
-                        <p class="ul-facilities-descr">Whether you're buying, selling, renting, or building, Brillia &
+                        <p class="ul-facilities-descr">Whether you're buying, selling, renting, or building, Brillian &
                             Co is your trusted partner in real estate success.</p>
 
                         <div class="ul-facilities-stats">

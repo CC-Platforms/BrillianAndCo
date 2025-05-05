@@ -53,7 +53,7 @@
                             <img src="{{ asset('assets/img/brillia13.jpg') }}" alt="Image" class="img-2">
                         </div>
                         
-                        <h4 class="ul-service-details-title">Why Choose Brillia And Co Real Estate</h4>
+                        <h4 class="ul-service-details-title">Why Choose Brillian And Co Real Estate</h4>
                         <p class="ul-service-details-descr">With a passion for innovation, a commitment to excellence, and deep understanding of the local market, we're revolutionizing the way people Buy, Sell, Rent and invest in Real Estate. Our team of experts ensures that your real estate journey is smooth, profitable, and stress-free. Your trust is our commitment, and we work tirelessly to exceed your expectations.</p>
                     </div>
 
@@ -77,12 +77,12 @@
                                 </div>
 
                                 <div class="ul-single-accordion-item__body">
-                                    <p>Brillia And Co Real Estate serves various local markets with a deep understanding of each area's unique characteristics. Our expertise in these markets allows us to provide valuable insights and identify the best opportunities for our clients.</p>
+                                    <p>Brillian And Co Real Estate serves various local markets with a deep understanding of each area's unique characteristics. Our expertise in these markets allows us to provide valuable insights and identify the best opportunities for our clients.</p>
                                 </div>
                             </div>
                             <div class="ul-single-accordion-item">
                                 <div class="ul-single-accordion-item__header">
-                                    <h3 class="ul-single-accordion-item__title">What makes Brillia And Co different?</h3>
+                                    <h3 class="ul-single-accordion-item__title">What makes Brillian And Co different?</h3>
                                     <i class="fa-regular fa-arrow-down"></i>
                                 </div>
 
@@ -98,58 +98,5 @@
         <!-- SERVICE DETAILS SECTION END -->
 
     </div>
-
-    <!-- APP AD SECTION START -->
-    <div class="ul-app-ad wow animate__fadeInUp">
-        <div class="ul-app-ad-container">
-            <div class="ul-app-ad-content">
-                <div class="row align-items-start gy-5">
-                    <!-- txt -->
-                    <div class="col-lg-7">
-                        <div class="ul-app-ad-txt">
-                            <span class="ul-section-sub-title">Download App</span>
-                            <h2 class="ul-section-title">Download Our Real Estate Mobile App <span class="colored">15% Off</span></h2>
-                            <div class="ul-app-ad-btns">
-                                <button>
-                                    <i class="flaticon-play"></i>
-                                    <span>
-                                        <span class="sub-title">Get in on</span>
-                                        <span class="title">Apps Store</span>
-                                    </span>
-                                </button>
-                                <button>
-                                    <i class="flaticon-play"></i>
-                                    <span>
-                                        <span class="sub-title">Get in on</span>
-                                        <span class="title">Google Play</span>
-                                    </span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- img -->
-                    <div class="col-lg-5">
-                        <div class="ul-app-ad-imgs">
-                            <div class="ul-app-ad-img">
-                                <!-- qr code -->
-                                <img src="{{ asset('assets/img/app-ad-qr-code.jpg') }}" alt="QR Code" class="ul-app-ad-qr-code">
-                                <!-- app screenshot 1 -->
-                                <img src="{{ asset('assets/img/app-ad-ss-1.png') }}" alt="App screenshot" class="ul-app-ad-ss-1">
-                            </div>
-                            <div class="ul-app-ad-img">
-                                <!-- app screenshot 2 -->
-                                <img src="{{ asset('assets/img/app-ad-ss-2.png') }}" alt="App Screenshot" class="ul-app-ad-ss-2">
-                            </div>
-
-                            <!-- vector -->
-                            <img src="{{ asset('assets/img/app-ad-img-vector.svg') }}" alt="vector" class="vector">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- APP AD SECTION END -->
 </main>
 @endsection
