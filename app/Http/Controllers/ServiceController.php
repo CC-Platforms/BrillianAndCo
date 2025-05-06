@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Services\ProjectService;
 use App\Models\Service;
 use Illuminate\Http\Request;
 
@@ -96,7 +97,10 @@ class ServiceController extends Controller
             ]
         ];
 
-        return view('services.index', compact('specialities', 'coreServices', 'stats'));
+        $projectService = new ProjectService();
+        $projects = $projectService->getProjects();
+
+        return view('services.index', compact('specialities', 'coreServices', 'stats', 'projects'));
     }
 
     /**
@@ -137,13 +141,14 @@ class ServiceController extends Controller
                 'full_description' => 'Brillian And Co Real Estate\'s Investment Services are designed for clients looking to build wealth through real estate. Our investment experts provide comprehensive market analysis, identify high-potential properties, and develop strategies tailored to your investment goals. We help you understand market trends, ROI projections, and risk factors for informed decision-making. From residential to commercial properties, we guide you through the entire investment process. Our team also offers portfolio management services, regularly reviewing your real estate investments and suggesting adjustments to maximize returns. With our innovative approach and deep market understanding, we help transform your real estate investments into profitable assets.'
             ]
         ];
-
+        $projectService = new ProjectService();
+        $projects = $projectService->getProjects();
         $service = collect($coreServices)->firstWhere('slug', $slug);
 
         if (!$service) {
             abort(404);
         }
 
-        return view('services.show', compact('service'));
+        return view('services.show', compact('service', 'projects'));
     }
 }

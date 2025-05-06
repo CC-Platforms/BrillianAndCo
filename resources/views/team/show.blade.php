@@ -44,8 +44,7 @@
                     <div class="ul-team-details-socials">
                         <a href="{{ $teamMember['social']['facebook'] }}"><i class="flaticon-facebook"></i></a>
                         <a href="{{ $teamMember['social']['instagram'] }}"><i class="flaticon-instagram"></i></a>
-                        <a href="{{ $teamMember['social']['linkedin'] }}"><i class="flaticon-linkedin"></i></a>
-                        <a href="{{ $teamMember['social']['tiktok'] }}">TikTok</a>
+                        <a href="{{ $teamMember['social']['tiktok'] }}"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
             </div>

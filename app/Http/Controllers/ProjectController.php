@@ -39,11 +39,12 @@ class ProjectController extends Controller
     public function show($slug)
     {
         $project = $this->projectService->findBySlug($slug);
+        $projects = $this->projectService->getProjects();
 
         if (!$project) {
             abort(404);
         }
 
-        return view('projects.show', compact('project'));
+        return view('projects.show', compact('project', 'projects'));
     }
 }

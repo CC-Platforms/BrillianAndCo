@@ -2855,6 +2855,7 @@ button {
 }
 .ul-footer-bottom {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: clamp(25px, 2.1vw, 40px) 0;

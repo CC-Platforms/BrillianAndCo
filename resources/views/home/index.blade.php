@@ -54,7 +54,9 @@
     @include('sections.why-choose-us')
     @include('sections.featured-properties')
     @include('sections.facilities')
-    @include('sections.properties')
+    @include('sections.properties', [
+        'projects' => $projects,
+    ])
     @include('sections.stats')
     @include('sections.testimonials')
     {{-- @include('sections.partners') --}}

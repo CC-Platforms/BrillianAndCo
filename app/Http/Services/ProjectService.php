@@ -22,7 +22,7 @@ class ProjectService
                     'assets/img/brillia1.jpg'
                 ],
                 'tag' => 'Featured',
-                'price' => '120,000 XAF',
+                'price' => '60,000 XAF',
                 'period' => 'Month',
                 'title' => 'Molyko Residence',
                 'location' => 'Near University of Buea, Molyko, Buea, Cameroon',
@@ -58,7 +58,7 @@ class ProjectService
                     'assets/img/brillia7.jpg'
                 ],
                 'tag' => 'Popular',
-                'price' => '150,000 XAF',
+                'price' => '90,000 XAF',
                 'period' => 'Month',
                 'title' => 'Mile 17 Estate',
                 'location' => 'Mile 17, Buea, Cameroon',
@@ -76,7 +76,7 @@ class ProjectService
                     'assets/img/brillia5.jpg'
                 ],
                 'tag' => 'Luxury',
-                'price' => '180,000 XAF',
+                'price' => '80,000 XAF',
                 'period' => 'Month',
                 'title' => 'Bomaka Heights',
                 'location' => 'Bomaka, Buea, Cameroon',
@@ -94,7 +94,7 @@ class ProjectService
                     'assets/img/brillia4.jpg'
                 ],
                 'tag' => 'Premium',
-                'price' => '200,000 XAF',
+                'price' => '100,000 XAF',
                 'period' => 'Month',
                 'title' => 'Mount View Residence',
                 'location' => 'Great Soppo, Buea, Cameroon',

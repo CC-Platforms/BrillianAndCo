@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Services\ProjectService;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
@@ -139,17 +140,21 @@ class TeamController extends Controller
 
     public function index()
     {
-        return view('team.index', ['teamMembers' => $this->teamMembers]);
+        $projectService = new ProjectService();
+        $projects = $projectService->getProjects();
+        return view('team.index', ['teamMembers' => $this->teamMembers, 'projects' => $projects]);
     }
 
     public function show($slug)
     {
         $teamMember = collect($this->teamMembers)->firstWhere('slug', $slug);
+        $projectService = new ProjectService();
+        $projects = $projectService->getProjects();
 
         if (!$teamMember) {
             abort(404, 'Team member not found');
         }
 
-        return view('team.show', compact('teamMember'));
+        return view('team.show', compact('teamMember', 'projects'));
     }
 }

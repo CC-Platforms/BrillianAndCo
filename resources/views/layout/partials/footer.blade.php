@@ -29,6 +29,7 @@
                             <a href="{{ route('about.index') }}">About</a>
                             <a href="{{ route('services.index') }}">Services</a>
                             <a href="{{ route('projects.index') }}">Projects</a>
+                            <a href="{{ route('contact.index') }}">Contact Us</a>
                         </div>
                     </div>
                 </div>
@@ -50,20 +51,6 @@
                         <div class="ul-footer-widget-links">
                             <a href="{{ route('about.index') }}">Company</a>
                             <a href="{{ route('team.index') }}">Our Team</a>
-                            <a href="{{ route('about.index') }}">Investors</a>
-                            <a href="{{ route('about.index') }}">Terms & Privacy</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="single-column">
-                    <div class="ul-footer-widget">
-                        <h3 class="ul-footer-widget-title">CONTACT US</h3>
-
-                        <div class="ul-footer-widget-links">
-                            <a href="{{ route('contact.index') }}">Contact</a>
-                            <a href="{{ route('contact.index') }}">Help Center</a>
-                            <a href="{{ route('contact.index') }}">FAQ</a>
-                            <a href="{{ route('contact.index') }}">Support</a>
                         </div>
                     </div>
                 </div>
@@ -72,8 +59,9 @@
     </div>
 
     <!-- footer bottom -->
-    <div class="ul-footer-bottom">
+    <div class="ul-footer-bottom col">
         <p class="copyright-txt">&copy;{{ date('Y') }} Brillian and Co Real Estate. All rights reserved</p>
+        <p class="copyright-txt">Designed by CC Platforms</p>
     </div>
 
     <!-- vector -->
