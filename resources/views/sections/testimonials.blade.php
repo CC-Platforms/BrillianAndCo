@@ -1,15 +1,13 @@
-    <!-- TESTIMONIAL SECTION START -->
-    <section class="ul-testimonial ul-section-spacing">
-        <div class="ul-testimonial-container">
-            <div class="row row-cols-lg-2 row-cols-1 gx-0 align-items-center flex-lg-row flex-column-reverse gy-5">
-                <!-- img -->
-                <div class="col">
-                    <div class="ul-testimonial-img wow animate__fadeInUp">
-                        <img src="{{ asset("assets/img/brillia13.jpg")}}" alt="Happy client giving a testimonial">
-                    </div>
+<!-- TESTIMONIAL SECTION START -->
+<section class="ul-testimonial ul-section-spacing">
+    <div class="ul-testimonial-container">
+        <div class="row row-cols-lg-2 row-cols-1 gx-0 align-items-center flex-lg-row flex-column-reverse gy-5">
+            <!-- img -->
+            <div class="col">
+                <div class="ul-testimonial-img wow animate__fadeInUp">
+                    <img src="{{ asset("assets/img/brillia13.jpg")}}" alt="Happy client giving a testimonial">
                 </div>
             </div>
-
             <!-- testimonial slider -->
             <div class="col">
                 <div class="ul-testimonial-txt wow animate__fadeInUp">
@@ -96,7 +94,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- slider pagination -->
                         <div class="ul-testimonial-slider-pagination"></div>
                     </div>
