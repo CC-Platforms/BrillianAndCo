@@ -45,17 +45,7 @@
         <!-- SPECIALITY SECTION END -->
 
         <!-- STATS SECTION START -->
-        <div class="ul-stats ul-section-spacing">
-            <div class="ul-stats-wrapper wow animate__fadeInUp">
-                @foreach($stats as $stat)
-                <div class="ul-stats-item">
-                    <i class="{{ $stat['icon'] }}"></i>
-                    <span class="number">{{ $stat['number'] }}</span>
-                    <span class="txt">{{ $stat['text'] }}</span>
-                </div>
-                @endforeach
-            </div>
-        </div>
+        @include('sections.stats')
         <!-- STATS SECTION END -->
 
         <!-- SERVICE SECTION START -->
