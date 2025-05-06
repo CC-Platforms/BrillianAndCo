@@ -214,31 +214,15 @@
                                     <h4 class="ul-project-details-listing-owner-name">Pah Brillian Beng</h4>
                                     <span class="contact-infos d-block">Supervisor</span>
                                     <div class="contact-infos d-none">
-                                        <a href="tel:+406-555-0120">+237 652383694</a>
+                                        <a href="tel:+237 652383694">+237 652383694</a>
                                         <a href="mailto:JqkZ0@example.com">JqkZ0@example.com</a>
                                     </div>
                                 </div>
                             </div>
-
-                            {{-- <form action="#" class="ul-project-details-owner-contact-form">
-                                <div class="form-group">
-                                    <input type="text" name="name" id="name" placeholder="Name*">
-                                </div>
-                                <div class="form-group">
-                                    <input type="tel" name="phone" id="phone" placeholder="Phone*">
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" name="email" id="email" placeholder="Email*">
-                                </div>
-                                <div class="form-group">
-                                    <textarea name="message" id="message" placeholder="Message"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <button class="ul-btn">Submit Now</button>
-                                </div>
-                            </form> --}}
-
-                            <button class="ul-btn ul-project-details-wa-btn hover:opacity-75"><i class="flaticon-telephone"></i>WhatsApp</button>
+                            <a class="ul-btn ul-project-details-wa-btn hover:opacity-75" href="{{ url('https://wa.me/237652383694') }}">
+                                <button class="ul-btn ul-project-details-wa-btn hover:opacity-75"><i class="flaticon-telephone"></i>WhatsApp</button>
+                            </a>
+                            
                         </div>
                     </div>
                 </div>

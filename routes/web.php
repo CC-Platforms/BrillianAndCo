@@ -3,14 +3,19 @@
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\TeamController;
+use App\Http\Services\ProjectService;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('home.index');
+    $projectService = new ProjectService();
+    $projects = $projectService->getProjects();
+
+    return view('home.index', compact('projects'));
 })->name('home.index');
 
 Route::get('/about', function () {
-
+    $projectService = new ProjectService();
+    $projects = $projectService->getProjects();
     $teamMembers = [
         [
             'id' => 1,
@@ -40,12 +45,17 @@ Route::get('/about', function () {
     ];
 
     return view('about.index', [
-        'teamMembers' => $teamMembers
+        'teamMembers' => $teamMembers,
+        'projects' => $projects,
     ]);
 })->name('about.index');
 
 Route::get('/contact', function () {
-    return view('contact-us.index');
+    $projectService = new ProjectService();
+    $projects = $projectService->getProjects();
+    return view('contact-us.index', [
+        'projects' => $projects,
+    ]);
 })->name('contact.index');
 
 Route::get('/blog', function () {
@@ -55,10 +65,6 @@ Route::get('/blog', function () {
 Route::get('/blog/{slug}', function ($slug) {
     return view('blog.show', ['slug' => $slug]);
 })->name('blog.show');
-
-Route::get('/projects', function () {
-    return view('projects.index');
-})->name('projects.index');
 
 Route::get('/portfolio', function () {
     return view('portfolio.index');

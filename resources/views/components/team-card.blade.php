@@ -10,7 +10,7 @@
                     @foreach($socialLinks as $network => $url)
                         @if($url)
                             <a href="{{ $url }}" class="" target="_blank" rel="noopener noreferrer">
-                                <i class="flaticon-{{ $network }}"></i>
+                                <i class="fab fa-{{ $network }}"></i>
                             </a>
                         @endif
                     @endforeach

@@ -25,7 +25,9 @@
             <div class="loader"></div>
         </div>
 
-        @include('layout.partials.sidebar')
+        @include('layout.partials.sidebar', [
+            'projects' => $projects,
+        ])
 
         @include('layout.partials.search-modal')
 
