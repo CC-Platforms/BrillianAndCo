@@ -29,7 +29,6 @@
                             <a href="{{ route('about.index') }}">About</a>
                             <a href="{{ route('services.index') }}">Services</a>
                             <a href="{{ route('projects.index') }}">Projects</a>
-                            <a href="{{ route('blog.index') }}">Blog</a>
                         </div>
                     </div>
                 </div>
@@ -38,11 +37,9 @@
                         <h3 class="ul-footer-widget-title">OUR SERVICES</h3>
 
                         <div class="ul-footer-widget-links">
-                            <a href="{{ route('services.index') }}">Buy and sell properties</a>
-                            <a href="{{ route('services.show', ['slug' => 'rent-home'])  }}">Rent home</a>
-                            <a href="{{ route('services.index') }}">Builder trade-up</a>
-                            <a href="{{ route('services.index') }}">Property Management</a>
-                            <a href="{{ route('services.index') }}">Real Estate Consulting</a>
+                            <a href="{{ route('services.show', ['slug' => 'property-sales-purchase']) }}">Property Sales and Purchase</a>
+                            <a href="{{ route('services.show', ['slug' => 'rental-services']) }}">Rental Services</a>
+                            <a href="{{ route('services.show', ['slug' => 'investment-services']) }}">Investment Services</a>
                         </div>
                     </div>
                 </div>

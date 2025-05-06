@@ -63,7 +63,7 @@
                             <div class="ul-single-accordion-item open">
                                 <div class="ul-single-accordion-item__header">
                                     <h3 class="ul-single-accordion-item__title">How does the process work?</h3>
-                                    <i class="fa-regular fa-arrow-down"></i>
+                                    <i class="fas fa-regular fa-arrow-down"></i>
                                 </div>
 
                                 <div class="ul-single-accordion-item__body">
@@ -73,7 +73,7 @@
                             <div class="ul-single-accordion-item">
                                 <div class="ul-single-accordion-item__header">
                                     <h3 class="ul-single-accordion-item__title">What areas do you serve?</h3>
-                                    <i class="fa-regular fa-arrow-down"></i>
+                                    <i class="fas fa-regular fa-arrow-down"></i>
                                 </div>
 
                                 <div class="ul-single-accordion-item__body">
@@ -83,7 +83,7 @@
                             <div class="ul-single-accordion-item">
                                 <div class="ul-single-accordion-item__header">
                                     <h3 class="ul-single-accordion-item__title">What makes Brillian And Co different?</h3>
-                                    <i class="fa-regular fa-arrow-down"></i>
+                                    <i class="fas fa-regular fa-arrow-down"></i>
                                 </div>
 
                                 <div class="ul-single-accordion-item__body">
@@ -99,4 +99,33 @@
 
     </div>
 </main>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get all accordion headers
+        const accordionHeaders = document.querySelectorAll('.ul-single-accordion-item__header');
+        
+        // Add click event listener to each accordion header
+        accordionHeaders.forEach(header => {
+            header.addEventListener('click', function() {
+                // Get the parent accordion item
+                const accordionItem = this.parentElement;
+                
+                // If the clicked item is already open, just close it
+                if (accordionItem.classList.contains('open')) {
+                    accordionItem.classList.remove('open');
+                    return;
+                }
+                
+                // Close all accordion items
+                document.querySelectorAll('.ul-single-accordion-item').forEach(item => {
+                    item.classList.remove('open');
+                });
+                
+                // Open the clicked accordion item
+                accordionItem.classList.add('open');
+            });
+        });
+    });
+</script>
 @endsection
