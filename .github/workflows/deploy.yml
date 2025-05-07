@@ -1,0 +1,65 @@
+name: Deploy Laravel Application to Hostinger
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+    
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: 8.4
+    
+    - name: Install Composer Dependencies
+      run: composer install --optimize-autoloader --no-dev --no-progress --no-interaction --prefer-dist
+    
+    - name: Install Node
+      uses: actions/setup-node@v3
+      with:
+        node-version: '20'
+    
+    - name: Install NPM Dependencies
+      run: npm install
+    
+    - name: Build NPM Assets
+      run: npm run build
+    
+    - name: Deploy to Hostinger
+      uses: easingthemes/ssh-deploy@v2.1.5
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        SOURCE: "."
+        REMOTE_HOST: "82.25.96.67"
+        REMOTE_PORT: "65002"
+        REMOTE_USER: "u995357878"
+        TARGET: "/home/u995357878/domains/bricoree.com/public_html"
+        EXCLUDE: "node_modules/, .git/, .github/, .env.example"
+    
+    - name: Execute Post-Deployment Commands
+      uses: appleboy/ssh-action@v0.1.6
+      with:
+        host: "82.25.96.67"
+        port: "65002"
+        username: "u995357878"
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        script: |
+          cd /home/u995357878/domains/bricoree.com/public_html
+          # Create symbolic link for assets if it doesn't exist
+          if [ ! -L "assets" ]; then
+            ln -s /home/u995357878/domains/bricoree.com/public_html/public/assets /home/u995357878/domains/bricoree.com/public_html/assets
+          fi
+          # Create symbolic link for storage if it doesn't exist
+          if [ ! -L "storage" ]; then
+            ln -s /home/u995357878/domains/bricoree.com/public_html/storage/app/public /home/u995357878/domains/bricoree.com/public_html/storage
+          fi
+          # Clear and optimize Laravel caches
+          php artisan optimize:clear
+          php artisan view:clear
+          php artisan optimize
