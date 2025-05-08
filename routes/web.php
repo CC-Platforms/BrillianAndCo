@@ -4,13 +4,19 @@ use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\TeamController;
 use App\Http\Services\ProjectService;
+use App\Http\Services\LandService;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $projectService = new ProjectService();
+    $landService = new LandService();
     $projects = $projectService->getProjects();
+    $landsByCategory = $landService->getLandsByCategory();    
 
-    return view('home.index', compact('projects'));
+    // For debugging, let's see what's in the array
+    // dd($landsByCategory); // Uncomment this line to check
+
+    return view('home.index', compact('projects', 'landsByCategory'));
 })->name('home.index');
 
 Route::get('/about', function () {

@@ -25,7 +25,7 @@ class ProjectService
                 'price' => '60,000 XAF',
                 'period' => 'Month',
                 'title' => 'Molyko Residence',
-                'location' => 'Near University of Buea, Molyko, Buea, Cameroon',
+                'location' => 'Molyko, Buea, Cameroon',
                 'beds' => 3,
                 'bathrooms' => 2,
                 'description' => 'Molyko Residence is a modern apartment complex ideally located near the University of Buea, perfect for students and faculty members. This vibrant property offers comfortable living with amenities including reliable water supply, backup power, and secure parking. The strategic location provides easy access to local markets, restaurants, and transportation hubs, making daily commuting hassle-free. The apartments feature spacious bedrooms, a well-equipped kitchen, and a cozy living area with beautiful views of the surrounding area.'

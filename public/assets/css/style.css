@@ -3720,6 +3720,27 @@ button {
   justify-content: space-between;
   margin-bottom: clamp(20px, 1.89vw, 36px);
 }
+
+/* Add this to your CSS file */
+.ul-land-category-heading {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.ul-land-category-heading h3 {
+  font-size: 25px;
+  font-weight: 600;
+  color: #333;
+  position: relative;
+  padding-left: 15px;
+  border-left: 4px solid #007bff;
+}
+
+.ul-2-properties-wrapper {
+  margin-bottom: 40px;
+}
+
 @media screen and (max-width: 991px) {
   .ul-project-details-heading {
     flex-direction: column;
