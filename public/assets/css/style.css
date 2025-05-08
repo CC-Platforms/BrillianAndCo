@@ -2803,13 +2803,56 @@ button {
 }
 .ul-footer-socials a {
   color: rgba(0, 0, 0, 0.3);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--white);
+  color: var(--white);
+  font-size: 19px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  background-color: var(--ul-secondary);
+  text-decoration: none;
 }
 .ul-footer-socials a:hover {
   color: var(--ul-primary);
 }
+
+.ceo-image-container {
+  position: relative;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.ceo-name-overlay {
+  position: absolute;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  max-width: 90%;
+  margin: 10px;
+}
+
 .ul-footer .single-column {
   flex-shrink: 0;
 }
+
+/* Mobile responsiveness */
+@media (max-width: 576px) {
+  .ceo-name-overlay {
+      font-size: 1.2rem;
+      padding: 10px 16px;
+  }
+}
+
 @media screen and (max-width: 991px) {
   .ul-footer .single-column {
     min-width: 200px;
