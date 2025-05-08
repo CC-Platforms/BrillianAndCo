@@ -13,9 +13,6 @@ Route::get('/', function () {
     $projects = $projectService->getProjects();
     $landsByCategory = $landService->getLandsByCategory();    
 
-    // For debugging, let's see what's in the array
-    // dd($landsByCategory); // Uncomment this line to check
-
     return view('home.index', compact('projects', 'landsByCategory'));
 })->name('home.index');
 
