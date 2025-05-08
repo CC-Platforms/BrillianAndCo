@@ -10,7 +10,7 @@
             <div class="ul-breadcrumb-nav">
                 <a href="index.html">Home</a>
                 <span class="separator"><i class="flaticon-aro-left"></i></span>
-                <span class="current-page">About us</span>
+                <span class="current-page">About Us</span>
             </div>
         </div>
     </div>
