@@ -4,9 +4,11 @@
     <!-- BREADCRUMB SECTION START -->
     <div class="ul-breadcrumb">
         <div class="wow animate__fadeInUp">
-            <h2 class="ul-breadcrumb-title">{{ $teamMember['name'] }} Details</h2>
+            <h2 class="ul-breadcrumb-title">{{ $teamMember['name'] }}</h2>
             <div class="ul-breadcrumb-nav">
                 <a href="{{ route('home.index') }}">Home</a>
+                <span class="separator"><i class="flaticon-aro-left"></i></span>
+                <a href="{{ url('/team') }}">Team</a>
                 <span class="separator"><i class="flaticon-aro-left"></i></span>
                 <span class="current-page">{{ $teamMember['name'] }}</span>
             </div>
@@ -31,9 +33,7 @@
                         <li class="ul-team-details-info"> <span class="key">Phone Number:</span> <a
                                 href="tel:{{ $teamMember['phone'] }}">{{ $teamMember['phone'] }}</a></li>
                         <li class="ul-team-details-info"><span class="key">Email:</span> <a
-                                href="mailto:{{ $teamMember['email'] }}">{{ $teamMember['email'] }}</a></li>
-                        <li class="ul-team-details-info"><span class="key">Website:</span> <a
-                                href="{{ $teamMember['website'] }}" target="_blank">{{ $teamMember['website'] }}</a></li>
+                                href="mailto:bricore161@gmail.com">bricore161@gmail.com</a></li>
                         <li class="ul-team-details-info"><span class="key">Experience:</span> {{ $teamMember['experience']
                             }}</li>
                         <li class="ul-team-details-info"><span class="key">Availability:</span> {{
