@@ -5,6 +5,8 @@
         </div>
 
         <div class="ul-team-card-txt">
+            <h4 class="ul-team-card-title"><a href="{{ route('team.show', ['slug' => $slug]) }}">{{ $name }}</a></h4>
+            <span class="ul-team-card-subtitle">Call <a href="tel:{{ $phone }}">{{ $phone }}</a></span>
             <div class="ul-team-card-socials">
                 <div class="ul-team-card-socials-links">
                     @foreach($socialLinks as $network => $url)
@@ -15,10 +17,7 @@
                         @endif
                     @endforeach
                 </div>
-                <div class="ul-team-card-socials-icon"><i class="flaticon-share"></i></div>
             </div>
-            <h4 class="ul-team-card-title"><a href="{{ route('team.show', ['slug' => $slug]) }}">{{ $name }}</a></h4>
-            <span class="ul-team-card-subtitle">Call <a href="tel:{{ $phone }}">{{ $phone }}</a></span>
         </div>
     </div>
 </div>
