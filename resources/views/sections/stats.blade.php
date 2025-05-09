@@ -9,22 +9,22 @@
     <div class="ul-stats-wrapper wow animate__fadeInUp">
         <div class="ul-stats-item">
             <i class="flaticon-user-1"></i>
-            <span class="number">260+</span>
+            <span class="number">9239</span>
             <span class="txt">Satisfied Clients</span>
         </div>
         <div class="ul-stats-item">
             <i class="flaticon-interior-design"></i>
-            <span class="number">110+</span>
+            <span class="number">2137</span>
             <span class="txt">Projects Completed</span>
         </div>
         <div class="ul-stats-item">
             <i class="flaticon-buildings"></i>
-            <span class="number">190+</span>
+            <span class="number">5912</span>
             <span class="txt">Apartments Rented</span>
         </div>
         <div class="ul-stats-item">
             <i class="flaticon-map"></i>
-            <span class="number">50+</span>
+            <span class="number">217</span>
             <span class="txt">Lands Sold</span>
         </div>
     </div>
