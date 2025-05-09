@@ -17,7 +17,7 @@
 
                         <div class="ul-facilities-stats">
                             <div class="ul-facilities-stat">
-                                <span class="number">560+</span>
+                                <span class="number">500+</span>
                                 <span class="txt">Properties Managed</span>
                             </div>
                             <div class="ul-facilities-stat">
