@@ -3,23 +3,23 @@
 namespace App\Http\Controllers;
 
 use App\Http\Services\ProjectService;
-use App\Http\Services\BriCoreService;
+use App\Http\Services\BricoreService;
 use Illuminate\Http\Request;
 
 class ServiceController extends Controller
 {
-    protected $briCoreService;
+    protected $bricoreService;
     protected $projectService;
 
     /**
      * Constructor to inject dependencies.
      *
-     * @param BriCoreService $briCoreService
+     * @param BricoreService $bricoreService
      * @param ProjectService $projectService
      */
-    public function __construct(BriCoreService $briCoreService, ProjectService $projectService)
+    public function __construct(BricoreService $bricoreService, ProjectService $projectService)
     {
-        $this->briCoreService = $briCoreService;
+        $this->bricoreService = $bricoreService;
         $this->projectService = $projectService;
     }
 
@@ -30,9 +30,9 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        $specialities = $this->briCoreService->getSpecialities();
-        $coreServices = $this->briCoreService->getCoreServices();
-        $stats = $this->briCoreService->getStats();
+        $specialities = $this->bricoreService->getSpecialities();
+        $coreServices = $this->bricoreService->getCoreServices();
+        $stats = $this->bricoreService->getStats();
         $projects = $this->projectService->getProjects();
 
         return view('services.index', compact('specialities', 'coreServices', 'stats', 'projects'));
@@ -46,7 +46,7 @@ class ServiceController extends Controller
      */
     public function show($slug)
     {
-        $service = $this->briCoreService->findServiceBySlug($slug);
+        $service = $this->bricoreService->findServiceBySlug($slug);
         $projects = $this->projectService->getProjects();
 
         if (!$service) {

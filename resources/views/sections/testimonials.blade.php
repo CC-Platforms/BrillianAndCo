@@ -95,7 +95,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <p class="ul-testimony-txt">"Many thanks to the founder of this great initive."</p>
+                                    <p class="ul-testimony-txt">"Many thanks to the founder of this great initiative."</p>
                                 </div>
                             </div>
                         </div>

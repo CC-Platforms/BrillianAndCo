@@ -1,7 +1,6 @@
 <!-- WHY CHOOSE US SECTION START -->
 <section class="ul-why-choose-us ul-section-spacing wow animate__fadeInUp">
     <div class="ul-container">
-        <!-- Section Header with Title and Subtitle -->
         @include('sections.section-header', [
             'title' => 'Why Choose Brillian & Co Real Estate',
             'subtitle' => 'Your Trust is Our Commitment - We deliver top-tier real estate services, tailored to your needs.'
@@ -16,7 +15,7 @@
                             <div class="icon"><i class="flaticon-property"></i></div>
                             <div class="txt">
                                 <h3 class="ul-why-choose-us-list-item-title">Rentals & Leasing</h3>
-                                <p class="ul-why-choose-us-list-item-descr">Studios, rooms, apartments, offices, stores, and guesthouses available at competitive rates.</p>
+                                <p class="ul-why-choose-us-list-item-descr">Studios, rooms, apartments, offices, stores, and guesthouses available at affordable and competitive rates.</p>
                             </div>
                         </div>
                     </div>

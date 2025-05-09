@@ -2,7 +2,7 @@
 
 namespace App\Http\Services;
 
-class BriCoreService
+class BricoreService
 {
     /**
      * Get all specialities.
