@@ -2802,7 +2802,6 @@ button {
   font-size: clamp(15px, 0.95vw, 18px);
 }
 .ul-footer-socials a {
-  color: rgba(0, 0, 0, 0.3);
   display: inline-flex;
   align-items: center;
   justify-content: center;
