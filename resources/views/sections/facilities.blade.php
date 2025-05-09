@@ -1,5 +1,11 @@
     <!-- FACILITY SECTION START -->
     <section class="ul-facilities ul-section-spacing">
+        
+        @include('sections.section-header', [
+        'title' => 'Our Facilities',
+        'subtitle' => 'Professional Real Estate Services in Buea'
+        ])
+
         <div class="ul-container">
             <div class="row ul-bs-row row-cols-lg-2 row-cols-1 wow animate__fadeInUp">
                 <div class="col">

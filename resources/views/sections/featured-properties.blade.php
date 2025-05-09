@@ -1,5 +1,12 @@
 <!-- FEATURED PROPERTIES SECTION START -->
+
 <section class="ul-featured-properties ul-section-spacing">
+    <div class="ul-section-header text-center">
+        <h2 class="ul-section-title text-white">Featured Properties</h2>
+        <div class="ul-section-divider"></div>
+        <p class="ul-section-subtitle text-gray-50">Explore our selection of premium properties in prime locations </p>
+    </div>
+
     <div class="ul-featured-properties-title-slider splide">
         <div class="splide__track">
             <ul class="splide__list">

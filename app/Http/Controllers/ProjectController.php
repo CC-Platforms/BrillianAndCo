@@ -3,20 +3,24 @@
 namespace App\Http\Controllers;
 
 use App\Http\Services\ProjectService;
+use App\Http\Services\LandService;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
 {
     protected $projectService;
+    protected $landService;
 
     /**
      * Constructor to inject ProjectService dependency.
      *
      * @param ProjectService $projectService
+     * @param LandService $landService
      */
-    public function __construct(ProjectService $projectService)
+    public function __construct(ProjectService $projectService, LandService $landService)
     {
         $this->projectService = $projectService;
+        $this->landService = $landService;
     }
 
     /**
@@ -27,7 +31,9 @@ class ProjectController extends Controller
     public function index()
     {
         $projects = $this->projectService->getProjects();
-        return view('projects.index', compact('projects'));
+        $landsByCategory = $this->landService->getLandsByCategory();
+        
+        return view('projects.index', compact('projects', 'landsByCategory'));
     }
 
     /**
