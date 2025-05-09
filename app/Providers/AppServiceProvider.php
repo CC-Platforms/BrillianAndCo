@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use App\Http\Services\BriCoreService;
+use App\Http\Services\BricoreService;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
 use App\Http\Services\LandService;
@@ -35,19 +35,19 @@ class AppServiceProvider extends ServiceProvider
 
          // Share services data with the services section
          View::composer('sections.services', function ($view) {
-            $briCoreService = app(BriCoreService::class);
+            $bricoreService = app(BricoreService::class);
             
             $view->with([
-                'specialities' => $briCoreService->getSpecialities(),
-                'coreServices' => $briCoreService->getCoreServices()
+                'specialities' => $bricoreService->getSpecialities(),
+                'coreServices' => $bricoreService->getCoreServices()
             ]);
         });
         
         View::composer('sections.stats', function ($view) {
-            $briCoreService = app(BriCoreService::class);
+            $bricoreService = app(BricoreService::class);
             
             $view->with([
-                'stats' => $briCoreService->getStats()
+                'stats' => $bricoreService->getStats()
             ]);
         });
     }
