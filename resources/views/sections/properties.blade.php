@@ -1,4 +1,10 @@
 <div class="ul-inner-page-content-wrapper ul-projects-page-content-wrapper">
+   
+   @include('sections.section-header', [
+    'title' => 'Our Projects',
+    'subtitle' => 'Find your perfect home among our exclusive property selections'
+    ])
+
     <div class="ul-inner-page-container">
         <!-- project cards grid -->
         <div class="row row-cols-md-3 row-cols-2 row-cols-xxs-1 ul-bs-row">
