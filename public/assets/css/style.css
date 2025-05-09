@@ -215,7 +215,9 @@ button {
 }
 
 .ul-inner-page-content-wrapper {
-  padding-top: clamp(60px, 6.31vw, 120px);
+  background: rgba(0, 97, 224, 0.05);
+  background-color: rgba(0, 97, 224, 0.05);
+  padding-top: clamp(40px, 6.31vw, 0px);
   padding-bottom: clamp(60px, 6.31vw, 120px);
   padding-bottom: 0;
 }
@@ -227,6 +229,37 @@ button {
 
 .wow {
   animation-duration: 1s !important;
+}
+
+/* Section Header Styles */
+.ul-section-header {
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.ul-section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 0.5rem;
+}
+
+.ul-section-divider {
+  height: 4px;
+  width: 6rem;
+  background-color: var(--ul-primary);
+  margin: 0 auto;
+  border-radius: 9999px;
+  margin-top: 0.75rem;
+}
+
+.ul-section-subtitle {
+  margin-top: 1rem;
+  color: #666666;
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @keyframes fadeInUp {

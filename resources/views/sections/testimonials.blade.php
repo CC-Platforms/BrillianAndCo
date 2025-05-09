@@ -1,5 +1,10 @@
 <!-- TESTIMONIAL SECTION START -->
+@include('sections.section-header', [
+    'title' => 'What Our Clients Say',
+    'subtitle' => 'Hear about the experiences of those who have worked with us'
+])
 <section class="ul-testimonial ul-section-spacing">
+    {{-- add a heading here too --}}
     <div class="ul-testimonial-container">
         <div class="row row-cols-lg-2 row-cols-1 gx-0 align-items-center flex-lg-row flex-column-reverse gy-5">
             <!-- img -->
@@ -12,10 +17,10 @@
             <div class="col">
                 <div class="ul-testimonial-txt wow animate__fadeInUp">
                     <div class="ul-section-heading">
-                        <div>
+                        {{-- <div>
                             <span class="ul-section-sub-title">Testimonials</span>
                             <h2 class="ul-section-title">What Our Clients Say</h2>
-                        </div>
+                        </div> --}}
                     </div>
                     <div class="ul-testimonial-slider swiper">
                         <div class="swiper-wrapper">
