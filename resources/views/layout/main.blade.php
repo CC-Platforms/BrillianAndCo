@@ -18,6 +18,7 @@
         <link rel="icon" href="{{ asset('assets/img/brillian/company_logo_circle.png') }}" type="image/x-icon">
         <!-- custom CSS -->
         <link rel="stylesheet" href="{{ asset("assets/css/style.css") }}">
+        <link rel="stylesheet" href="{{ asset("assets/css/floating-whatsapp.css") }}">
     </head>
 
     <body>
@@ -38,5 +39,7 @@
 
 
         @include('layout.partials.footer')
+        
+        @include('layout.partials.whatsapp-button')
     </body>
 </html>
