@@ -2,6 +2,7 @@
 
 @section('content')
 <main>
+
     @include('sections.home-hero')
     @include('sections.why-choose-us')
     @include('sections.services', ['showStats' => false]) 

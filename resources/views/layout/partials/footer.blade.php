@@ -55,7 +55,20 @@
                     </div>
                 </div>
             </div>
+            <!-- NEWSLETTER SUBSCRIBE SECTION -->
+            <div class="newsletter-subscribe-section py-5 px-4 rounded-4 shadow-lg mt-5 text-white" style="background-color: #000929;">
+                <h4 class="fw-bold">Subscribe to our Newsletter</h4>
+                <p class="mb-4">Subscribe to read from us in order to get more information on available assets.</p>
+                <form action="{{ route('newsletter.subscribe') }}" method="POST" class="d-flex flex-column flex-md-row gap-3 align-items-start align-items-md-center">
+                    @csrf
+                    <input type="email" name="email" class="form-control rounded-pill px-4 py-2" placeholder="Your email address..." required>
+                    <button type="submit" class="btn px-4 py-2 rounded-pill fw-semibold" style="background-color: #3058af; color: white;">Subscribe</button>
+                </form>
+            </div>
         </div>
+
+
+
     </div>
 
     <!-- footer bottom -->
