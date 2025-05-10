@@ -217,6 +217,7 @@ button {
     max-width: calc(clamp(1000px, 74.09vw, 1410px) + var(--container-space-x));
     padding-left: calc(var(--container-space-x) / 2);
     padding-right: calc(var(--container-space-x) / 2);
+    padding-bottom: 40px;
     margin: auto;
 }
 
