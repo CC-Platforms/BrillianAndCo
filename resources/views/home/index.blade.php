@@ -9,7 +9,9 @@
     @include('sections.facilities')
     @include('sections.properties')
     @include('sections.stats')
+    @include('sections.bricore-motto')
     @include('sections.testimonials')
+    @include('sections.frequently-asked-questions')
 </main>
 
 @endsection
