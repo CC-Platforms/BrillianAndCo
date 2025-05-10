@@ -339,6 +339,47 @@ button {
     border-color: var(--ul-secondary);
 }
 
+.ul-btn-buy {
+    color: var(--black);
+    border-radius: 100px;
+    border: 1px solid var(--ul-primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(12px, 1.05vw, 20px);
+    height: clamp(45px, 2.84vw, 54px);
+    padding: 0 clamp(15px, 1.26vw, 24px);
+    font-weight: 600;
+    font-size: clamp(13px, 0.84vw, 16px);
+    position: relative;
+    background-color: var(--ul-primary);
+    color: var(--white);
+    width: 30%;
+}
+
+.ul-btn-sell {
+    color: var(--white);
+    border-radius: 100px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(12px, 1.05vw, 20px);
+    height: clamp(45px, 2.84vw, 54px);
+    padding: 0 clamp(15px, 1.26vw, 24px);
+    font-weight: 600;
+    font-size: clamp(13px, 0.84vw, 16px);
+    position: relative;
+    background-color: var(--ul-secondary);
+    width: 30%;
+}
+
+.ul-btn-buy:hover, .ul-btn-sell:hover {
+    background-color: var(--ul-secondary);
+    color: var(--white);
+    border-color: var(--ul-secondary);
+}
+
+
 .ul-section-heading {
     display: flex;
     align-items: center;
@@ -1407,7 +1448,7 @@ button {
 }
 .ul-banner .bottom {
     position: absolute;
-    bottom: 0;
+    bottom: 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;

@@ -1,0 +1,73 @@
+.ul-form-section {
+    padding: 40px 20px;
+    background-color: var(--white);
+    font-family: var(--font-primary);
+}
+
+.ul-form-container {
+    max-width: 700px;
+    margin: auto;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    padding: 30px 40px;
+}
+
+.ul-form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.ul-form-group label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--ul-secondary);
+    font-size: 14px;
+}
+
+.ul-form-group label span {
+    color: red;
+}
+
+.ul-form-group input,
+.ul-form-group select,
+.ul-form-group textarea {
+    padding: 12px 14px;
+    border: 1px solid var(--ul-gray);
+    border-radius: 8px;
+    font-size: 15px;
+    color: var(--ul-black);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: inherit;
+}
+
+.ul-form-group input:focus,
+.ul-form-group select:focus,
+.ul-form-group textarea:focus {
+    border-color: var(--ul-primary);
+    box-shadow: 0 0 0 3px rgba(48, 88, 175, 0.1);
+    outline: none;
+}
+
+.ul-form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.ul-btn-primary {
+    background: var(--ul-gradient);
+    color: var(--white);
+    padding: 12px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+.ul-btn-primary:hover {
+    opacity: 0.9;
+}

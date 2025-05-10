@@ -4,8 +4,10 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\SalesController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\TeamController;
 use Illuminate\Support\Facades\Route;
@@ -34,4 +36,15 @@ Route::controller(ProjectController::class)->group(function () {
 Route::controller(TeamController::class)->group(function () {
     Route::get('/team', 'index')->name('team.index');
     Route::get('/team/{slug}', 'show')->name('team.show');
+});
+
+Route::controller(SalesController::class)->group(function() {
+    Route::get('/buyer', 'buyerIndex')->name('buyer.index');
+    Route::post('/buyer', 'buyerSend')->name('buyer.send');
+    Route::get('/seller', 'sellerIndex')->name('seller.index');
+    Route::post('/seller', 'sellerSend')->name('seller.send');
+});
+
+Route::controller(NewsletterController::class)->group(function() {
+    Route::post('/subscribe', 'subscribe')->name('newsletter.subscribe');
 });
