@@ -1,14 +1,16 @@
 <div class="col">
-    <div class="ul-team-card">
-        <div class="ul-team-card-img">
-            <img src="{{ asset($image) }}" alt="{{ $name }}">
+    <div class="ul-team-card h-100" style="display: flex; flex-direction: column;">
+        <div class="ul-team-card-img" style="height: 320px; overflow: hidden;">
+            <img src="{{ asset($image) }}" alt="{{ $name }}" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
 
-        <div class="ul-team-card-txt">
-            <h4 class="ul-team-card-title"><a href="{{ route('team.show', ['slug' => $slug]) }}">{{ $name }}</a></h4>
-            <span class="ul-team-card-subtitle">Call <a href="tel:{{ $phone }}">{{ $phone }}</a></span>
-            <div class="ul-team-card-socials">
-                <div class="ul-team-card-socials-links">
+        <div class="ul-team-card-txt" style="height: 160px; display: flex; flex-direction: column;">
+            <h4 class="ul-team-card-title" style="font-weight: 400; margin-bottom: 8px;">
+                <a href="{{ route('team.show', ['slug' => $slug]) }}">{{ $name }}</a>
+            </h4>
+            <span class="ul-team-card-position" style="font-weight: 600; color: var(--ul-gray2); margin-bottom: 12px;">{{ $position }}</span>
+            <div class="ul-team-card-socials" style="margin-top: auto;">
+                <div class="ul-team-card-socials-links" style="display: flex; gap: 12px; justify-content: center;">
                     @foreach($socialLinks as $network => $url)
                         @if($url)
                             <a href="{{ $url }}" class="" target="_blank" rel="noopener noreferrer">

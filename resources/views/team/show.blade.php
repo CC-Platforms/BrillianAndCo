@@ -31,9 +31,9 @@
                     <p class="ul-team-details-descr">{{ $teamMember['description'] }}</p>
                     <ul class="ul-team-details-infos">
                         <li class="ul-team-details-info"> <span class="key">Phone Number:</span> <a
-                                href="tel:{{ $teamMember['phone'] }}">{{ $teamMember['phone'] }}</a></li>
+                            href="tel:{{ $teamMember['phone'] }}">{{ $teamMember['phone'] }}</a></li>
                         <li class="ul-team-details-info"><span class="key">Email:</span> <a
-                                href="mailto:bricore161@gmail.com">bricore161@gmail.com</a></li>
+                                href="mailto:bricore161@gmail.com">{{ $teamMember['phone'] }}</a></li>
                         <li class="ul-team-details-info"><span class="key">Experience:</span> {{ $teamMember['experience']
                             }}</li>
                         <li class="ul-team-details-info"><span class="key">Availability:</span> {{
@@ -43,7 +43,9 @@
                     <!-- social links -->
                     <div class="ul-team-details-socials">
                         <a href="{{ $teamMember['social']['facebook'] }}"><i class="flaticon-facebook"></i></a>
-                        <a href="{{ $teamMember['social']['instagram'] }}"><i class="flaticon-instagram"></i></a>
+                        @if(isset($teamMember['social']['instagram']) && $teamMember['social']['instagram'])
+                            <a href="{{ $teamMember['social']['instagram'] }}"><i class="flaticon-instagram"></i></a>
+                        @endif
                         <a href="{{ $teamMember['social']['tiktok'] }}"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>

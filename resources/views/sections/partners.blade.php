@@ -1,34 +1,40 @@
     <!-- PARTNERS AREA START -->
-    <div class="ul-partners-area">
-        <div class="ul-container wow animate__fadeInUp">
-            <span class="ul-partners-area-title">Trusted by</span>
+    <section class="ul-section-spacing">
+        <div class="ul-container">
+            @include('sections.section-header', [
+                'title' => 'Our Trusted Partners',
+                'subtitle' => 'Working together with leading companies to deliver excellence in real estate'
+            ])
 
-            <div class="ul-partners-slider swiper">
-                <div class="swiper-wrapper align-items-center">
-                    <!-- single slide -->
-                    <div class="swiper-slide">
-                        <img src="{{ asset('assets/img/partner-1.png') }}" alt="Partner Logo 1">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="{{ asset('assets/img/partner-1.png') }}" alt="Partner Logo 2">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="{{ asset('assets/img/partner-1.png') }}" alt="Partner Logo 3">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="{{ asset('assets/img/partner-1.png') }}" alt="Partner Logo 4">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="{{ asset('assets/img/partner-1.png') }}" alt="Partner Logo 5">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="{{ asset('assets/img/partner-1.png') }}" alt="Partner Logo 6">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="{{ asset('assets/img/partner-1.png') }}" alt="Partner Logo 1 (Duplicate)">
+            <div class="ul-partners-area">
+                <div class="ul-container wow animate__fadeInUp">
+
+                    <div class="ul-partners-slider swiper">
+                        <div class="swiper-wrapper align-items-center">
+                            <!-- single slide -->
+                            <div class="swiper-slide">
+                                <img src="assets/img/company1.jpg" alt="Parter Logo">
+                            </div>
+                            <!-- single slide -->
+                            <div class="swiper-slide">
+                                <img src="assets/img/company2.jpg" alt="Parter Logo">
+                            </div>
+                            <!-- single slide -->
+                            <div class="swiper-slide">
+                                <img src="assets/img/company3.jpg" alt="Parter Logo">
+                            </div>
+                            <!-- single slide -->
+                            <div class="swiper-slide">
+                                <img src="assets/img/company4.jpg" alt="Parter Logo">
+                            </div>
+                            <!-- single slide -->
+                            {{-- <div class="swiper-slide">
+                                <img src="assets/img/company1.jpg" alt="Parter Logo">
+                            </div> --}}
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <!-- PARTNERS AREA END -->

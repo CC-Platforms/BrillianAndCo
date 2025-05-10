@@ -12,6 +12,7 @@
     @include('sections.bricore-motto')
     @include('sections.testimonials')
     @include('sections.frequently-asked-questions')
+    @include('sections.partners')
 </main>
 
 @endsection

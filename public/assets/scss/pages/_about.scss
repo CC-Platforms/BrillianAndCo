@@ -29,7 +29,7 @@
                 position: absolute;
                 background-color: var(--white);
                 font-size: clamp(45px, 3.15vw, 60px);
-                bottom: clamp(40px, 4.20vw, 80px);
+                bottom: clamp(40px, 4.2vw, 80px);
                 left: clamp(-77px, -4.05vw, -60px);
                 color: var(--ul-primary);
                 width: clamp(108px, 7.25vw, 138px);
@@ -133,7 +133,7 @@
     }
 
     &-stat {
-        width: clamp(86px, 6.10vw, 116px);
+        width: clamp(86px, 6.1vw, 116px);
         aspect-ratio: 1/1;
         border: 1px solid var(--white);
         border-radius: 50%;
@@ -174,7 +174,7 @@
 //  Team section styles
 .ul-team {
     position: relative;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 67%, #F2F7FD 0%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 67%, #f2f7fd 0%);
 
     &-slider {
         padding: 40px 29px;
@@ -193,6 +193,9 @@
 
     &-card {
         position: relative;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
 
         &:hover {
             .ul-team-card-socials-links {
@@ -204,10 +207,13 @@
         &-img {
             border-radius: 16px;
             overflow: hidden;
+            flex: 0 0 auto;
+            height: 320px;
 
             img {
                 width: 100%;
-                aspect-ratio: 370/375;
+                height: 100%;
+                object-fit: cover;
             }
         }
 
@@ -219,8 +225,10 @@
             margin-top: clamp(-44px, -2.31vw, -34px);
             border-radius: 16px;
             box-shadow: 0 4px 25px rgba(0, 0, 0, 0.06);
-            padding: 0 clamp(12px, 1.26vw, 24px);
-            padding-bottom: clamp(12px, 1.26vw, 24px);
+            padding: clamp(12px, 1.26vw, 24px);
+            height: 160px;
+            display: flex;
+            flex-direction: column;
 
             &::before {
                 content: "";
@@ -236,76 +244,61 @@
             }
         }
 
-        &-socials {
-            position: absolute;
-            right: clamp(17px, 1.05vw, 20px);
-            top: clamp(-43px, -2.26vw, -23px);
-
-            &-icon {
-                background-color: var(--ul-primary);
-                width: clamp(30px, 1.89vw, 36px);
-                aspect-ratio: 1/1;
-                border-radius: 999px;
-                color: var(--white);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: clamp(12px, 0.79vw, 15px);
-            }
-
-            &-links {
-                display: flex;
-                flex-direction: column;
-                gap: clamp(5px, 0.42vw, 8px);
-                position: absolute;
-                z-index: -2;
-                font-size: clamp(11px, 0.74vw, 14px);
-                opacity: 0;
-                transition: 0.2s linear;
-                bottom: calc(100% + 8px);
-                transform: translateY(40%);
-
-                a {
-                    background-color: var(--white);
-                    width: clamp(30px, 1.89vw, 36px);
-                    aspect-ratio: 1/1;
-                    border-radius: 999px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    color: var(--ul-secondary);
-
-                    &:hover {
-                        color: var(--white);
-                        background-color: var(--ul-secondary);
-                    }
-                }
-            }
-        }
-
         &-title {
-            font-weight: 600;
             font-size: clamp(18px, 1.16vw, 22px);
-        }
-
-        &-subtitle {
-            color: var(--ul-gray2);
-            font-size: clamp(13px, 0.84vw, 16px);
-            font-weight: 500;
+            font-weight: 400;
+            margin-bottom: 8px;
 
             a {
-                font-weight: 400;
-                color: var(--ul-gray2);
+                color: var(--ul-secondary);
+                text-decoration: none;
+                font-weight: inherit;
 
                 &:hover {
                     color: var(--ul-primary);
                 }
             }
         }
+
+        &-position {
+            font-size: clamp(14px, 0.84vw, 16px);
+            color: var(--ul-gray2);
+            margin-bottom: 12px;
+            display: block;
+            font-weight: 600;
+        }
+
+        &-socials {
+            margin-top: auto;
+
+            &-links {
+                display: flex;
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                a {
+                    width: 36px;
+                    height: 36px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: var(--ul-secondary);
+                    color: #fff;
+                    border-radius: 50%;
+                    font-size: 16px;
+                    transition: all 0.3s ease;
+
+                    &:hover {
+                        background-color: var(--ul-primary);
+                    }
+                }
+            }
+        }
     }
 
     &-vectors {
-        >* {
+        > * {
             position: absolute;
 
             &:first-child {
@@ -324,7 +317,6 @@
         }
     }
 }
-
 
 // testimonial
 .ul-inner-testimonial {
@@ -345,7 +337,7 @@
         align-items: center;
         gap: clamp(4px, 0.37vw, 7px);
         font-size: var(--ul-primary);
-        color: #FFA31A;
+        color: #ffa31a;
         margin-bottom: clamp(10px, 1.05vw, 20px);
         font-size: clamp(15px, 1.05vw, 20px);
     }
@@ -409,7 +401,6 @@
     }
 }
 
-
 // features section styles
 .ul-features {
     background: url(../img/features-bg.jpg) no-repeat center center;
@@ -448,7 +439,7 @@
     &-content {
         background: var(--ul-primary);
         border-radius: clamp(15px, 1.58vw, 30px);
-        padding: clamp(15px, 4.20vw, 80px);
+        padding: clamp(15px, 4.2vw, 80px);
     }
 
     &-slider-pagination {
@@ -470,7 +461,7 @@
 .ul-feature {
     border: 1px solid var(--white);
     border-radius: 20px;
-    padding: clamp(20px, 2.10vw, 40px);
+    padding: clamp(20px, 2.1vw, 40px);
     text-align: center;
     color: var(--white);
 

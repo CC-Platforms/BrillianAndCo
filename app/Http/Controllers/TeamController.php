@@ -11,12 +11,10 @@ class TeamController extends Controller
     private $teamMembers = [
         [
             'id' => 1,
-            'name' => 'Pah Brillian Beng', // You might replace these with more local names if preferred
+            'name' => 'Pah Brillian Beng',             
             'slug' => 'pah-brillian-beng',
-            'position' => 'Chief Executive Officer',
-            'phone' => '+237 652383694', 
-            'email' => 'john@example.com',
-            'website' => 'https://johndoe.com',
+            'position' => 'CEO , BRICORE',
+            'email' => 'bricore161@gmail.com',
             'experience' => '8 Years',
             'availability' => 'Full Time',
             'description' => 'Pah Brillian Beng is a seasoned real estate agent with extensive experience in residential and commercial properties in Buea and Limbe.',
@@ -30,35 +28,33 @@ class TeamController extends Controller
             'skills' => [
                 ['title' => 'Property Negotiation', 'value' => 85],
                 ['title' => 'Client Relations', 'value' => 90],
-                ['title' => 'Market Analysis (SW Region)', 'value' => 75], // Added specificity
+                ['title' => 'Market Analysis (SW Region)', 'value' => 75],
                 ['title' => 'Contract Drafting', 'value' => 80]
             ]
         ],
-        // [
-        //     'id' => 2,
-        //     'name' => 'Jane Smith', // You might replace these with more local names if preferred
-        //     'slug' => 'jane-smith',
-        //     'position' => 'Property Manager',
-        //     'phone' => '+237652383695', // Cameroon phone format
-        //     'email' => 'jane@example.com',
-        //     'website' => 'https://janesmith.com',
-        //     'experience' => '10 Years',
-        //     'availability' => 'Part Time',
-        //     'description' => 'Jane oversees property operations ensuring tenant satisfaction and property maintenance across Douala and Yaoundé portfolios.', // Added city context
-        //     'image' => 'assets/img/team-2.jpg',
-        //     'social' => [
-        //         'facebook' => '#',
-        //         'twitter' => '#',
-        //         'linkedin' => '#',
-        //         'instagram' => '#'
-        //     ],
-        //     'skills' => [
-        //         ['title' => 'Maintenance Coordination', 'value' => 88],
-        //         ['title' => 'Budget Management', 'value' => 82],
-        //         ['title' => 'Conflict Resolution', 'value' => 80],
-        //         ['title' => 'Team Leadership', 'value' => 85]
-        //     ]
-        // ],
+        [
+            'id' => 2,
+            'name' => 'Aporeke Chekore Marie',
+            'slug' => 'aporeke-chekore-marie',
+            'position' => 'Secretary, BRICORE',
+            'phone' => '+237 681239513', 
+            'email' => 'aporekemariechekore@gmail.com',
+            'experience' => '5 Years',
+            'availability' => 'Part Time',
+            'description' => 'Marie oversees property operations ensuring tenant satisfaction and property maintenance across Douala and Yaoundé portfolios.', // Added city context
+            'image' => 'assets/img/secretary.jpg',
+            'social' => [
+                'facebook' => 'https://www.facebook.com/share/1JDa33kfks/?mibextid=wwXIfr',
+                'tiktok' => 'https://snapchat.com/t/hvnLLTI1',
+                'linkedin' => 'https://cm.linkedin.com/in/pah-brillian-beng-a3908b1a6',
+            ],
+            'skills' => [
+                ['title' => 'Maintenance Coordination', 'value' => 88],
+                ['title' => 'Budget Management', 'value' => 82],
+                ['title' => 'Conflict Resolution', 'value' => 80],
+                ['title' => 'Team Leadership', 'value' => 85]
+            ]
+        ],
         // // --- Added Team Members Start ---
         // [
         //     'id' => 3,
