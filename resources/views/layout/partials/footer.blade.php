@@ -74,7 +74,7 @@
     <!-- footer bottom -->
     <div class="ul-footer-bottom col">
         <p class="copyright-txt">&copy;{{ date('Y') }} Brillian and Co Real Estate. All rights reserved</p>
-        <p class="copyright-txt">Designed by CC Platforms</p>
+        <p class="copyright-txt">Designed by <a href="https://cyrixtechsolutions.com">Cyrix Tech Solutions</a></p>
     </div>
 
     <!-- vector -->

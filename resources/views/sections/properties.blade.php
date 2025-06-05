@@ -38,11 +38,6 @@
                                 <span class="icon"><i class="flaticon-bath"></i></span>
                                 <span class="text">{{ $project['bathrooms'] }} Bathrooms</span>
                             </div>
-                            <!-- single info -->
-                            {{-- <div class="ul-project-info">
-                                <span class="icon"><i class="flaticon-scale"></i></span>
-                                <span class="text">{{ $project['area'] }}</span>
-                            </div> --}}
                         </div>
                     </div>
                 </div>
@@ -69,28 +64,32 @@
                 </div>
                 <div class="ul-2-properties-wrapper">
                     @foreach($landsByCategory['Fast Selling Lands'] as $land)
-                    <!-- single property -->
-                    <div class="ul-2-property wow animate__fadeInUp">
+                    <!-- single property with updated structure -->
+                    <div class="ul-2-property-card wow animate__fadeInUp">
                         <div class="ul-2-property-img">
-                            <img src="{{ $land['image'] }}" alt="{{ $land['title'] }}">
-                        </div>
-                        <div class="ul-2-property-txt">
-                            <div class="left">
-                                <h3 class="ul-2-property-title"><a href="#">{{ $land['title'] }}</a></h3>
-                                <p class="ul-2-property-location">{{ $land['location'] }}</p>
-                                <div class="ul-project-infos ul-featured-property-infos justify-content-start">
-                                    <!-- single info -->
-                                    <div class="ul-project-info">
-                                        <span class="icon"><i class="flaticon-scale"></i></span>
-                                        <span class="text">{{ $land['area'] }}</span>
-                                    </div>
+                            <img src="{{ $land['image'] }}" alt="{{ $land['title'] }}" data-bs-toggle="modal" data-bs-target="#imageModal" 
+                             onclick="setModalImage('{{ $land['image'] }}', '{{ $land['title'] }}')">
+                            <div class="image-overlay">
+                                <div class="preview-icon">
+                                    <i class="fas fa-expand"></i>
                                 </div>
                             </div>
-
-                            <div class="right">
-                                <div class="ul-2-property-price">
-                                    <span class="title">Price</span>
-                                    <span class="number">{{ $land['price'] }}</span>
+                        </div>
+                        <div class="ul-2-property-content">
+                            <div class="ul-2-property-header">
+                                <div class="ul-2-property-main-info">
+                                    <h3 class="ul-2-property-title"><a href="#">{{ $land['title'] }}</a></h3>
+                                    <p class="ul-2-property-location">{{ $land['location'] }}</p>
+                                </div>
+                                <div class="ul-2-property-price-section">
+                                    <span class="price-label">Price</span>
+                                    <span class="price-value">{{ $land['price'] }}</span>
+                                </div>
+                            </div>
+                            <div class="ul-2-property-details">
+                                <div class="ul-property-detail-item">
+                                    <span class="icon"><i class="flaticon-scale"></i></span>
+                                    <span class="text">{{ $land['area'] }}</span>
                                 </div>
                             </div>
                         </div>
@@ -106,29 +105,26 @@
                 </div>
                 <div class="ul-2-properties-wrapper">
                     @foreach($landsByCategory['Developed Lands'] as $land)
-                    <!-- single property -->
-                    <div class="ul-2-property wow animate__fadeInUp">
+                    <!-- single property with updated structure -->
+                    <div class="ul-2-property-card wow animate__fadeInUp">
                         <div class="ul-2-property-img">
-                            <img src="{{ $land['image'] }}" alt="{{ $land['title'] }}">
+                            <img src="{{ $land['image'] }}" alt="{{ $land['title'] }}" data-bs-toggle="modal" data-bs-target="#imageModal" 
+                             onclick="setModalImage('{{ $land['image'] }}', '{{ $land['title'] }}')">
                         </div>
-                        <div class="ul-2-property-txt">
-                            <div class="left">
+                        <div class="ul-2-property-content">
+                            <div class="ul-2-property-main-info">
                                 <h3 class="ul-2-property-title"><a href="#">{{ $land['title'] }}</a></h3>
                                 <p class="ul-2-property-location">{{ $land['location'] }}</p>
-                                <div class="ul-project-infos ul-featured-property-infos justify-content-start">
-                                    <!-- single info -->
-                                    <div class="ul-project-info">
+                                <div class="ul-2-property-details">
+                                    <div class="ul-property-detail-item">
                                         <span class="icon"><i class="flaticon-scale"></i></span>
                                         <span class="text">{{ $land['area'] }}</span>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="right">
-                                <div class="ul-2-property-price">
-                                    <span class="title">Price</span>
-                                    <span class="number">{{ $land['price'] }}</span>
-                                </div>
+                            <div class="ul-2-property-price-section">
+                                <span class="price-label">Price</span>
+                                <span class="price-value">{{ $land['price'] }}</span>
                             </div>
                         </div>
                     </div>
@@ -143,28 +139,67 @@
                 </div>
                 <div class="ul-2-properties-wrapper">
                     @foreach($landsByCategory['Fast Developing Lands'] as $land)
-                    <!-- single property -->
-                    <div class="ul-2-property wow animate__fadeInUp">
+                    <!-- single property with updated structure -->
+                    <div class="ul-2-property-card wow animate__fadeInUp">
                         <div class="ul-2-property-img">
-                            <img src="{{ $land['image'] }}" alt="{{ $land['title'] }}">
+                            <img src="{{ $land['image'] }}" alt="{{ $land['title'] }}" data-bs-toggle="modal" data-bs-target="#imageModal" 
+                             onclick="setModalImage('{{ $land['image'] }}', '{{ $land['title'] }}')">
                         </div>
-                        <div class="ul-2-property-txt">
-                            <div class="left">
+                        <div class="ul-2-property-content">
+                            <div class="ul-2-property-main-info">
                                 <h3 class="ul-2-property-title"><a href="#">{{ $land['title'] }}</a></h3>
                                 <p class="ul-2-property-location">{{ $land['location'] }}</p>
-                                <div class="ul-project-infos ul-featured-property-infos justify-content-start">
-                                    <!-- single info -->
-                                    <div class="ul-project-info">
+                                <div class="ul-2-property-details">
+                                    <div class="ul-property-detail-item">
                                         <span class="icon"><i class="flaticon-scale"></i></span>
                                         <span class="text">{{ $land['area'] }}</span>
                                     </div>
                                 </div>
                             </div>
+                            <div class="ul-2-property-price-section">
+                                <span class="price-label">Price</span>
+                                <span class="price-value">{{ $land['price'] }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+                @endif
 
-                            <div class="right">
-                                <div class="ul-2-property-price">
-                                    <span class="title">Price</span>
-                                    <span class="number">{{ $land['price'] }}</span>
+
+                <!-- Architecture -->
+                @if(isset($landsByCategory['Architecture']))
+                <div class="ul-land-category-heading wow animate__fadeInUp">
+                    <h3>Architecture</h3>
+                </div>
+                <div class="ul-2-properties-wrapper">
+                    @foreach($landsByCategory['Architecture'] as $land)
+                    <!-- single property with updated structure -->
+                    <div class="ul-2-property-card wow animate__fadeInUp">
+                        <div class="ul-2-property-img">
+                            <img src="{{ $land['image'] }}" alt="{{ $land['title'] }}" data-bs-toggle="modal" data-bs-target="#imageModal" 
+                             onclick="setModalImage('{{ $land['image'] }}', '{{ $land['title'] }}')">
+                            <div class="image-overlay">
+                                <div class="preview-icon">
+                                    <i class="fas fa-expand"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ul-2-property-content">
+                            <div class="ul-2-property-header">
+                                <div class="ul-2-property-main-info">
+                                    <h3 class="ul-2-property-title"><a href="#">{{ $land['title'] }}</a></h3>
+                                    <p class="ul-2-property-location">{{ $land['location'] }}</p>
+                                </div>
+                                <div class="ul-2-property-price-section">
+                                    <span class="price-label">Price</span>
+                                    <span class="price-value">{{ $land['price'] }}</span>
+                                </div>
+                            </div>
+                            <div class="ul-2-property-details">
+                                <div class="ul-property-detail-item">
+                                    <span class="icon"><i class="flaticon-scale"></i></span>
+                                    <span class="text">{{ $land['area'] }}</span>
                                 </div>
                             </div>
                         </div>
@@ -172,8 +207,33 @@
                     @endforeach
                 </div>
                 @endif
+
+
             </div>
         </section>
         <!-- LAND PROPERTIES SECTION END -->
     </div>
 </div>
+
+<!-- Bootstrap Modal for Image Preview -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <h5 class="modal-title" id="imageModalLabel">Property Image</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-0">
+                <img id="modalImage" src="" alt="" class="img-fluid w-100">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Simple function to set modal image and title
+    function setModalImage(imageSrc, title) {
+        document.getElementById('modalImage').src = imageSrc;
+        document.getElementById('imageModalLabel').textContent = title;
+    }
+</script>

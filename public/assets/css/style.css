@@ -2122,6 +2122,7 @@ button {
     z-index: 1;
     overflow: hidden;
 }
+
 .ul-properties-tab-navs {
     background-color: #f0effb;
     border: 1px solid #e0def7;
@@ -2133,6 +2134,7 @@ button {
     display: flex;
     margin-bottom: clamp(30px, 3.15vw, 60px);
 }
+
 .ul-properties-tab-navs button {
     border-radius: 999px;
     padding: 0 clamp(15px, 1.16vw, 22px);
@@ -2143,111 +2145,255 @@ button {
     gap: clamp(5px, 0.42vw, 8px);
     border: 2px solid transparent;
 }
+
 .ul-properties-tab-navs button:hover {
     color: var(--ul-primary);
 }
+
 .ul-properties-tab-navs button.active {
     background-color: var(--white);
     border: 2px solid #e0def7;
 }
+
 .ul-properties .ul-tab {
     height: 0;
     overflow: hidden;
 }
+
 .ul-properties .ul-tab.active {
     height: auto;
 }
+
 .ul-properties-btn {
     background-color: var(--ul-secondary);
     border-color: var(--ul-secondary);
     margin-top: clamp(15px, 2.1vw, 40px);
 }
+
 .ul-properties-btn:hover {
     background-color: var(--ul-primary);
     border-color: var(--ul-primary);
 }
 
-.ul-2-property {
+/* Updated Property Card Styles */
+.ul-2-property-card {
     position: relative;
     z-index: 1;
-    margin-bottom: clamp(20px, 2.1vw, 40px);
-}
-.ul-2-property:hover .ul-2-property-img img {
-    transform: scale(1.05);
-}
-.ul-2-property-img {
-    border-radius: clamp(15px, 1.31vw, 25px);
+    margin-bottom: clamp(25px, 2.5vw, 40px);
+    background: #ffffff;
+    border-radius: 16px;
     overflow: hidden;
-    position: relative;
-    z-index: 1;
-}
-.ul-2-property-img::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(17, 17, 17, 0) 0%, #111111 100%);
-    z-index: 1;
-}
-.ul-2-property-img img {
-    width: 100%;
-    aspect-ratio: 1170/620;
-    object-fit: cover;
-}
-@media screen and (max-width: 479px) {
-    .ul-2-property-img img {
-        aspect-ratio: 1/1;
-    }
-}
-.ul-2-property-txt {
-    position: absolute;
-    inset: clamp(32px, 3.36vw, 64px) clamp(20px, 5.25vw, 100px);
-    top: auto;
-    z-index: 1;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 20px;
-    color: var(--white);
-}
-@media screen and (max-width: 479px) {
-    .ul-2-property-txt {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-}
-.ul-2-property-title {
-    font-weight: 700;
-    font-size: clamp(24px, 1.68vw, 32px);
-    margin-bottom: clamp(6px, 0.53vw, 10px);
-}
-.ul-2-property-title a {
-    color: var(--white);
-}
-.ul-2-property-title a:hover {
-    color: var(--ul-primary);
-}
-.ul-2-property-location {
-    font-size: clamp(14px, 0.89vw, 17px);
-    color: rgba(255, 255, 255, 0.5);
-    margin-bottom: clamp(12px, 1.1vw, 21px);
-}
-.ul-2-property .ul-project-info {
-    color: var(--white);
-}
-.ul-2-property-price .title {
-    font-weight: 700;
-    font-size: clamp(12px, 1.26vw, 24px);
-    display: block;
-    margin-bottom: clamp(5px, 0.42vw, 8px);
-}
-.ul-2-property-price .number {
-    display: block;
-    color: var(--ul-primary);
-    font-size: clamp(24px, 2.52vw, 48px);
-    font-weight: 800;
-    line-height: 1;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid #f0f0f0;
 }
 
+.ul-2-property-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    border-color: #e0e0e0;
+}
+
+.ul-2-property-card:hover .ul-2-property-img img {
+    transform: scale(1.03);
+}
+
+.ul-2-property-img {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 240px;
+}
+
+.ul-2-property-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.ul-2-property-content {
+    padding: 24px;
+}
+
+.ul-2-property-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    gap: 16px;
+}
+
+.ul-2-property-main-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.ul-2-property-title {
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 8px;
+    line-height: 1.3;
+    color: #1a1a1a;
+}
+
+.ul-2-property-title a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.ul-2-property-title a:hover {
+    color: #4f46e5;
+}
+
+.ul-2-property-location {
+    font-size: 15px;
+    color: #6b7280;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.ul-2-property-location::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="%236b7280" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>') no-repeat center;
+    background-size: contain;
+    flex-shrink: 0;
+}
+
+.ul-2-property-price-section {
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.price-label {
+    display: block;
+    font-size: 12px;
+    color: #9ca3af;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+}
+
+.price-value {
+    display: block;
+    color: #4f46e5;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.ul-2-property-details {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding-top: 16px;
+    border-top: 1px solid #f3f4f6;
+}
+
+.ul-property-detail-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background: #f8fafc;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #4b5563;
+    font-weight: 500;
+}
+
+.ul-property-detail-item .icon {
+    color: #4f46e5;
+    font-size: 14px;
+}
+
+/* Mobile responsive adjustments */
+@media screen and (max-width: 768px) {
+    .ul-2-property-header {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .ul-2-property-price-section {
+        text-align: left;
+        width: 100%;
+    }
+    
+    .ul-2-property-content {
+        padding: 20px;
+    }
+    
+    .ul-2-property-img {
+        height: 200px;
+    }
+    
+    .price-value {
+        font-size: 20px;
+    }
+}
+
+/* Category Headings */
+.ul-land-category-heading {
+    margin: clamp(40px, 4.2vw, 80px) 0 clamp(20px, 2.1vw, 40px) 0;
+}
+
+.ul-land-category-heading h3 {
+    font-size: clamp(24px, 2.1vw, 36px);
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 10px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.ul-land-category-heading h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--ul-primary, #007bff);
+    border-radius: 2px;
+}
+
+/* Properties Wrapper */
+.ul-2-properties-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: clamp(20px, 2.1vw, 40px);
+}
+
+@media screen and (max-width: 768px) {
+    .ul-2-properties-wrapper {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .ul-2-properties-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .ul-2-property-card {
+        margin-bottom: 20px;
+    }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 576px) {
+    .ul-2-properties-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
 .ul-stats {
     max-width: 1920px;
     margin: auto;
