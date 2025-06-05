@@ -15,14 +15,14 @@ class ProjectService
             [
                 'id' => 1,
                 'slug' => 'molyko-residence',
-                'image' => 'assets/img/brillia1.jpg',
+                'image' => 'assets/img/brillian/properties_2/brown_building_projects.jpg',
                 'images' => [
-                    'assets/img/brillia1.jpg',
-                    'assets/img/brillia1.jpg',
-                    'assets/img/brillia1.jpg'
+                    'assets/img/brillian/properties_2/brown_building_1.jpg',
+                    'assets/img/brillian/properties_2/brown_apart_1.jpg',
+                    'assets/img/brillian/properties_2/brown_apart_2.jpg'
                 ],
-                'tag' => 'Featured',
-                'price' => '60,000 XAF',
+                'tag' => 'New',
+                'price' => '60k-90k XAF',
                 'period' => 'Month',
                 'title' => 'Molyko Residence',
                 'location' => 'Molyko, Buea, Cameroon',
@@ -32,18 +32,18 @@ class ProjectService
             ],
             [
                 'id' => 2,
-                'slug' => 'petit-paris-apartments',
-                'image' => 'assets/img/brillia15.jpg',
+                'slug' => 'molyko-apartments',
+                'image' => 'assets/img/brillian/properties_2/brown_building_1.jpg',
                 'images' => [
-                    'assets/img/brillia15.jpg',
-                    'assets/img/brillia16.jpg',
-                    'assets/img/brillia15.jpg'
+                    'assets/img/brillian/properties_2/black_white_apart_1.jpg',
+                    'assets/img/brillian/properties_2/brown_building_projects.jpg',
+                    'assets/img/brillian/properties_2/black_white_apart_1.jpg'
                 ],
                 'tag' => 'New',
-                'price' => '85,000 XAF',
+                'price' => '100,000 XAF',
                 'period' => 'Month',
-                'title' => 'Petit Paris Apartments',
-                'location' => 'Petit Paris, Buea, Cameroon',
+                'title' => 'Molyko Apartments',
+                'location' => 'Molyko, Buea, Cameroon',
                 'beds' => 2,
                 'bathrooms' => 2,
                 'description' => 'Petit Paris Apartments offer stylish urban living in one of Buea\'s most vibrant neighborhoods. These newly constructed units feature contemporary designs with quality finishes, including ceramic tile flooring and modern fixtures. Residents enjoy 24-hour security, communal gardens, and a convenient location close to shops, cafes, and entertainment options. The apartments include air conditioning, built-in wardrobes, and balconies with city views, providing a perfect blend of comfort and convenience for young professionals and small families.'
@@ -51,14 +51,14 @@ class ProjectService
             [
                 'id' => 3,
                 'slug' => 'mile-17-estate',
-                'image' => 'assets/img/brillia7.jpg',
+                'image' => 'assets/img/brillian/properties_2/white_apart_brown_door.jpg',
                 'images' => [
-                    'assets/img/brillia7.jpg',
-                    'assets/img/brillia7.jpg',
-                    'assets/img/brillia7.jpg'
+                    'assets/img/brillian/properties_2/white_apart_brown_door_2.jpg',
+                    'assets/img/brillian/properties_2/kitchen_brown.jpg',
+                    'assets/img/brillian/properties_2/toilet_brown.jpg'
                 ],
-                'tag' => 'Popular',
-                'price' => '90,000 XAF',
+                'tag' => 'New',
+                'price' => '40,000 XAF',
                 'period' => 'Month',
                 'title' => 'Mile 17 Estate',
                 'location' => 'Mile 17, Buea, Cameroon',
@@ -68,18 +68,19 @@ class ProjectService
             ],
             [
                 'id' => 4,
-                'slug' => 'bomaka-heights',
-                'image' => 'assets/img/brillia5.jpg',
+                'slug' => 'molyko-heights',
+                'image' => 'assets/img/brillian/properties_2/white_brown_building.jpg',
                 'images' => [
-                    'assets/img/brillia5.jpg',
-                    'assets/img/brillia5.jpg',
-                    'assets/img/brillia5.jpg'
+                    'assets/img/brillian/properties_2/marble_room_1.jpg',
+                    'assets/img/brillian/properties_2/marble_room_2.jpg',
+                    'assets/img/brillian/properties_2/marble_room_3.jpg',
+                    'assets/img/brillian/properties_2/marble_room_4.jpg',
                 ],
-                'tag' => 'Luxury',
+                'tag' => 'New',
                 'price' => '80,000 XAF',
-                'period' => 'Month',
-                'title' => 'Bomaka Heights',
-                'location' => 'Bomaka, Buea, Cameroon',
+                'period' => 'Month Heights',
+                'title' => 'Molyko ',
+                'location' => 'Molyko, Buea, Cameroon',
                 'beds' => 3,
                 'bathrooms' => 2,
                 'description' => 'Bomaka Heights offers premium apartments in one of Buea\'s most sought-after neighborhoods. These thoughtfully designed units feature high-quality finishes, including granite countertops, hardwood floors, and custom cabinetry. The complex includes amenities such as a backup generator, water storage systems, and private parking. The elevated location provides spectacular views of Mount Cameroon and the surrounding landscape. With excellent security and proximity to major shopping centers, schools, and healthcare facilities, Bomaka Heights represents luxury living at its finest in Southwest Cameroon.'
@@ -87,7 +88,7 @@ class ProjectService
             [
                 'id' => 5,
                 'slug' => 'mount-view-residence',
-                'image' => 'assets/img/brillia4.jpg',
+                'image' => 'assets\img\brillian\properties_2\marble_room_3.jpg',
                 'images' => [
                     'assets/img/brillia4.jpg',
                     'assets/img/brillia4.jpg',

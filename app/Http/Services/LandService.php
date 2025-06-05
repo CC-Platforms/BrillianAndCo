@@ -15,34 +15,34 @@ class LandService
             [
                 'id' => 1,
                 'slug' => 'fast-selling-land-1',
-                'image' => 'assets/img/land1.jpg',
+                'image' => 'assets/img/brillian/properties_2/camsic_land.jpg',
                 'images' => [
-                    'assets/img/land1.jpg',
-                    'assets/img/land1.jpg',
-                    'assets/img/land1.jpg'
+                    'assets/img/brillian/properties_2/camsic_land.jpg',
+                    'assets/img/brillian/properties_2/camsic_land.jpg',
+                    'assets/img/brillian/properties_2/camsic_land.jpg'
                 ],
                 'tag' => 'Featured',
-                'price' => '4,000,000 XAF',
+                'price' => '8,500,000 XAF',
                 'title' => 'Prime Land Plot A-1',
-                'location' => 'Bokwango, Buea, Cameroon',
-                'area' => '600 m² (10m x 40m)',
+                'location' => 'Casmic, Buea, Cameroon',
+                'area' => '400 m²',
                 'category' => 'Fast Selling Lands',
                 'description' => 'Prime investment opportunity in the rapidly developing Mile 16 area of Buea. This land offers excellent potential for both residential and commercial development with its strategic location near major roads and utilities. The relatively flat terrain makes construction straightforward, while its elevated position provides beautiful views. Perfect for land banking with significant appreciation potential.'
             ],
             [
                 'id' => 2,
                 'slug' => 'fast-selling-land-2',
-                'image' => 'assets/img/land2.jpg',
+                'image' => 'assets/img/brillian/properties_2/prime_land.jpg',
                 'images' => [
-                    'assets/img/land2.jpg',
-                    'assets/img/land2.jpg',
-                    'assets/img/land2.jpg'
+                    'assets/img/brillian/properties_2/prime_land.jpg',
+                    'assets/img/brillian/properties_2/prime_land.jpg',
+                    'assets/img/brillian/properties_2/prime_land.jpg'
                 ],
                 'tag' => 'New',
-                'price' => '1,500,000 XAF',
-                'title' => 'Premium Land Plot B-2',
-                'location' => 'Mile 16, Buea, Cameroon',
-                'area' => '500 m²',
+                'price' => '15,000,000 XAF',
+                'title' => 'Prime Land Plot B-2',
+                'location' => 'Molyko New Layout, Buea',
+                'area' => '400 m²',
                 'category' => 'Fast Selling Lands',
                 'description' => 'Exclusive land parcel in the prestigious Bokwango area, perfect for land banking. This investment opportunity features a gently sloping terrain with excellent natural drainage and mountain views. The land is situated in a rapidly appreciating area with nearby developments increasing property values. Secure your future with this strategic investment in one of Buea\'s most promising locations.'
             ],
@@ -96,6 +96,40 @@ class LandService
                 'area' => '520 m²',
                 'category' => 'Fast Developing Lands',
                 'description' => 'Premium land in the emerging Tole region, poised for significant development. This property is part of an area designated for expansion with planned infrastructure improvements in the near future. The cooler climate and scenic environment make it attractive for residential development. Forward-thinking investors will recognize the potential as this area transforms into one of Buea\'s most desirable locations in the coming years.'
+            ],
+            [
+                'id' => 6,
+                'slug' => 'architectural-land-1',
+                'image' => 'assets/img/brillian/properties_2/architecture_1.jpg',
+                'images' => [
+                    'assets/img/brillian/properties_2/architecture_1.jpg',
+                    'assets/img/brillian/properties_2/architecture_1.jpg',
+                    'assets/img/brillian/properties_2/architecture_1.jpg'
+                ],
+                'tag' => 'Architectural',
+                'price' => '12,000,000 XAF',
+                'title' => 'Modern Villa Plot F-6',
+                'location' => 'Government Layout, Buea, Cameroon',
+                'area' => '800 m² (20m x 40m)',
+                'category' => 'Architecture',
+                'description' => 'Exclusive architectural plot designed for luxury villa construction in the prestigious Government Layout area. This prime location features approved architectural plans for a modern 4-bedroom villa with contemporary design elements. The plot includes detailed foundation work, architectural drawings, and building permits. Perfect for discerning buyers seeking a turnkey solution for luxury residential development in one of Buea\'s most exclusive neighborhoods.'
+            ],
+            [
+                'id' => 7,
+                'slug' => 'architectural-land-2',
+                'image' => 'assets/img/brillian/properties_2/architecture_2.jpg',
+                'images' => [
+                    'assets/img/brillian/properties_2/architecture_1.jpg',
+                    'assets/img/brillian/properties_2/architecture_1.jpg',
+                    'assets/img/brillian/properties_2/architecture_1.jpg'
+                ],
+                'tag' => 'Design Ready',
+                'price' => '15,500,000 XAF',
+                'title' => 'Contemporary Estate Plot G-7',
+                'location' => 'Mile 17 Lysoka, Buea, Cameroon',
+                'area' => '1,000 m² (25m x 40m)',
+                'category' => 'Architecture',
+                'description' => 'Spectacular estate plot with contemporary architectural designs for a luxury family compound. Features approved plans for a main residence, guest quarters, and recreational facilities. The architectural design incorporates sustainable building practices, natural lighting optimization, and panoramic mountain views. This exceptional property includes landscape architecture plans and is situated in an exclusive gated community with 24/7 security and premium amenities.'
             ],
         ];
     }

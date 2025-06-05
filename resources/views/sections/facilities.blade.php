@@ -46,13 +46,13 @@
                             </div>
                             <div class="ul-facilities-img-slider swiper">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide"><img src="{{ asset('assets/img/brillian/properties_2/apart_white_1.jpg') }}" alt="Facility Image">
+                                    <div class="swiper-slide"><img src="{{ asset('assets\img\brillian\properties_2\marble_room_3.jpg') }}" alt="Facility Image">
                                     </div>
-                                    <div class="swiper-slide"><img src="{{ asset('assets/img/brillian/properties_2/apart_white_2.jpg') }}" alt="Facility Image">
+                                    <div class="swiper-slide"><img src="{{ asset('assets\img\brillian\properties_2\apart_white_2.jpg') }}" alt="Facility Image">
                                     </div>
-                                    <div class="swiper-slide"><img src="{{ asset('assets/img/brillian/properties/IMG-20250503-WA0126.jpg') }}" alt="Facility Image">
+                                    <div class="swiper-slide"><img src="{{ asset('assets\img\brillian\properties_2\brown_apart_1.jpg') }}" alt="Facility Image">
                                     </div>
-                                    <div class="swiper-slide"><img src="{{ asset('assets/img/brillian/properties/IMG-20250503-WA0128.jpg') }}" alt="Facility Image">
+                                    <div class="swiper-slide"><img src="{{ asset('assets\img\brillian\properties_2\white_apart_brown_door.jpg') }}" alt="Facility Image">
                                     </div>
                                 </div>
                             </div>
