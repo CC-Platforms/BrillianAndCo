@@ -53,30 +53,57 @@ class BricoreService
         return [
             [
                 'id' => 1,
-                'slug' => 'property-sales-purchase',
+                'slug' => 'sales-purchase-lands',
                 'icon' => 'flaticon-buildings',
-                'title' => 'Property Sales & Purchase',
-                'description' => 'From finding your dream home to closing the deal, our experienced team guides you through every step of buying or selling property.',
+                'title' => 'Sales and Purchase of Lands',
+                'description' => 'Specialized in land transactions, we help you find, evaluate, and acquire prime land parcels for residential, commercial, or investment purposes.',
                 'button_text' => 'Learn More',
-                'full_description' => 'At Brillian And Co Real Estate, our Property Sales & Purchase service is designed to make your real estate transactions seamless and successful. Our dedicated team of professionals will assist you through every stage of the buying or selling process. For buyers, we help you find properties that match your criteria, arrange viewings, negotiate the best price, and handle all paperwork. For sellers, we provide market analysis to price your property competitively, create compelling listings, market your property effectively, and manage negotiations to get you the best possible deal. With our deep market knowledge and commitment to excellence, we ensure a smooth transaction from start to finish.'
+                'full_description' => 'At Brillian And Co Real Estate, our Sales and Purchase of Lands service focuses specifically on land transactions across various categories. Whether you\'re looking for residential plots to build your dream home, commercial land for business development, or agricultural land for farming ventures, our team provides expert guidance throughout the process. We conduct thorough due diligence on land titles, zoning regulations, and development potential. Our services include land valuation, legal documentation assistance, survey coordination, and negotiation support. With our extensive network and deep understanding of land markets, we help clients secure the best deals while ensuring all legal requirements are met for a smooth and secure transaction.'
             ],
             [
                 'id' => 2,
                 'slug' => 'rental-services',
                 'icon' => 'flaticon-right-aro',
                 'title' => 'Rental Services',
-                'description' => 'Whether you\'re looking to rent or are a property owner seeking tenants, our rental services ensure a smooth and beneficial experience.',
+                'description' => 'Comprehensive rental solutions connecting property owners with qualified tenants while ensuring seamless property management and tenant satisfaction.',
                 'button_text' => 'Learn More',
-                'full_description' => 'Our Rental Services at Brillian And Co Real Estate cater to both property owners and potential tenants. For property owners, we provide tenant screening, property management, rent collection, and maintenance coordination. We ensure your property stays in excellent condition while maximizing your rental income. For tenants, we offer access to a wide range of rental properties that match your budget, location preferences, and lifestyle needs. Our team handles all the paperwork, explains lease terms clearly, and acts as a liaison between you and the property owner. We\'re committed to creating harmonious landlord-tenant relationships that benefit both parties.'
+                'full_description' => 'Our Rental Services at Brillian And Co Real Estate provide end-to-end solutions for both property owners and tenants. For landlords, we offer professional tenant screening, property marketing, rent collection, maintenance coordination, and lease management. We ensure your properties are well-maintained and generate optimal rental income. For tenants, we provide access to a curated selection of rental properties including apartments, houses, and commercial spaces. Our team assists with property viewings, lease negotiations, and ongoing tenant support. We handle all documentation, ensure fair lease terms, and maintain clear communication between all parties to create positive rental experiences that benefit everyone involved.'
             ],
             [
                 'id' => 3,
-                'slug' => 'investment-services',
+                'slug' => 'property-management',
                 'icon' => 'flaticon-button-aero',
-                'title' => 'Investment Services',
-                'description' => 'Maximize your returns with our expert market analysis and investment guidance, helping you identify high-potential real estate opportunities.',
+                'title' => 'Property Management',
+                'description' => 'Professional property management services that maximize your investment returns while maintaining property value and ensuring tenant satisfaction.',
                 'button_text' => 'Learn More',
-                'full_description' => 'Brillian And Co Real Estate\'s Investment Services are designed for clients looking to build wealth through real estate. Our investment experts provide comprehensive market analysis, identify high-potential properties, and develop strategies tailored to your investment goals. We help you understand market trends, ROI projections, and risk factors for informed decision-making. From residential to commercial properties, we guide you through the entire investment process. Our team also offers portfolio management services, regularly reviewing your real estate investments and suggesting adjustments to maximize returns. With our innovative approach and deep market understanding, we help transform your real estate investments into profitable assets.'
+                'full_description' => 'Brillian And Co Real Estate\'s Property Management service takes the hassle out of property ownership. We provide comprehensive management solutions including tenant acquisition and screening, rent collection, property maintenance and repairs, financial reporting, and legal compliance. Our experienced team conducts regular property inspections, coordinates necessary maintenance work, and ensures properties meet all safety and regulatory standards. We also handle tenant relations, address concerns promptly, and work to minimize vacancy periods. With our professional property management, property owners can enjoy passive income while we handle all day-to-day operations, preserve property value, and maximize rental returns through strategic management practices.'
+            ],
+            [
+                'id' => 4,
+                'slug' => 'property-development',
+                'icon' => 'flaticon-button-aero',
+                'title' => 'Property Development',
+                'description' => 'From concept to completion, we manage property development projects that transform raw land into valuable residential and commercial properties.',
+                'button_text' => 'Learn More',
+                'full_description' => 'Our Property Development service at Brillian And Co Real Estate encompasses the entire development lifecycle from initial feasibility studies to project completion. We identify prime development opportunities, conduct market research, secure necessary permits and approvals, and coordinate with architects, contractors, and other professionals. Our development projects include residential estates, commercial complexes, and mixed-use developments. We manage construction timelines, quality control, and budget oversight to ensure projects are completed on schedule and within budget. Whether you\'re an investor looking to develop land or seeking partnership opportunities in development projects, our experienced team provides the expertise and resources needed to bring profitable property developments to market.'
+            ],
+            [
+                'id' => 5,
+                'slug' => 'property-valuation',
+                'icon' => 'flaticon-button-aero',
+                'title' => 'Property Valuation',
+                'description' => 'Accurate and professional property assessments providing detailed valuations for buying, selling, insurance, and investment decision-making.',
+                'button_text' => 'Learn More',
+                'full_description' => 'Brillian And Co Real Estate\'s Property Valuation service provides comprehensive and accurate property assessments conducted by certified valuation professionals. We offer detailed valuation reports for various purposes including sales transactions, purchase decisions, insurance requirements, mortgage applications, tax assessments, and investment analysis. Our valuation process involves thorough property inspection, comparative market analysis, assessment of property condition, location factors, and current market trends. We utilize industry-standard valuation methods and provide detailed reports that include property descriptions, photographs, market comparisons, and final valuation conclusions. Our accurate valuations help clients make informed decisions whether buying, selling, refinancing, or planning investments in real estate.'
+            ],
+            [
+                'id' => 6,
+                'slug' => 'real-estate-consulting',
+                'icon' => 'flaticon-button-aero',
+                'title' => 'Real Estate Consulting',
+                'description' => 'Expert advisory services providing strategic guidance on real estate investments, market trends, and property-related business decisions.',
+                'button_text' => 'Learn More',
+                'full_description' => 'Our Real Estate Consulting service at Brillian And Co Real Estate offers strategic advisory solutions for clients seeking expert guidance in property-related matters. We provide market analysis, investment strategy development, feasibility studies, and business planning for real estate ventures. Our consulting services cover residential and commercial property investments, development opportunities, portfolio optimization, and market entry strategies. We also offer specialized consulting for corporate clients including location selection for businesses, real estate portfolio management, and asset optimization strategies. With our deep market knowledge and analytical expertise, we help clients navigate complex real estate decisions, identify opportunities, mitigate risks, and develop strategies that align with their financial goals and business objectives.'
             ]
         ];
     }
