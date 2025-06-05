@@ -2,12 +2,12 @@
 <div class="ul-inner-page-content-wrapper">
     <!-- SPECIALITY SECTION START -->
     
-    @include('sections.section-header', [
+    {{-- @include('sections.section-header', [
     'title' => 'Our Services',
     'subtitle' => 'Discover our comprehensive range of real estate services'
-    ])
+    ]) --}}
 
-    <section class="ul-specialities overflow-hidden">
+    {{-- <section class="ul-specialities overflow-hidden">
         <div class="ul-specialities-heading-card wow animate__fadeInUp">
             <div class="txt">
                 <h3 class="ul-specialities-title">The new way to find your new home</h3>
@@ -31,7 +31,7 @@
             </div>
             @endforeach
         </div>
-    </section>
+    </section> --}}
     <!-- SPECIALITY SECTION END -->
 
     <!-- STATS SECTION START -->
