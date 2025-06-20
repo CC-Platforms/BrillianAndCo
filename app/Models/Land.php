@@ -200,15 +200,16 @@ class Land extends Model
         return $numeric ? (int)$numeric : null;
     }
 
-    /**
+        /**
      * Get numeric area value (without m²) for editing
      */
     public function getAreaNumericAttribute()
     {
-        if (!$this->attributes['area'] ?? null) return null;
-        
+        $area = $this->attributes['area'] ?? null;
+        if (!$area) return null;
+
         // Extract the first number from area string
-        preg_match('/(\d+)/', $this->attributes['area'], $matches);
+        preg_match('/(\d+)/', $area, $matches);
         return isset($matches[1]) ? (int)$matches[1] : null;
     }
 
