@@ -38,9 +38,9 @@
                         <h3 class="ul-footer-widget-title">OUR SERVICES</h3>
 
                         <div class="ul-footer-widget-links">
-                            <a href="{{ route('services.show', ['slug' => 'property-sales-purchase']) }}">Property Sales and Purchase</a>
-                            <a href="{{ route('services.show', ['slug' => 'rental-services']) }}">Rental Services</a>
-                            <a href="{{ route('services.show', ['slug' => 'investment-services']) }}">Investment Services</a>
+                            @foreach($footerServices as $service)
+                                <a href="{{ route('services.show', $service->slug) }}">{{ $service->title }}</a>
+                            @endforeach
                         </div>
                     </div>
                 </div>

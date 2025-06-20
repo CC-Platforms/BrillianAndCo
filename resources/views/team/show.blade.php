@@ -28,7 +28,7 @@
                 <div class="txt wow animate__fadeInUp">
                     <h3 class="ul-team-details-name">{{ $teamMember['name'] }}</h3>
                     <h6 class="ul-team-details-role">{{ $teamMember['position'] }}</h6>
-                    <p class="ul-team-details-descr">{{ $teamMember['description'] }}</p>
+                    <p class="ul-team-details-descr">{!! $teamMember['description'] !!}</p>
                     <ul class="ul-team-details-infos">
                         <li class="ul-team-details-info"> <span class="key">Phone Number:</span> <a
                             href="tel:{{ $teamMember['phone'] }}">{{ $teamMember['phone'] }}</a></li>
@@ -55,7 +55,7 @@
         {{-- <div class="ul-team-more-details ul-section-spacing">
             <div class="ul-container wow animate__fadeInUp">
                 <h3 class="ul-team-more-details-title">Personal Information</h3>
-                <p class="ul-team-details-descr">{{ $teamMember['description'] }}</p>
+                <p class="ul-team-details-descr">{!! $teamMember['description'] !!}</p>
 
                 <div class="ul-team-details-skills-details">
                     <h3 class="ul-team-details-skills-details-title">Personal Skills</h3>

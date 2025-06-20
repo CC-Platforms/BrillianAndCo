@@ -54,34 +54,46 @@
                         <div class="swiper-slide">
                             <div class="ul-project">
                                 <div class="ul-project-img">
-                                    <img src="{{ asset($project['image']) }}" alt="{{ $project['title'] }}">
+                                    <img src="{{ str_starts_with($project->featured_image, 'assets/') ? asset($project->featured_image) : asset('storage/' . $project->featured_image) }}" alt="{{ $project->title }}">
                                 </div>
                                 <div class="ul-project-txt">
-                                    <span class="ul-project-tag">{{ $project['tag'] }}</span>
+                                    <span class="ul-project-tag">{{ $project->tag }}</span>
                                     <div class="top">
                                         <div class="left">
                                             <span class="ul-project-price">
-                                                <span class="number">{{ $project['price'] }}</span>/{{ $project['period'] }}
+                                                <span class="number">{{ $project->price }}</span>/{{ $project->period }}
                                             </span>
-                                            <a href="{{ route('projects.show', ['slug' => $project['slug']]) }}" class="ul-project-title">
-                                                {{ $project['title'] }}
+                                            <a href="{{ route('projects.show', ['slug' => $project->slug]) }}" class="ul-project-title">
+                                                {{ $project->title }}
                                             </a>
-                                            <p class="ul-project-location">{{ $project['location'] }}</p>
+                                            <p class="ul-project-location">{{ $project->location }}</p>
                                         </div>
                                         <div class="right">
                                             <!-- Optional content like favorite icon or share -->
                                         </div>
                                     </div>
-        
+
                                     <!-- bottom -->
-                                    <div class="ul-project-infos ul-featured-property-infos">
-                                        <div class="ul-project-info ul-featured-property-info">
+                                    <div class="ul-project-infos">
+                                        <!-- single info -->
+                                        <div class="ul-project-info">
                                             <span class="icon"><i class="flaticon-bed-color"></i></span>
-                                            <span class="text">{{ $project['beds'] }} Beds</span>
+                                            <span class="text">{{ $project->beds }} Beds</span>
                                         </div>
-                                        <div class="ul-project-info ul-featured-property-info">
+                                        <!-- single info -->
+                                        <div class="ul-project-info">
+                                            <span class="icon"><i class="flaticon-couch"></i></span>
+                                            <span class="text">{{ $project->parlor }} Parlor</span>
+                                        </div>
+                                        <!-- single info -->
+                                        <div class="ul-project-info">
+                                            <span class="icon"><i class="flaticon-kitchen"></i></span>
+                                            <span class="text">{{ $project->kitchen }} Kitchen</span>
+                                        </div>
+                                        <!-- single info -->
+                                        <div class="ul-project-info">
                                             <span class="icon"><i class="flaticon-bath"></i></span>
-                                            <span class="text">{{ $project['bathrooms'] }} Bathrooms</span>
+                                            <span class="text">{{ $project->bathroom }} Bathroom</span>
                                         </div>
                                     </div>
                                 </div>

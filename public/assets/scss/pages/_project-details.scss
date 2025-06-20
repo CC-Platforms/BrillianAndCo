@@ -74,7 +74,7 @@
 
         .icon {
             border: 1px solid #ddd;
-            width: clamp(35px, 2.10vw, 40px);
+            width: clamp(35px, 2.1vw, 40px);
             aspect-ratio: 1/1;
             border-radius: 999px;
             display: flex;
@@ -108,6 +108,7 @@
             width: 100%;
             aspect-ratio: 930/488;
             object-fit: cover;
+            min-height: 600px;
         }
     }
 
@@ -127,6 +128,7 @@
             width: 100%;
             aspect-ratio: 214/156;
             object-fit: cover;
+            min-height: 120px;
         }
     }
 
@@ -150,7 +152,7 @@
     &-overview-infos {
         background-color: #fafafa;
         border-radius: 16px;
-        padding: clamp(15px, 2.10vw, 40px);
+        padding: clamp(15px, 2.1vw, 40px);
     }
 
     &-overview-info {
@@ -201,7 +203,11 @@
             width: clamp(50px, 3.36vw, 64px);
             aspect-ratio: 1/1;
             border-radius: 999px;
-            background: radial-gradient(151.64% 120.36% at 47.19% -0.63%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+            background: radial-gradient(
+                151.64% 120.36% at 47.19% -0.63%,
+                rgba(255, 255, 255, 0.4) 0%,
+                rgba(255, 255, 255, 0) 100%
+            );
             backdrop-filter: blur(21px);
             border: 1px solid var(--white);
             display: inline-flex;
@@ -258,7 +264,7 @@
 
     &-floor-plan {
         background-color: #fafafa;
-        padding: clamp(15px, 2.10vw, 40px);
+        padding: clamp(15px, 2.1vw, 40px);
         border-radius: 16px;
 
         &-tab-navs {
@@ -269,7 +275,7 @@
         }
 
         .tab-nav {
-            height: clamp(35px, 2.10vw, 40px);
+            height: clamp(35px, 2.1vw, 40px);
             padding: 0 clamp(12px, 1.26vw, 24px);
             border: 1px solid var(--ul-primary);
             background-color: transparent;
@@ -301,8 +307,8 @@
         gap: clamp(15px, 1.05vw, 20px);
         border-top: 1px solid var(--ul-gray);
         border-bottom: 1px solid var(--ul-gray);
-        padding-bottom: clamp(14px, 2.10vw, 40px);
-        padding-top: clamp(15px, 2.10vw, 40px);
+        padding-bottom: clamp(14px, 2.1vw, 40px);
+        padding-top: clamp(15px, 2.1vw, 40px);
 
         @include xxs {
             flex-direction: column;
@@ -348,7 +354,7 @@
             }
 
             .rating {
-                color: #F7921E;
+                color: #f7921e;
                 display: flex;
                 gap: clamp(2px, 0.26vw, 5px);
                 font-size: clamp(12px, 0.79vw, 15px);
@@ -391,7 +397,7 @@
         input,
         textarea,
         .ss-main {
-            border: 1px solid rgba(0, 0, 0, 0.20);
+            border: 1px solid rgba(0, 0, 0, 0.2);
             border-radius: 999px;
             width: 100%;
             height: clamp(45px, 2.63vw, 50px);
@@ -470,7 +476,6 @@
             a {
                 color: var(--ul-secondary);
                 font-size: clamp(12px, 0.79vw, 15px);
-
 
                 &:hover {
                     color: var(--ul-primary);

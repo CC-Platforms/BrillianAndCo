@@ -61,7 +61,15 @@
                 </div>
 
                 <div class="col">
-                    <div class="ul-facilities-img"><img src="{{ asset('assets/img/brillian/properties_2/brown_building_projects.jpg') }}" alt="Facility Image"></div>
+                    @if(isset($facilities) && $facilities->first())
+                    <div class="ul-facilities-img">
+                        <img src="{{ str_starts_with($facilities->first()->image, 'assets/') ? asset($facilities->first()->image) : asset('storage/' . $facilities->first()->image) }}" alt="{{ $facilities->first()->title }}">
+                    </div>
+                    @else
+                    <div class="ul-facilities-img">
+                        <img src="{{ asset('assets/img/brillian/properties_2/brown_building_projects.jpg') }}" alt="Facility Image">
+                    </div>
+                    @endif
                 </div>
             </div>
         </div>

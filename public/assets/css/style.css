@@ -63,8 +63,6 @@ html {
 body {
     font-family: var(--font-primary);
     margin: auto;
-    overflow: hidden;
-    position: fixed;
 }
 
 a,
@@ -374,12 +372,12 @@ button {
     width: 30%;
 }
 
-.ul-btn-buy:hover, .ul-btn-sell:hover {
+.ul-btn-buy:hover,
+.ul-btn-sell:hover {
     background-color: var(--ul-secondary);
     color: var(--white);
     border-color: var(--ul-secondary);
 }
-
 
 .ul-section-heading {
     display: flex;
@@ -2260,7 +2258,8 @@ button {
     content: "";
     width: 16px;
     height: 16px;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="%236b7280" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>') no-repeat center;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="%236b7280" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>')
+        no-repeat center;
     background-size: contain;
     flex-shrink: 0;
 }
@@ -2320,20 +2319,20 @@ button {
         flex-direction: column;
         gap: 12px;
     }
-    
+
     .ul-2-property-price-section {
         text-align: left;
         width: 100%;
     }
-    
+
     .ul-2-property-content {
         padding: 20px;
     }
-    
+
     .ul-2-property-img {
         height: 200px;
     }
-    
+
     .price-value {
         font-size: 20px;
     }
@@ -2354,7 +2353,7 @@ button {
 }
 
 .ul-land-category-heading h3::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
@@ -2382,7 +2381,7 @@ button {
     .ul-2-properties-wrapper {
         grid-template-columns: 1fr;
     }
-    
+
     .ul-2-property-card {
         margin-bottom: 20px;
     }
@@ -4277,6 +4276,7 @@ button {
     width: 100%;
     aspect-ratio: 930/488;
     object-fit: cover;
+    min-height: 600px;
 }
 .ul-project-details-img-slider-thumb {
     margin-top: clamp(15px, 1.26vw, 24px);
@@ -4292,6 +4292,7 @@ button {
     width: 100%;
     aspect-ratio: 214/156;
     object-fit: cover;
+    min-height: 120px;
 }
 .ul-project-details-block {
     margin-bottom: clamp(20px, 2.36vw, 45px);
@@ -5928,7 +5929,6 @@ button {
     margin-top: clamp(-301px, -15.82vw, -60px);
 } /*# sourceMappingURL=style.css.map */
 
-
 /* Counter Animation Styles */
 .ul-stats-item {
     opacity: 0;
@@ -5948,7 +5948,15 @@ button {
 }
 
 /* Stagger effect for items */
-.ul-stats-item:nth-child(1) { transition-delay: 0s; }
-.ul-stats-item:nth-child(2) { transition-delay: 0.1s; }
-.ul-stats-item:nth-child(3) { transition-delay: 0.2s; }
-.ul-stats-item:nth-child(4) { transition-delay: 0.3s; }
+.ul-stats-item:nth-child(1) {
+    transition-delay: 0s;
+}
+.ul-stats-item:nth-child(2) {
+    transition-delay: 0.1s;
+}
+.ul-stats-item:nth-child(3) {
+    transition-delay: 0.2s;
+}
+.ul-stats-item:nth-child(4) {
+    transition-delay: 0.3s;
+}
