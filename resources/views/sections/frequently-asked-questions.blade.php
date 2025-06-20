@@ -86,6 +86,7 @@
             <div class="ul-faq-answer" x-show="activeQuestion === 3" x-transition>
                 <p>We operate in major cities and regions across Cameroon, including:</p>
                 <ul>
+                    <li>Buea - Business capital</li>
                     <li>Douala - Commercial capital</li>
                     <li>Yaoundé - Administrative capital</li>
                     <li>Kribi - Beach resort city</li>

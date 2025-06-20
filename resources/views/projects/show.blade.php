@@ -22,12 +22,12 @@
             <!-- heading -->
             <div class="ul-project-details-heading">
                 <div class="left">
-                    <h3 class="ul-project-details-title">{{ $project['title'] }}</h3>
-                    <span class="ul-project-details-location"><span class="icon"><i class="flaticon-maps-and-flags"></i></span>{{ $project['location'] }}</span>
+                    <h3 class="ul-project-details-title">{{ $project->title }}</h3>
+                    <span class="ul-project-details-location"><span class="icon"><i class="flaticon-maps-and-flags"></i></span>{{ $project->location }}</span>
                 </div>
 
                 <div class="right">
-                    <div class="ul-project-details-price"><span class="number">{{ $project['price'] }}</span> {{ $project['period'] }}</div>
+                    <div class="ul-project-details-price"><span class="number">{{ $project->price }}</span> {{ $project->period }}</div>
                 </div>
             </div>
 
@@ -40,21 +40,35 @@
                         <div class="ul-project-details-slider-wrapper wow animate__fadeInUp">
                             <div class="swiper ul-project-details-img-slider">
                                 <div class="swiper-wrapper">
-                                    @foreach($project['images'] as $image)
+                                    @if($project->featured_image)
                                     <div class="swiper-slide">
-                                        <img src="{{ asset($image) }}" alt="{{ $project['title'] }}">
+                                        <img src="{{ str_starts_with($project->featured_image, 'assets/') ? asset($project->featured_image) : asset('storage/' . $project->featured_image) }}" alt="{{ $project->title }}">
                                     </div>
-                                    @endforeach
+                                    @endif
+                                    @if($project->gallery_images_json && is_array($project->gallery_images_json))
+                                        @foreach($project->gallery_images_json as $image)
+                                        <div class="swiper-slide">
+                                            <img src="{{ str_starts_with($image, 'assets/') ? asset($image) : asset('storage/' . $image) }}" alt="{{ $project->title }}">
+                                        </div>
+                                        @endforeach
+                                    @endif
                                 </div>
                             </div>
 
                             <div class="swiper ul-project-details-img-slider-thumb">
                                 <div class="swiper-wrapper">
-                                    @foreach($project['images'] as $image)
+                                    @if($project->featured_image)
                                     <div class="swiper-slide">
-                                        <img src="{{ asset($image) }}" alt="{{ $project['title'] }}">
+                                        <img src="{{ str_starts_with($project->featured_image, 'assets/') ? asset($project->featured_image) : asset('storage/' . $project->featured_image) }}" alt="{{ $project->title }}">
                                     </div>
-                                    @endforeach
+                                    @endif
+                                    @if($project->gallery_images_json && is_array($project->gallery_images_json))
+                                        @foreach($project->gallery_images_json as $image)
+                                        <div class="swiper-slide">
+                                            <img src="{{ str_starts_with($image, 'assets/') ? asset($image) : asset('storage/' . $image) }}" alt="{{ $project->title }}">
+                                        </div>
+                                        @endforeach
+                                    @endif
                                 </div>
 
                                 <!-- navigation -->
@@ -68,7 +82,7 @@
                         <!-- description -->
                         <div class="ul-project-details-block wow animate__fadeIn">
                             <h3 class="ul-project-details-title">Description</h3>
-                            <p>{{ $project['description'] }}</p>
+                            <div>{!! $project->description !!}</div>
                         </div>
 
                         <!-- overview -->
@@ -81,7 +95,7 @@
                                             <div class="icon"><i class="flaticon-buildings"></i></div>
                                             <div class="txt">
                                                 <span class="key">ID NO.</span>
-                                                <span class="value">#{{ $project['id'] }}</span>
+                                                <span class="value">#{{ $project->id }}</span>
                                             </div>
                                         </div>
                                     </div>
@@ -91,7 +105,7 @@
                                             <div class="icon"><i class="flaticon-home-tik-mark"></i></div>
                                             <div class="txt">
                                                 <span class="key">Type</span>
-                                                <span class="value">{{ $project['tag'] }}</span>
+                                                <span class="value">{{ $project->tag }}</span>
                                             </div>
                                         </div>
                                     </div>
@@ -101,7 +115,7 @@
                                             <div class="icon"><i class="flaticon-bed-color"></i></div>
                                             <div class="txt">
                                                 <span class="key">Beds</span>
-                                                <span class="value">{{ $project['beds'] }}</span>
+                                                <span class="value">{{ $project->beds }}</span>
                                             </div>
                                         </div>
                                     </div>
@@ -111,7 +125,7 @@
                                             <div class="icon"><i class="flaticon-bath"></i></div>
                                             <div class="txt">
                                                 <span class="key">Bath</span>
-                                                <span class="value">{{ $project['bathrooms'] }}</span>
+                                                <span class="value">{{ $project->bathrooms }}</span>
                                             </div>
                                         </div>
                                     </div>
@@ -119,10 +133,10 @@
                                     <div class="col">
                                         <div class="ul-project-details-overview-info">
                                             <div class="icon"><i class="flaticon-buildings"></i></div>
-                                            {{-- <div class="txt">
-                                                <span class="key">Area</span>
-                                                <span class="value">{{ $project['area'] }}</span>
-                                            </div> --}}
+                                            <div class="txt">
+                                                <span class="key">Period</span>
+                                                <span class="value">{{ $project->period }}</span>
+                                            </div>
                                         </div>
                                     </div>
 

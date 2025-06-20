@@ -17,6 +17,6 @@
     <!-- BREADCRUMB SECTION END -->
 
     <!-- properties section -->
-    @include('sections.properties')
+    @include('sections.projects')
 </main>
 @endsection

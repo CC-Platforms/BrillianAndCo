@@ -10,7 +10,7 @@
                 <div class="ul-container wow animate__fadeInUp">
 
                     <div class="ul-partners-slider swiper">
-                        <div class="swiper-wrapper align-items-center">
+                        <div class="swiper-wrapper align-items-center justify-center">
                             <!-- single slide -->
                             <div class="swiper-slide">
                                 <img src="assets/img/company1.jpg" alt="Parter Logo">

@@ -65,4 +65,23 @@
         font-size: clamp(10px, 0.79vw, 15px);
         margin-bottom: clamp(25px, 3.15vw, 60px);
     }
+
+    .swiper-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 120px;
+
+        img {
+            max-height: 80px;
+            width: auto;
+            object-fit: contain;
+        }
+    }
 }

@@ -5,13 +5,13 @@
     <!-- BREADCRUMB SECTION START -->
     <div class="ul-breadcrumb">
         <div class="wow animate__fadeInUp">
-            <h2 class="ul-breadcrumb-title">{{ $service['title'] }}</h2>
+            <h2 class="ul-breadcrumb-title">{{ $service->title }}</h2>
             <div class="ul-breadcrumb-nav">
                 <a href="{{ url('/') }}">Home</a>
                 <span class="separator"><i class="flaticon-aro-left"></i></span>
                 <a href="{{ url('/services') }}">Services</a>
                 <span class="separator"><i class="flaticon-aro-left"></i></span>
-                <span class="current-page">{{ $service['title'] }}</span>
+                <span class="current-page">{{ $service->title }}</span>
             </div>
         </div>
     </div>
@@ -28,9 +28,9 @@
                         <div class="ul-service-details-sidebar-widget overflow-hidden">
                             <h4 class="ul-service-details-sidebar-widget-title">Our Services</h4>
                             <ul class="service-list">
-                                <li><a href="{{ url('/services/property-sales-purchase') }}" class="{{ $service['slug'] == 'property-sales-purchase' ? 'current' : '' }}">Property Sales & Purchase <i class="flaticon-read-more-icon"></i></a></li>
-                                <li><a href="{{ url('/services/rental-services') }}" class="{{ $service['slug'] == 'rental-services' ? 'current' : '' }}">Rental Services <i class="flaticon-read-more-icon"></i></a></li>
-                                <li><a href="{{ url('/services/investment-services') }}" class="{{ $service['slug'] == 'investment-services' ? 'current' : '' }}">Investment Services <i class="flaticon-read-more-icon"></i></a></li>
+                                @foreach($footerServices as $sidebarService)
+                                    <li><a href="{{ route('services.show', $sidebarService->slug) }}" class="{{ $service->slug == $sidebarService->slug ? 'current' : '' }}">{{ $sidebarService->title }} <i class="flaticon-read-more-icon"></i></a></li>
+                                @endforeach
                             </ul>
                         </div>
 
@@ -45,8 +45,8 @@
                 <!-- right content -->
                 <div class="col-lg-8 order-0 order-lg-1">
                     <div class="ul-service-details-txt wow animate__fadeInUp">
-                        <h4 class="ul-service-details-title">{{ $service['title'] }}</h4>
-                        <p class="ul-service-details-descr">{{ $service['full_description'] }}</p>
+                        <h4 class="ul-service-details-title">{{ $service->title }}</h4>
+                        <p class="ul-service-details-descr">{!! $service->full_description !!}</p>
                         
                         <div class="ul-service-details-cover-img">
                             <img src="{{ asset('assets/img/brillia6.jpg') }}" alt="Image" class="img-1">

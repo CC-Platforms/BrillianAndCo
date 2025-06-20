@@ -23,155 +23,37 @@
     <div class="ul-featured-properties-slider-wrapper wow animate__fadeInUp">
         <div class="ul-featured-properties-slider swiper">
             <div class="swiper-wrapper">
+                @foreach($featuredProperties as $index => $property)
                 <div class="swiper-slide">
                     <div class="ul-featured-property ul-project">
                         <div>
                             <div class="header">
-                                <div class="left"><span class="index">01</span></div>
+                                <div class="left"><span class="index">{{ sprintf('%02d', $index + 1) }}</span></div>
                                 <div class="right"></div>
                             </div>
-                            <p class="ul-project-title">Molyko Residence</p>
-                            <p class="ul-project-location">Molyko, Buea, Southwest Region</p>
+                            <p class="ul-project-title">{{ $property->title }}</p>
+                            <p class="ul-project-location">{{ $property->location }}</p>
                         </div>
                         <div class="ul-project-img">
-                            <img src="{{ asset('assets\img\brillian\properties_2\marble_room_3.jpg') }}" alt="Molyko Residence Image">
-                            <span class="ul-project-tag">Popular</span>
+                            <img src="{{ str_starts_with($property->featured_image, 'assets/') ? asset($property->featured_image) : asset('storage/' . $property->featured_image) }}" alt="{{ $property->title }} Image">
+                            <span class="ul-project-tag">{{ $property->tag }}</span>
                         </div>
                         <div class="ul-project-txt">
-                            <span class="ul-project-price"><span class="number">50,000 XAF</span>/Month</span>
+                            <span class="ul-project-price"><span class="number">{{ $property->price }}</span>/{{ $property->period }}</span>
                             <div class="ul-project-infos ul-featured-property-infos">
                                 <div class="ul-project-info ul-featured-property-info">
                                     <span class="icon"><i class="flaticon-bed-color"></i></span>
-                                    <span class="text">3 Beds</span>
+                                    <span class="text">{{ $property->beds }} Beds</span>
                                 </div>
                                 <div class="ul-project-info ul-featured-property-info">
                                     <span class="icon"><i class="flaticon-bath"></i></span>
-                                    <span class="text">2 Bathrooms</span>
+                                    <span class="text">{{ $property->bathrooms }} Bathrooms</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="swiper-slide">
-                    <div class="ul-featured-property ul-project">
-                        <div>
-                            <div class="header">
-                                <div class="left"><span class="index">02</span></div>
-                                <div class="right"></div>
-                            </div>
-                            <p class="ul-project-title">Great Soppo Apartment</p>
-                            <p class="ul-project-location">Great Soppo, Buea, Southwest Region</p>
-                        </div>
-                        <div class="ul-project-img">
-                            <img src="{{ asset('assets\img\brillian\properties_2\white_apart_brown_door_2.jpg') }}" alt="Great Soppo Apartment Image">
-                            <span class="ul-project-tag">Popular</span>
-                        </div>
-                        <div class="ul-project-txt">
-                            <span class="ul-project-price"><span class="number">75,000 XAF </span>/Month</span>
-                            <div class="ul-project-infos ul-featured-property-infos">
-                                <div class="ul-project-info ul-featured-property-info">
-                                    <span class="icon"><i class="flaticon-bed-color"></i></span>
-                                    <span class="text">3 Beds</span>
-                                </div>
-                                <div class="ul-project-info ul-featured-property-info">
-                                    <span class="icon"><i class="flaticon-bath"></i></span>
-                                    <span class="text">2 Bathrooms</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="ul-featured-property ul-project">
-                        <div>
-                            <div class="header">
-                                <div class="left"><span class="index">03</span></div>
-                                <div class="right"></div>
-                            </div>
-                            <p class="ul-project-title">Down Beach Seaside Home</p>
-                            <p class="ul-project-location">Down Beach, Limbe, Southwest Region</p>
-                        </div>
-                        <div class="ul-project-img">
-                            <img src="{{ asset('assets\img\brillian\properties_2\black_white_apart_2.jpg') }}" alt="Down Beach Seaside Home Image">
-                            <span class="ul-project-tag">Popular</span>
-                        </div>
-                        <div class="ul-project-txt">
-                            <span class="ul-project-price"><span class="number">60,000 XAF</span>/Month</span>
-                            <div class="ul-project-infos ul-featured-property-infos">
-                                <div class="ul-project-info ul-featured-property-info">
-                                    <span class="icon"><i class="flaticon-bed-color"></i></span>
-                                    <span class="text">3 Beds</span>
-                                </div>
-                                <div class="ul-project-info ul-featured-property-info">
-                                    <span class="icon"><i class="flaticon-bath"></i></span>
-                                    <span class="text">2 Bathrooms</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="ul-featured-property ul-project">
-                        <div>
-                            <div class="header">
-                                <div class="left"><span class="index">04</span></div>
-                                <div class="right"></div>
-                            </div>
-                            <p  class="ul-project-title">Mile 4 Beach House</p>
-                            <p class="ul-project-location">Mile 4, Limbe, Southwest Region</p>
-                        </div>
-                        <div class="ul-project-img">
-                            <img src="{{ asset('assets/img/brillian/properties/IMG-20250503-WA0120.jpg') }}" alt="Mile 4 Beach House Image">
-                            <span class="ul-project-tag">Popular</span>
-                        </div>
-                        <div class="ul-project-txt">
-                            <span class="ul-project-price"><span class="number">50,000 XAF</span>/Month</span>
-                            <div class="ul-project-infos ul-featured-property-infos">
-                                <div class="ul-project-info ul-featured-property-info">
-                                    <span class="icon"><i class="flaticon-bed-color"></i></span>
-                                    <span class="text">3 Beds</span>
-                                </div>
-                                <div class="ul-project-info ul-featured-property-info">
-                                    <span class="icon"><i class="flaticon-bath"></i></span>
-                                    <span class="text">2 Bathrooms</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide">
-                    <div class="ul-featured-property ul-project">
-                        <div>
-                            <div class="header">
-                                <div class="left"><span class="index">05</span></div>
-                                <div class="right"></div>
-                            </div>
-                            <p class="ul-project-title">Sandpit Mountain View</p>
-                            <p class="ul-project-location">Sandpit, Buea, Southwest Region</p>
-                        </div>
-                        <div class="ul-project-img">
-                            <img src="{{ asset('assets/img/brillian/properties/IMG-20250503-WA0132.jpg') }}" alt="Sandpit Mountain View Image">
-                            <span class="ul-project-tag">Popular</span>
-                        </div>
-                        <div class="ul-project-txt">
-                            <span class="ul-project-price"><span class="number">65,000 XAF</span>/Month</span>
-                            <div class="ul-project-infos ul-featured-property-infos">
-                                <div class="ul-project-info ul-featured-property-info">
-                                    <span class="icon"><i class="flaticon-bed-color"></i></span>
-                                    <span class="text">3 Beds</span>
-                                </div>
-                                <div class="ul-project-info ul-featured-property-info">
-                                    <span class="icon"><i class="flaticon-bath"></i></span>
-                                    <span class="text">2 Bathrooms</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
 
@@ -181,4 +63,6 @@
         </div>
     </div>
 </section>
+<!-- FEATURED PROPERTIES SECTION END -->
+
 <!-- FEATURED PROPERTIES SECTION END -->
