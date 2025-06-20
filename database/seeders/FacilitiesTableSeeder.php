@@ -15,22 +15,8 @@ class FacilitiesTableSeeder extends Seeder
     {
         $facilities = [
             [
-                'title' => 'Property Management Facilities',
-                'subtitle' => 'Comprehensive Management Solutions',
-                'description' => 'Our state-of-the-art property management facilities ensure optimal maintenance and management of all properties under our care. We provide comprehensive solutions that keep properties in excellent condition while maximizing returns for owners.',
-                'features_list_json' => [
-                    '24/7 Security Monitoring',
-                    'Professional Maintenance Services',
-                    'Tenant Screening and Management',
-                    'Rent Collection Services',
-                    'Property Inspections',
-                    'Emergency Response System',
-                    'Landscaping and Grounds Keeping',
-                    'Financial Reporting and Analysis'
-                ],
-                'gallery_images_json' => [
-                    'assets/img/facility-img.jpg',
-                ],
+                'title' => 'Construction & Development',
+                'image' => 'assets/img/brillian/properties_2/apart_white_2.jpg',
                 'is_active' => true,
             ],
         ];

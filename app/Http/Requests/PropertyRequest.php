@@ -30,11 +30,11 @@ class PropertyRequest extends FormRequest
             'period' => 'nullable|string|max:255',
             'location' => 'required|string|max:255',
             'beds' => 'nullable|integer|min:0|max:20',
-            'bathrooms' => 'nullable|integer|min:0|max:20',
+            'parlor' => 'nullable|integer|min:0|max:10',
+            'kitchen' => 'nullable|integer|min:0|max:10',
+            'bathroom' => 'nullable|integer|min:0|max:20',
             'description' => 'required|string',
             'featured_image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'gallery_images_json' => 'nullable|array',
-            'gallery_images_json.*' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
             'tag' => 'nullable|string|in:New,Featured,Premium,Hot Deal',
             'is_featured' => 'boolean',
             'is_active' => 'boolean',
@@ -54,10 +54,11 @@ class PropertyRequest extends FormRequest
             'period' => 'rental period',
             'location' => 'location',
             'beds' => 'number of bedrooms',
-            'bathrooms' => 'number of bathrooms',
+            'parlor' => 'number of parlors',
+            'kitchen' => 'number of kitchens',
+            'bathroom' => 'number of bathrooms',
             'description' => 'property description',
             'featured_image' => 'featured image',
-            'gallery_images_json' => 'gallery images',
             'tag' => 'property tag',
             'is_featured' => 'featured status',
             'is_active' => 'active status',
@@ -74,8 +75,6 @@ class PropertyRequest extends FormRequest
         return [
             'featured_image.image' => 'The featured image must be an image file.',
             'featured_image.max' => 'The featured image size must be less than 2MB.',
-            'gallery_images_json.*.image' => 'All gallery images must be image files.',
-            'gallery_images_json.*.max' => 'Each gallery image size must be less than 2MB.',
         ];
     }
 }

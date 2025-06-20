@@ -39,13 +39,26 @@ class TeamMemberCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        CRUD::column('image')->type('text')->label('Profile Photo');
+        CRUD::column('image')->type('image')->label('Photo')
+            ->height('120px')->width('120px')
+            ->value(function($entry) {
+                if (!$entry->image) return '';
+                
+                // Handle asset images (seeded data)
+                if (str_starts_with($entry->image, 'assets/')) {
+                    return asset($entry->image);
+                }
+                
+                // Handle uploaded storage images - new withFiles() method stores full path
+                if (str_starts_with($entry->image, 'uploads/')) {
+                    return asset('storage/' . $entry->image);
+                }
+                
+                // Fallback for any other format
+                return asset('storage/' . $entry->image);
+            });
         CRUD::column('name')->type('text')->label('Name');
         CRUD::column('position')->type('text')->label('Position');
-        CRUD::column('email')->type('email')->label('Email');
-        CRUD::column('phone')->type('text')->label('Phone');
-        CRUD::column('experience')->type('text')->label('Experience');
-        CRUD::column('availability')->type('text')->label('Availability');
         CRUD::column('is_active')->type('boolean')->label('Active');
         CRUD::column('created_at')->type('datetime')->label('Created');
     }
@@ -83,8 +96,11 @@ class TeamMemberCrudController extends CrudController
         ]);
 
         CRUD::field('image')->type('upload')->label('Profile Photo')
-            ->upload(true)
-            ->disk('public')
+            ->withFiles([
+                'disk' => 'public',
+                'path' => 'uploads/team-members',
+                'deleteWhenEntryIsDeleted' => true,
+            ])
             ->hint('Professional headshot (recommended: 400x400px, square format)')
             ->wrapper(['class' => 'form-group col-md-6']);
 
@@ -159,12 +175,6 @@ class TeamMemberCrudController extends CrudController
 
         CRUD::field('social_links_json')->type('textarea')->label('Social Media Profiles (JSON)')
             ->hint('Enter social media links in JSON format: {"facebook":"url","linkedin":"url","twitter":"url"}')
-            ->value(function($entry) {
-                if ($entry->social_links_json && is_array($entry->social_links_json)) {
-                    return json_encode($entry->social_links_json, JSON_PRETTY_PRINT);
-                }
-                return $entry->social_links_json ?? '';
-            })
             ->attributes(['rows' => 3])
             ->wrapper(['class' => 'form-group col-md-12']);
 
@@ -177,12 +187,6 @@ class TeamMemberCrudController extends CrudController
 
         CRUD::field('skills_json')->type('textarea')->label('Professional Skills (JSON)')
             ->hint('Enter skills in JSON format: [{"title":"Property Valuation","value":90},{"title":"Client Relations","value":85}]')
-            ->value(function($entry) {
-                if ($entry->skills_json && is_array($entry->skills_json)) {
-                    return json_encode($entry->skills_json, JSON_PRETTY_PRINT);
-                }
-                return $entry->skills_json ?? '';
-            })
             ->attributes(['rows' => 4])
             ->wrapper(['class' => 'form-group col-md-12']);
 
@@ -211,6 +215,22 @@ class TeamMemberCrudController extends CrudController
     }
 
     /**
+     * Define what happens when the Delete operation is loaded.
+     * 
+     * @see https://backpackforlaravel.com/docs/crud-operation-delete
+     * @return void
+     */
+    protected function setupDeleteOperation()
+    {
+        // Configure the upload field for automatic file deletion
+        CRUD::field('image')->type('upload')->withFiles([
+            'disk' => 'public',
+            'path' => 'uploads/team-members',
+            'deleteWhenEntryIsDeleted' => true,
+        ]);
+    }
+
+    /**
      * Define what happens when the Show operation is loaded.
      * 
      * @see https://backpackforlaravel.com/docs/crud-operation-show
@@ -218,31 +238,30 @@ class TeamMemberCrudController extends CrudController
      */
     protected function setupShowOperation()
     {
-        // Personal Information
-        CRUD::column('name')->type('text')->label('Full Name');
+        CRUD::column('name')->type('text')->label('Name');
         CRUD::column('position')->type('text')->label('Position');
-        CRUD::column('image')->type('text')->label('Profile Photo');
-        
-        // Contact Information
-        CRUD::column('email')->type('email')->label('Email Address');
-        CRUD::column('phone')->type('text')->label('Phone Number');
-        CRUD::column('website')->type('url')->label('Website');
-        
-        // Professional Details
-        CRUD::column('experience')->type('text')->label('Experience');
-        CRUD::column('availability')->type('text')->label('Availability');
-        CRUD::column('description')->type('summernote')->label('Biography');
-        
-        // Social Media (display as JSON)
-        CRUD::column('social_links_json')->type('json')->label('Social Media');
-        
-        // Skills (display as JSON)
-        CRUD::column('skills_json')->type('json')->label('Skills & Expertise');
-        
-        // Status
-        CRUD::column('is_active')->type('boolean')->label('Active Team Member');
-        
-        // Timestamps
+        CRUD::column('description')->type('textarea')->label('Description');
+        CRUD::column('image')->type('image')->label('Photo')
+            ->height('300px')->width('300px')
+            ->value(function($entry) {
+                if (!$entry->image) return '';
+                
+                // Handle asset images (seeded data)
+                if (str_starts_with($entry->image, 'assets/')) {
+                    return asset($entry->image);
+                }
+                
+                // Handle uploaded storage images - new withFiles() method stores full path
+                if (str_starts_with($entry->image, 'uploads/')) {
+                    return asset('storage/' . $entry->image);
+                }
+                
+                // Fallback for any other format
+                return asset('storage/' . $entry->image);
+            });
+        CRUD::column('social_links_json')->type('json')->label('Social Links');
+        CRUD::column('skills_json')->type('json')->label('Skills');
+        CRUD::column('is_active')->type('boolean')->label('Active');
         CRUD::column('created_at')->type('datetime')->label('Created At');
         CRUD::column('updated_at')->type('datetime')->label('Updated At');
     }

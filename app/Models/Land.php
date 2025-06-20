@@ -22,13 +22,11 @@ class Land extends Model
         'land_type',
         'description',
         'featured_image',
-        'gallery_images_json',
         'tag',
         'is_active',
     ];
 
     protected $casts = [
-        'gallery_images_json' => 'array',
         'is_active' => 'boolean',
     ];
 
@@ -61,20 +59,7 @@ class Land extends Model
         }
     }
 
-    /**
-     * Set gallery images JSON - convert string to array when saving
-     */
-    public function setGalleryImagesJsonAttribute($value)
-    {
-        if (is_string($value)) {
-            // If it's a comma-separated string, convert to array
-            $images = array_map('trim', explode(',', $value));
-            $images = array_filter($images); // Remove empty values
-            $this->attributes['gallery_images_json'] = json_encode($images);
-        } else {
-            $this->attributes['gallery_images_json'] = json_encode($value);
-        }
-    }
+
 
     /**
      * Get the route key for the model.
@@ -109,6 +94,14 @@ class Land extends Model
     }
 
     /**
+     * Scope a query to filter by land type.
+     */
+    public function scopeByLandType($query, $landType)
+    {
+        return $query->where('land_type', $landType);
+    }
+
+    /**
      * Get lands grouped by category.
      */
     public static function getLandsByCategory()
@@ -126,13 +119,21 @@ class Land extends Model
     */
 
     /**
-     * Get gallery images JSON - convert array to string for textarea display
+     * Get the featured image URL for display
      */
-    public function getGalleryImagesJsonForTextareaAttribute()
+    public function getImageUrlAttribute()
     {
-        if (is_array($this->gallery_images_json)) {
-            return implode(', ', $this->gallery_images_json);
+        if (!$this->featured_image) {
+            return null;
         }
-        return $this->gallery_images_json ?? '';
+
+        // Handle asset images
+        if (str_starts_with($this->featured_image, 'assets/')) {
+            return asset($this->featured_image);
+        }
+
+        // Handle uploaded storage images
+        return asset('storage/' . $this->featured_image);
     }
+
 }

@@ -32,8 +32,6 @@ class LandRequest extends FormRequest
             'category' => 'required|string|in:Fast Selling Lands,Developed Lands,Fast Developing Lands,Architecture',
             'description' => 'required|string',
             'featured_image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'gallery_images_json' => 'nullable|array',
-            'gallery_images_json.*' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
             'tag' => 'nullable|string|in:Featured,New,Premium,Hot Deal,Investment,Architectural,Design Ready',
             'is_active' => 'boolean',
         ];
@@ -54,7 +52,6 @@ class LandRequest extends FormRequest
             'category' => 'category',
             'description' => 'land description',
             'featured_image' => 'featured image',
-            'gallery_images_json' => 'gallery images',
             'tag' => 'land tag',
             'is_active' => 'active status',
         ];
@@ -70,8 +67,6 @@ class LandRequest extends FormRequest
         return [
             'featured_image.image' => 'The featured image must be an image file.',
             'featured_image.max' => 'The featured image size must be less than 2MB.',
-            'gallery_images_json.*.image' => 'All gallery images must be image files.',
-            'gallery_images_json.*.max' => 'Each gallery image size must be less than 2MB.',
             'category.in' => 'Please select a valid category.',
             'tag.in' => 'Please select a valid tag.',
         ];

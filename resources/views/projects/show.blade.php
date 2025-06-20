@@ -45,13 +45,16 @@
                                         <img src="{{ str_starts_with($project->featured_image, 'assets/') ? asset($project->featured_image) : asset('storage/' . $project->featured_image) }}" alt="{{ $project->title }}">
                                     </div>
                                     @endif
-                                    @if($project->gallery_images_json && is_array($project->gallery_images_json))
-                                        @foreach($project->gallery_images_json as $image)
-                                        <div class="swiper-slide">
-                                            <img src="{{ str_starts_with($image, 'assets/') ? asset($image) : asset('storage/' . $image) }}" alt="{{ $project->title }}">
-                                        </div>
-                                        @endforeach
-                                    @endif
+                                    <!-- Static gallery images -->
+                                    <div class="swiper-slide">
+                                        <img src="{{ asset('assets/img/brillian/properties_2/apart_white_2.jpg') }}" alt="{{ $project->title }} Gallery">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="{{ asset('assets/img/brillian/properties_2/marble_room_3.jpg') }}" alt="{{ $project->title }} Gallery">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="{{ asset('assets/img/brillian/properties_2/brown_apart_1.jpg') }}" alt="{{ $project->title }} Gallery">
+                                    </div>
                                 </div>
                             </div>
 
@@ -62,13 +65,16 @@
                                         <img src="{{ str_starts_with($project->featured_image, 'assets/') ? asset($project->featured_image) : asset('storage/' . $project->featured_image) }}" alt="{{ $project->title }}">
                                     </div>
                                     @endif
-                                    @if($project->gallery_images_json && is_array($project->gallery_images_json))
-                                        @foreach($project->gallery_images_json as $image)
-                                        <div class="swiper-slide">
-                                            <img src="{{ str_starts_with($image, 'assets/') ? asset($image) : asset('storage/' . $image) }}" alt="{{ $project->title }}">
-                                        </div>
-                                        @endforeach
-                                    @endif
+                                    <!-- Static gallery thumbnails -->
+                                    <div class="swiper-slide">
+                                        <img src="{{ asset('assets/img/brillian/properties_2/apart_white_2.jpg') }}" alt="{{ $project->title }} Gallery">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="{{ asset('assets/img/brillian/properties_2/marble_room_3.jpg') }}" alt="{{ $project->title }} Gallery">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="{{ asset('assets/img/brillian/properties_2/brown_apart_1.jpg') }}" alt="{{ $project->title }} Gallery">
+                                    </div>
                                 </div>
 
                                 <!-- navigation -->
@@ -122,10 +128,30 @@
 
                                     <div class="col">
                                         <div class="ul-project-details-overview-info">
+                                            <div class="icon"><i class="flaticon-couch"></i></div>
+                                            <div class="txt">
+                                                <span class="key">Parlor</span>
+                                                <span class="value">{{ $project->parlor }}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="ul-project-details-overview-info">
+                                            <div class="icon"><i class="flaticon-kitchen"></i></div>
+                                            <div class="txt">
+                                                <span class="key">Kitchen</span>
+                                                <span class="value">{{ $project->kitchen }}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="ul-project-details-overview-info">
                                             <div class="icon"><i class="flaticon-bath"></i></div>
                                             <div class="txt">
-                                                <span class="key">Bath</span>
-                                                <span class="value">{{ $project->bathrooms }}</span>
+                                                <span class="key">Bathroom</span>
+                                                <span class="value">{{ $project->bathroom }}</span>
                                             </div>
                                         </div>
                                     </div>

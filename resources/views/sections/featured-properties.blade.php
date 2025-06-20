@@ -46,8 +46,16 @@
                                     <span class="text">{{ $property->beds }} Beds</span>
                                 </div>
                                 <div class="ul-project-info ul-featured-property-info">
+                                    <span class="icon"><i class="flaticon-couch"></i></span>
+                                    <span class="text">{{ $property->parlor }} Parlor</span>
+                                </div>
+                                <div class="ul-project-info ul-featured-property-info">
+                                    <span class="icon"><i class="flaticon-kitchen"></i></span>
+                                    <span class="text">{{ $property->kitchen }} Kitchen</span>
+                                </div>
+                                <div class="ul-project-info ul-featured-property-info">
                                     <span class="icon"><i class="flaticon-bath"></i></span>
-                                    <span class="text">{{ $property->bathrooms }} Bathrooms</span>
+                                    <span class="text">{{ $property->bathroom }} Bathroom</span>
                                 </div>
                             </div>
                         </div>

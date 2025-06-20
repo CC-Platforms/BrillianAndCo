@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Web;
 use App\Http\Controllers\Controller;
 use App\Models\Property;
 use App\Models\Land;
+use App\Models\Facility;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -16,9 +17,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // Get featured properties (using Property model instead of ProjectService)
-        $projects = Property::where('is_featured', true)
-            ->where('is_active', true)
+        // Get all active properties for the projects section (not just featured)
+        $projects = Property::where('is_active', true)
             ->orderBy('created_at', 'desc')
             ->get();
         
@@ -26,7 +26,7 @@ class HomeController extends Controller
         $featuredProperties = Property::where('is_featured', true)
             ->where('is_active', true)
             ->orderBy('created_at', 'desc')
-            ->limit(5)
+            ->limit(20)
             ->get();
         
         // Get lands grouped by category (using Land model instead of LandService)
@@ -34,6 +34,11 @@ class HomeController extends Controller
             ->get()
             ->groupBy('category');
         
-        return view('home.index', compact('projects', 'featuredProperties', 'landsByCategory'));
+        // Get active facilities for the facilities section
+        $facilities = Facility::where('is_active', true)
+            ->orderBy('created_at', 'desc')
+            ->get();
+        
+        return view('home.index', compact('projects', 'featuredProperties', 'landsByCategory', 'facilities'));
     }
 }

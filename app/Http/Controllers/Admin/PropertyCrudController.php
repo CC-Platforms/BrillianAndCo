@@ -39,13 +39,32 @@ class PropertyCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        CRUD::column('featured_image')->type('text')->label('Featured Image');
+        CRUD::column('featured_image')->type('image')->label('Featured Image')
+            ->height('120px')->width('160px')
+            ->value(function($entry) {
+                if (!$entry->featured_image) return '';
+                
+                // Handle asset images (seeded data)
+                if (str_starts_with($entry->featured_image, 'assets/')) {
+                    return asset($entry->featured_image);
+                }
+                
+                // Handle uploaded storage images - new withFiles() method stores full path
+                if (str_starts_with($entry->featured_image, 'uploads/')) {
+                    return asset('storage/' . $entry->featured_image);
+                }
+                
+                // Fallback for any other format
+                return asset('storage/' . $entry->featured_image);
+            });
         CRUD::column('title')->type('text')->label('Property Title');
         CRUD::column('location')->type('text')->label('Location');
         CRUD::column('price')->type('text')->label('Price');
         CRUD::column('period')->type('text')->label('Period');
         CRUD::column('beds')->type('number')->label('Beds');
-        CRUD::column('bathrooms')->type('number')->label('Baths');
+        CRUD::column('parlor')->type('number')->label('Parlor');
+        CRUD::column('kitchen')->type('number')->label('Kitchen');
+        CRUD::column('bathroom')->type('number')->label('Bathroom');
         CRUD::column('tag')->type('text')->label('Tag');
         CRUD::column('is_featured')->type('boolean')->label('Featured');
         CRUD::column('is_active')->type('boolean')->label('Active');
@@ -110,12 +129,25 @@ class PropertyCrudController extends CrudController
         CRUD::field('beds')->type('number')->label('Bedrooms')
             ->attributes(['min' => 0, 'max' => 20, 'step' => 1])
             ->default(1)
-            ->wrapper(['class' => 'form-group col-md-6']);
+            ->wrapper(['class' => 'form-group col-md-3']);
         
-        CRUD::field('bathrooms')->type('number')->label('Bathrooms')
+        CRUD::field('parlor')->type('number')->label('Parlor')
+            ->attributes(['min' => 0, 'max' => 10, 'step' => 1])
+            ->default(1)
+            ->hint('Number of parlors/living rooms')
+            ->wrapper(['class' => 'form-group col-md-3']);
+        
+        CRUD::field('kitchen')->type('number')->label('Kitchen')
+            ->attributes(['min' => 0, 'max' => 10, 'step' => 1])
+            ->default(1)
+            ->hint('Number of kitchens')
+            ->wrapper(['class' => 'form-group col-md-3']);
+        
+        CRUD::field('bathroom')->type('number')->label('Bathroom')
             ->attributes(['min' => 0, 'max' => 20, 'step' => 1])
             ->default(1)
-            ->wrapper(['class' => 'form-group col-md-6']);
+            ->hint('Number of bathrooms')
+            ->wrapper(['class' => 'form-group col-md-3']);
 
         // Images Section
         CRUD::addField([
@@ -125,20 +157,13 @@ class PropertyCrudController extends CrudController
         ]);
 
         CRUD::field('featured_image')->type('upload')->label('Featured Image')
-            ->upload(true)
-            ->disk('public')
+            ->withFiles([
+                'disk' => 'public',
+                'path' => 'uploads/properties',
+                'deleteWhenEntryIsDeleted' => true,
+            ])
             ->hint('Main property image (recommended: 800x450px)')
-            ->wrapper(['class' => 'form-group col-md-6']);
-
-        CRUD::field('gallery_images_json')->type('textarea')->label('Property Gallery Images')
-            ->hint('Enter image URLs separated by commas, or upload via file manager')
-            ->value(function($entry) {
-                if ($entry->gallery_images_json && is_array($entry->gallery_images_json)) {
-                    return implode(', ', $entry->gallery_images_json);
-                }
-                return $entry->gallery_images_json ?? '';
-            })
-            ->wrapper(['class' => 'form-group col-md-6']);
+            ->wrapper(['class' => 'form-group col-md-12']);
 
         // Content Section
         CRUD::addField([
@@ -201,6 +226,22 @@ class PropertyCrudController extends CrudController
     }
 
     /**
+     * Define what happens when the Delete operation is loaded.
+     * 
+     * @see https://backpackforlaravel.com/docs/crud-operation-delete
+     * @return void
+     */
+    protected function setupDeleteOperation()
+    {
+        // Configure the upload field for automatic file deletion
+        CRUD::field('featured_image')->type('upload')->withFiles([
+            'disk' => 'public',
+            'path' => 'uploads/properties',
+            'deleteWhenEntryIsDeleted' => true,
+        ]);
+    }
+
+    /**
      * Define what happens when the Show operation is loaded.
      * 
      * @see https://backpackforlaravel.com/docs/crud-operation-show
@@ -216,12 +257,30 @@ class PropertyCrudController extends CrudController
         
         // Property Details
         CRUD::column('beds')->type('number')->label('Bedrooms');
-        CRUD::column('bathrooms')->type('number')->label('Bathrooms');
+        CRUD::column('parlor')->type('number')->label('Parlor');
+        CRUD::column('kitchen')->type('number')->label('Kitchen');
+        CRUD::column('bathroom')->type('number')->label('Bathroom');
         CRUD::column('description')->type('summernote')->label('Description');
         
         // Images
-        CRUD::column('featured_image')->type('text')->label('Featured Image');
-        CRUD::column('gallery_images_json')->type('json')->label('Property Gallery');
+        CRUD::column('featured_image')->type('image')->label('Featured Image')
+            ->height('300px')->width('400px')
+            ->value(function($entry) {
+                if (!$entry->featured_image) return '';
+                
+                // Handle asset images (seeded data)
+                if (str_starts_with($entry->featured_image, 'assets/')) {
+                    return asset($entry->featured_image);
+                }
+                
+                // Handle uploaded storage images - new withFiles() method stores full path
+                if (str_starts_with($entry->featured_image, 'uploads/')) {
+                    return asset('storage/' . $entry->featured_image);
+                }
+                
+                // Fallback for any other format
+                return asset('storage/' . $entry->featured_image);
+            });
         
         // Status and Tags
         CRUD::column('tag')->type('text')->label('Tag');

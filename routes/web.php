@@ -63,3 +63,10 @@ Route::middleware('track.visitors')->group(function () {
         Route::post('/subscribe', 'subscribe')->name('newsletter.subscribe');
     });
 }); // End visitor tracking middleware group
+
+Route::get('/debug-images', function() {
+    $properties = App\Models\Property::select('id', 'title', 'featured_image')->get();
+    foreach($properties as $property) {
+        echo "ID: {$property->id} | Title: {$property->title} | Image: {$property->featured_image}<br>";
+    }
+});

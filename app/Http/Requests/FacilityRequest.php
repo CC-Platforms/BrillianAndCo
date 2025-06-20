@@ -26,13 +26,7 @@ class FacilityRequest extends FormRequest
     {
         return [
             'title' => 'required|string|max:255',
-            'subtitle' => 'nullable|string|max:255',
-            'description' => 'required|string',
-            'features_list_json' => 'nullable|array',
-            'features_list_json.*.feature' => 'required|string|max:255',
-            'features_list_json.*.icon' => 'required|string',
-            'gallery_images_json' => 'nullable|array',
-            'gallery_images_json.*' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'is_active' => 'boolean',
         ];
     }
@@ -46,10 +40,7 @@ class FacilityRequest extends FormRequest
     {
         return [
             'title' => 'facility title',
-            'subtitle' => 'subtitle',
-            'description' => 'facility description',
-            'features_list_json' => 'features list',
-            'gallery_images_json' => 'gallery images',
+            'image' => 'facility image',
             'is_active' => 'active status',
         ];
     }
@@ -62,10 +53,8 @@ class FacilityRequest extends FormRequest
     public function messages()
     {
         return [
-            'gallery_images_json.*.image' => 'All gallery images must be image files.',
-            'gallery_images_json.*.max' => 'Each gallery image size must be less than 2MB.',
-            'features_list_json.*.feature.required' => 'Each feature must have a name.',
-            'features_list_json.*.icon.required' => 'Each feature must have an icon selected.',
+            'image.image' => 'The facility image must be an image file.',
+            'image.max' => 'The facility image size must be less than 2MB.',
         ];
     }
 }

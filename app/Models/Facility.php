@@ -13,16 +13,11 @@ class Facility extends Model
 
     protected $fillable = [
         'title',
-        'subtitle',
-        'description',
-        'features_list_json',
-        'gallery_images_json',
+        'image',
         'is_active',
     ];
 
     protected $casts = [
-        'features_list_json' => 'array',
-        'gallery_images_json' => 'array',
         'is_active' => 'boolean',
     ];
 
@@ -32,5 +27,23 @@ class Facility extends Model
     public function scopeActive($query)
     {
         return $query->where('is_active', true);
+    }
+
+    /**
+     * Get the image URL for display
+     */
+    public function getImageUrlAttribute()
+    {
+        if (!$this->image) {
+            return null;
+        }
+
+        // Handle asset images
+        if (str_starts_with($this->image, 'assets/')) {
+            return asset($this->image);
+        }
+
+        // Handle uploaded storage images
+        return asset('storage/' . $this->image);
     }
 }

@@ -53,11 +53,27 @@
                 </div>
                 @endif
                 
-                @if($bathrooms > 0)
+                @if(isset($parlor) && $parlor > 0)
+                <!-- single info -->
+                <div class="ul-project-info ul-featured-property-info">
+                    <span class="icon"><i class="flaticon-couch"></i></span>
+                    <span class="text">{{ $parlor }} {{ __('Parlor') }}{{ $parlor > 1 ? 's' : '' }}</span>
+                </div>
+                @endif
+                
+                @if(isset($kitchen) && $kitchen > 0)
+                <!-- single info -->
+                <div class="ul-project-info ul-featured-property-info">
+                    <span class="icon"><i class="flaticon-kitchen"></i></span>
+                    <span class="text">{{ $kitchen }} {{ __('Kitchen') }}{{ $kitchen > 1 ? 's' : '' }}</span>
+                </div>
+                @endif
+                
+                @if(isset($bathroom) && $bathroom > 0)
                 <!-- single info -->
                 <div class="ul-project-info ul-featured-property-info">
                     <span class="icon"><i class="flaticon-bath"></i></span>
-                    <span class="text">{{ $bathrooms }} {{ __('Bathroom') }}{{ $bathrooms > 1 ? 's' : '' }}</span>
+                    <span class="text">{{ $bathroom }} {{ __('Bathroom') }}{{ $bathroom > 1 ? 's' : '' }}</span>
                 </div>
                 @endif
                 

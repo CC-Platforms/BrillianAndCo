@@ -39,12 +39,31 @@ class LandCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        CRUD::column('featured_image')->type('text')->label('Main Land Image');
+        CRUD::column('featured_image')->type('image')->label('Featured Image')
+            ->height('120px')->width('160px')
+            ->value(function($entry) {
+                if (!$entry->featured_image) return '';
+                
+                // Handle asset images (seeded data)
+                if (str_starts_with($entry->featured_image, 'assets/')) {
+                    return asset($entry->featured_image);
+                }
+                
+                // Handle uploaded storage images - new withFiles() method stores full path
+                if (str_starts_with($entry->featured_image, 'uploads/')) {
+                    return asset('storage/' . $entry->featured_image);
+                }
+                
+                // Fallback for any other format
+                return asset('storage/' . $entry->featured_image);
+            });
         CRUD::column('title')->type('text')->label('Land Title');
         CRUD::column('location')->type('text')->label('Location');
         CRUD::column('price')->type('text')->label('Price');
-        CRUD::column('area')->type('text')->label('Area');
+        // CRUD::column('period')->type('text')->label('Period');
+        CRUD::column('size')->type('text')->label('Size');
         CRUD::column('category')->type('text')->label('Category');
+        CRUD::column('is_featured')->type('boolean')->label('Featured');
         CRUD::column('is_active')->type('boolean')->label('Active');
         CRUD::column('created_at')->type('datetime')->label('Created');
     }
@@ -128,21 +147,14 @@ class LandCrudController extends CrudController
             'value' => '<h5 class="text-primary mt-4"><i class="la la-camera"></i> Land Images</h5><hr>'
         ]);
 
-        CRUD::field('featured_image')->type('upload')->label('Main Land Image')
-            ->upload(true)
-            ->disk('public')
+        CRUD::field('featured_image')->type('upload')->label('Featured Image')
+            ->withFiles([
+                'disk' => 'public',
+                'path' => 'uploads/lands',
+                'deleteWhenEntryIsDeleted' => true,
+            ])
             ->hint('Main land image (recommended: 800x450px)')
-            ->wrapper(['class' => 'form-group col-md-6']);
-
-        CRUD::field('gallery_images_json')->type('textarea')->label('Land Gallery Images')
-            ->hint('Enter image URLs separated by commas, or upload via file manager')
-            ->value(function($entry) {
-                if ($entry->gallery_images_json && is_array($entry->gallery_images_json)) {
-                    return implode(', ', $entry->gallery_images_json);
-                }
-                return $entry->gallery_images_json ?? '';
-            })
-            ->wrapper(['class' => 'form-group col-md-6']);
+            ->wrapper(['class' => 'form-group col-md-12']);
 
         // Content Section
         CRUD::addField([
@@ -204,6 +216,22 @@ class LandCrudController extends CrudController
     }
 
     /**
+     * Define what happens when the Delete operation is loaded.
+     * 
+     * @see https://backpackforlaravel.com/docs/crud-operation-delete
+     * @return void
+     */
+    protected function setupDeleteOperation()
+    {
+        // Configure the upload field for automatic file deletion
+        CRUD::field('featured_image')->type('upload')->withFiles([
+            'disk' => 'public',
+            'path' => 'uploads/lands',
+            'deleteWhenEntryIsDeleted' => true,
+        ]);
+    }
+
+    /**
      * Define what happens when the Show operation is loaded.
      * 
      * @see https://backpackforlaravel.com/docs/crud-operation-show
@@ -211,26 +239,36 @@ class LandCrudController extends CrudController
      */
     protected function setupShowOperation()
     {
-        // Basic Information
         CRUD::column('title')->type('text')->label('Land Title');
         CRUD::column('location')->type('text')->label('Location');
         CRUD::column('price')->type('text')->label('Price (XAF)');
-        CRUD::column('area')->type('text')->label('Land Area');
-        CRUD::column('category')->type('text')->label('Category');
+        CRUD::column('period')->type('text')->label('Period');
+        CRUD::column('size')->type('text')->label('Size');
         CRUD::column('land_type')->type('text')->label('Land Type');
-        
-        // Description
         CRUD::column('description')->type('summernote')->label('Description');
         
-        // Images
-        CRUD::column('featured_image')->type('text')->label('Main Land Image');
-        CRUD::column('gallery_images_json')->type('json')->label('Land Gallery');
+        CRUD::column('featured_image')->type('image')->label('Featured Image')
+            ->height('300px')->width('400px')
+            ->value(function($entry) {
+                if (!$entry->featured_image) return '';
+                
+                // Handle asset images (seeded data)
+                if (str_starts_with($entry->featured_image, 'assets/')) {
+                    return asset($entry->featured_image);
+                }
+                
+                // Handle uploaded storage images - new withFiles() method stores full path
+                if (str_starts_with($entry->featured_image, 'uploads/')) {
+                    return asset('storage/' . $entry->featured_image);
+                }
+                
+                // Fallback for any other format
+                return asset('storage/' . $entry->featured_image);
+            });
         
-        // Status and Tags
         CRUD::column('tag')->type('text')->label('Tag');
+        CRUD::column('is_featured')->type('boolean')->label('Featured Land');
         CRUD::column('is_active')->type('boolean')->label('Active Listing');
-        
-        // Timestamps
         CRUD::column('created_at')->type('datetime')->label('Created At');
         CRUD::column('updated_at')->type('datetime')->label('Updated At');
     }

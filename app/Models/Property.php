@@ -19,21 +19,23 @@ class Property extends Model
         'period',
         'location',
         'beds',
-        'bathrooms',
+        'parlor',
+        'kitchen',
+        'bathroom',
         'description',
         'featured_image',
-        'gallery_images_json',
         'tag',
         'is_featured',
         'is_active',
     ];
 
     protected $casts = [
-        'gallery_images_json' => 'array',
         'is_featured' => 'boolean',
         'is_active' => 'boolean',
         'beds' => 'integer',
-        'bathrooms' => 'integer',
+        'parlor' => 'integer',
+        'kitchen' => 'integer',
+        'bathroom' => 'integer',
     ];
 
     /*
@@ -65,20 +67,7 @@ class Property extends Model
         }
     }
 
-    /**
-     * Set gallery images JSON - convert string to array when saving
-     */
-    public function setGalleryImagesJsonAttribute($value)
-    {
-        if (is_string($value)) {
-            // If it's a comma-separated string, convert to array
-            $images = array_map('trim', explode(',', $value));
-            $images = array_filter($images); // Remove empty values
-            $this->attributes['gallery_images_json'] = json_encode($images);
-        } else {
-            $this->attributes['gallery_images_json'] = json_encode($value);
-        }
-    }
+
 
     /**
      * Get the route key for the model.
@@ -119,13 +108,58 @@ class Property extends Model
     */
 
     /**
-     * Get gallery images JSON - convert array to string for textarea display
+     * Get the featured image URL with proper path handling
      */
-    public function getGalleryImagesJsonForTextareaAttribute()
+    public function getFeaturedImageAttribute($value)
     {
-        if (is_array($this->gallery_images_json)) {
-            return implode(', ', $this->gallery_images_json);
+        if (!$value) {
+            return $value;
         }
-        return $this->gallery_images_json ?? '';
+
+        // If it's already a full URL or starts with assets/, return as is for asset() helper
+        if (str_starts_with($value, 'http') || str_starts_with($value, 'assets/')) {
+            return $value;
+        }
+
+        // If it's a storage file (uploaded file), return the relative path for storage() helper
+        // This handles uploaded files that are stored in storage/app/public/
+        return $value;
     }
+
+    /**
+     * Get the featured image URL for display purposes
+     */
+    public function getFeaturedImageUrlAttribute()
+    {
+        if (!$this->featured_image) {
+            return null;
+        }
+
+        // If it starts with assets/, use asset helper
+        if (str_starts_with($this->featured_image, 'assets/')) {
+            return asset($this->featured_image);
+        }
+
+        // If it's an uploaded file, use storage helper
+        return asset('storage/' . $this->featured_image);
+    }
+
+    /**
+     * Get the featured image URL for display
+     */
+    public function getImageUrlAttribute()
+    {
+        if (!$this->featured_image) {
+            return null;
+        }
+
+        // Handle asset images
+        if (str_starts_with($this->featured_image, 'assets/')) {
+            return asset($this->featured_image);
+        }
+
+        // Handle uploaded storage images
+        return asset('storage/' . $this->featured_image);
+    }
+
 }

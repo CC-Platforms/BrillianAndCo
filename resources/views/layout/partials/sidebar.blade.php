@@ -82,8 +82,18 @@
                                         </div>
                                         <!-- single info -->
                                         <div class="ul-project-info">
+                                            <span class="icon"><i class="flaticon-couch"></i></span>
+                                            <span class="text">{{ $project->parlor }} Parlor</span>
+                                        </div>
+                                        <!-- single info -->
+                                        <div class="ul-project-info">
+                                            <span class="icon"><i class="flaticon-kitchen"></i></span>
+                                            <span class="text">{{ $project->kitchen }} Kitchen</span>
+                                        </div>
+                                        <!-- single info -->
+                                        <div class="ul-project-info">
                                             <span class="icon"><i class="flaticon-bath"></i></span>
-                                            <span class="text">{{ $project->bathrooms }} Bathrooms</span>
+                                            <span class="text">{{ $project->bathroom }} Bathroom</span>
                                         </div>
                                     </div>
                                 </div>
