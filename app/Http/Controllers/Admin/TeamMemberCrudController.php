@@ -40,7 +40,7 @@ class TeamMemberCrudController extends CrudController
     protected function setupListOperation()
     {
         CRUD::column('image')->type('image')->label('Photo')
-            ->height('120px')->width('120px')
+            ->height('80px')->width('80px')
             ->value(function($entry) {
                 if (!$entry->image) return '';
                 
@@ -59,8 +59,8 @@ class TeamMemberCrudController extends CrudController
             });
         CRUD::column('name')->type('text')->label('Name');
         CRUD::column('position')->type('text')->label('Position');
-        CRUD::column('is_active')->type('boolean')->label('Active');
-        CRUD::column('created_at')->type('datetime')->label('Created');
+        CRUD::column('phone')->type('text')->label('Phone');
+        CRUD::column('email')->type('email')->label('Email');
     }
 
     /**
@@ -175,7 +175,7 @@ class TeamMemberCrudController extends CrudController
 
         CRUD::field('social_links_json')->type('textarea')->label('Social Media Profiles (JSON)')
             ->hint('Enter social media links in JSON format: {"facebook":"url","linkedin":"url","twitter":"url"}')
-            ->attributes(['rows' => 3])
+            ->attributes(['placeholder' => '{"facebook":"","linkedin":"","twitter":""}', 'rows' => 3])
             ->wrapper(['class' => 'form-group col-md-12']);
 
         // Skills Section
@@ -187,7 +187,7 @@ class TeamMemberCrudController extends CrudController
 
         CRUD::field('skills_json')->type('textarea')->label('Professional Skills (JSON)')
             ->hint('Enter skills in JSON format: [{"title":"Property Valuation","value":90},{"title":"Client Relations","value":85}]')
-            ->attributes(['rows' => 4])
+            ->attributes(['placeholder' => '[{"title":"","value":0}]', 'rows' => 3])
             ->wrapper(['class' => 'form-group col-md-12']);
 
         // Status Section
@@ -238,11 +238,9 @@ class TeamMemberCrudController extends CrudController
      */
     protected function setupShowOperation()
     {
-        CRUD::column('name')->type('text')->label('Name');
-        CRUD::column('position')->type('text')->label('Position');
-        CRUD::column('description')->type('textarea')->label('Description');
+        // Personal Information
         CRUD::column('image')->type('image')->label('Photo')
-            ->height('300px')->width('300px')
+            ->height('200px')->width('200px')
             ->value(function($entry) {
                 if (!$entry->image) return '';
                 
@@ -259,8 +257,25 @@ class TeamMemberCrudController extends CrudController
                 // Fallback for any other format
                 return asset('storage/' . $entry->image);
             });
-        CRUD::column('social_links_json')->type('json')->label('Social Links');
-        CRUD::column('skills_json')->type('json')->label('Skills');
+        
+        CRUD::column('name')->type('text')->label('Full Name');
+        CRUD::column('position')->type('text')->label('Position');
+        
+        // Contact Information
+        CRUD::column('email')->type('email')->label('Email Address');
+        CRUD::column('phone')->type('text')->label('Phone Number');
+        CRUD::column('website')->type('url')->label('Website');
+        
+        // Professional Details
+        CRUD::column('experience')->type('text')->label('Experience');
+        CRUD::column('availability')->type('text')->label('Availability');
+        CRUD::column('description')->type('textarea')->label('Biography');
+        
+        // Social Media & Skills
+        CRUD::column('social_links_json')->type('text')->label('Social Media Links');
+        CRUD::column('skills_json')->type('text')->label('Professional Skills');
+        
+        // Status & Timestamps
         CRUD::column('is_active')->type('boolean')->label('Active');
         CRUD::column('created_at')->type('datetime')->label('Created At');
         CRUD::column('updated_at')->type('datetime')->label('Updated At');

@@ -29,8 +29,6 @@ class TeamMember extends Model
     ];
 
     protected $casts = [
-        'social_links_json' => 'array',
-        'skills_json' => 'array',
         'is_active' => 'boolean',
     ];
 
@@ -68,18 +66,35 @@ class TeamMember extends Model
      */
     public function setSocialLinksJsonAttribute($value)
     {
-        if (is_string($value) && !empty($value)) {
-            // Try to decode as JSON first
-            $decoded = json_decode($value, true);
-            if (json_last_error() === JSON_ERROR_NONE) {
-                $this->attributes['social_links_json'] = $value;
-            } else {
-                // If not valid JSON, store as is for manual editing
-                $this->attributes['social_links_json'] = $value;
-            }
-        } else {
+        if (is_string($value)) {
+            $this->attributes['social_links_json'] = $value;
+        } elseif (is_array($value)) {
             $this->attributes['social_links_json'] = json_encode($value);
+        } else {
+            $this->attributes['social_links_json'] = $value;
         }
+    }
+
+    /**
+     * Get social links JSON - always return as string for form display
+     */
+    public function getSocialLinksJsonAttribute($value)
+    {
+        if (is_null($value)) {
+            return '';
+        }
+        
+        // If it's already a valid JSON string, return as is
+        if (is_string($value)) {
+            return $value;
+        }
+        
+        // If it's an array, convert to JSON string
+        if (is_array($value)) {
+            return json_encode($value, JSON_PRETTY_PRINT);
+        }
+        
+        return (string) $value;
     }
 
     /**
@@ -87,18 +102,35 @@ class TeamMember extends Model
      */
     public function setSkillsJsonAttribute($value)
     {
-        if (is_string($value) && !empty($value)) {
-            // Try to decode as JSON first
-            $decoded = json_decode($value, true);
-            if (json_last_error() === JSON_ERROR_NONE) {
-                $this->attributes['skills_json'] = $value;
-            } else {
-                // If not valid JSON, store as is for manual editing
-                $this->attributes['skills_json'] = $value;
-            }
-        } else {
+        if (is_string($value)) {
+            $this->attributes['skills_json'] = $value;
+        } elseif (is_array($value)) {
             $this->attributes['skills_json'] = json_encode($value);
+        } else {
+            $this->attributes['skills_json'] = $value;
         }
+    }
+
+    /**
+     * Get skills JSON - always return as string for form display
+     */
+    public function getSkillsJsonAttribute($value)
+    {
+        if (is_null($value)) {
+            return '';
+        }
+        
+        // If it's already a valid JSON string, return as is
+        if (is_string($value)) {
+            return $value;
+        }
+        
+        // If it's an array, convert to JSON string
+        if (is_array($value)) {
+            return json_encode($value, JSON_PRETTY_PRINT);
+        }
+        
+        return (string) $value;
     }
 
     /*

@@ -26,7 +26,7 @@ class PropertyRequest extends FormRequest
     {
         return [
             'title' => 'required|string|max:255',
-            'price' => 'required|string|max:255',
+            'price_numeric' => 'required|numeric|min:0',
             'period' => 'nullable|string|max:255',
             'location' => 'required|string|max:255',
             'beds' => 'nullable|integer|min:0|max:20',
@@ -50,7 +50,7 @@ class PropertyRequest extends FormRequest
     {
         return [
             'title' => 'property title',
-            'price' => 'price',
+            'price_numeric' => 'price',
             'period' => 'rental period',
             'location' => 'location',
             'beds' => 'number of bedrooms',

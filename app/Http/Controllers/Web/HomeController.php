@@ -20,6 +20,7 @@ class HomeController extends Controller
         // Get all active properties for the projects section (not just featured)
         $projects = Property::where('is_active', true)
             ->orderBy('created_at', 'desc')
+            ->limit(6)
             ->get();
         
         // Get featured properties specifically for the featured properties section

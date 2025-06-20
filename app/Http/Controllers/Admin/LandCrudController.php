@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Requests\LandRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
+use Prologue\Alerts\Facades\Alert;
 
 /**
  * Class LandCrudController
@@ -60,10 +61,9 @@ class LandCrudController extends CrudController
         CRUD::column('title')->type('text')->label('Land Title');
         CRUD::column('location')->type('text')->label('Location');
         CRUD::column('price')->type('text')->label('Price');
-        // CRUD::column('period')->type('text')->label('Period');
-        CRUD::column('size')->type('text')->label('Size');
+        CRUD::column('area')->type('text')->label('Area');
         CRUD::column('category')->type('text')->label('Category');
-        CRUD::column('is_featured')->type('boolean')->label('Featured');
+        CRUD::column('tag')->type('text')->label('Tag');
         CRUD::column('is_active')->type('boolean')->label('Active');
         CRUD::column('created_at')->type('datetime')->label('Created');
     }
@@ -97,12 +97,13 @@ class LandCrudController extends CrudController
         ]);
 
         CRUD::field('location')->type('text')->label('Location')
-            ->hint('e.g., Molyko, Buea, South West Region, Cameroon')
+            ->hint('e.g., Casmic, Buea, Cameroon')
             ->wrapper(['class' => 'form-group col-md-8']);
         
-        CRUD::field('price')->type('text')->label('Price (XAF)')
-            ->hint('e.g., 8,500,000 or 15,000,000')
-            ->attributes(['placeholder' => '8,500,000'])
+        CRUD::field('price_numeric')->type('number')->label('Price')
+            ->hint('Enter amount in XAF (currency will be added automatically)')
+            ->attributes(['placeholder' => '8500000', 'min' => '0', 'step' => '1'])
+            ->suffix(' XAF')
             ->wrapper(['class' => 'form-group col-md-4']);
 
         // Land Details Section
@@ -112,9 +113,10 @@ class LandCrudController extends CrudController
             'value' => '<h5 class="text-primary mt-4"><i class="la la-expand"></i> Land Specifications</h5><hr>'
         ]);
 
-        CRUD::field('area')->type('text')->label('Land Area')
-            ->hint('e.g., 400 m², 800 m² (20m x 40m), 1,200 sq ft')
-            ->attributes(['placeholder' => '400 m²'])
+        CRUD::field('area_numeric')->type('number')->label('Land Area')
+            ->hint('Enter area in square meters (m² will be added automatically)')
+            ->attributes(['placeholder' => '400', 'min' => '1', 'step' => '1'])
+            ->suffix(' m²')
             ->wrapper(['class' => 'form-group col-md-6']);
 
         CRUD::field('category')->type('select_from_array')->label('Land Category')
@@ -216,6 +218,82 @@ class LandCrudController extends CrudController
     }
 
     /**
+     * Store a newly created resource in storage.
+     */
+    public function store()
+    {
+        $this->crud->hasAccessOrFail('create');
+        
+        // Execute the FormRequest authorization and validation
+        $request = $this->crud->validateRequest();
+        
+        // Manually handle the virtual fields
+        $data = $request->all();
+        
+        // Handle price_numeric -> price conversion
+        if (isset($data['price_numeric']) && is_numeric($data['price_numeric'])) {
+            $data['price'] = number_format($data['price_numeric'], 0, '.', ',') . ' XAF';
+            unset($data['price_numeric']);
+        }
+        
+        // Handle area_numeric -> area conversion  
+        if (isset($data['area_numeric']) && is_numeric($data['area_numeric'])) {
+            $data['area'] = $data['area_numeric'] . ' m²';
+            unset($data['area_numeric']);
+        }
+        
+        // Insert the entry in the database
+        $item = $this->crud->create($data);
+        $this->data['entry'] = $this->crud->entry = $item;
+        
+        // Show a success message
+        Alert::success(trans('backpack::crud.insert_success'))->flash();
+        
+        // Save the redirect choice for next time
+        $this->crud->setSaveAction();
+        
+        return $this->crud->performSaveAction($item->getKey());
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update()
+    {
+        $this->crud->hasAccessOrFail('update');
+        
+        // Execute the FormRequest authorization and validation
+        $request = $this->crud->validateRequest();
+        
+        // Manually handle the virtual fields
+        $data = $request->all();
+        
+        // Handle price_numeric -> price conversion
+        if (isset($data['price_numeric']) && is_numeric($data['price_numeric'])) {
+            $data['price'] = number_format($data['price_numeric'], 0, '.', ',') . ' XAF';
+            unset($data['price_numeric']);
+        }
+        
+        // Handle area_numeric -> area conversion
+        if (isset($data['area_numeric']) && is_numeric($data['area_numeric'])) {
+            $data['area'] = $data['area_numeric'] . ' m²';
+            unset($data['area_numeric']);
+        }
+        
+        // Update the entry in the database
+        $item = $this->crud->update($request->get($this->crud->model->getKeyName()), $data);
+        $this->data['entry'] = $this->crud->entry = $item;
+        
+        // Show a success message
+        Alert::success(trans('backpack::crud.update_success'))->flash();
+        
+        // Save the redirect choice for next time
+        $this->crud->setSaveAction();
+        
+        return $this->crud->performSaveAction($item->getKey());
+    }
+
+    /**
      * Define what happens when the Delete operation is loaded.
      * 
      * @see https://backpackforlaravel.com/docs/crud-operation-delete
@@ -241,9 +319,9 @@ class LandCrudController extends CrudController
     {
         CRUD::column('title')->type('text')->label('Land Title');
         CRUD::column('location')->type('text')->label('Location');
-        CRUD::column('price')->type('text')->label('Price (XAF)');
-        CRUD::column('period')->type('text')->label('Period');
-        CRUD::column('size')->type('text')->label('Size');
+        CRUD::column('price')->type('text')->label('Price');
+        CRUD::column('area')->type('text')->label('Area');
+        CRUD::column('category')->type('text')->label('Category');
         CRUD::column('land_type')->type('text')->label('Land Type');
         CRUD::column('description')->type('summernote')->label('Description');
         
@@ -267,7 +345,6 @@ class LandCrudController extends CrudController
             });
         
         CRUD::column('tag')->type('text')->label('Tag');
-        CRUD::column('is_featured')->type('boolean')->label('Featured Land');
         CRUD::column('is_active')->type('boolean')->label('Active Listing');
         CRUD::column('created_at')->type('datetime')->label('Created At');
         CRUD::column('updated_at')->type('datetime')->label('Updated At');

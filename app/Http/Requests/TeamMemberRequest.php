@@ -31,15 +31,11 @@ class TeamMemberRequest extends FormRequest
             'phone' => 'nullable|string|max:255',
             'website' => 'nullable|url|max:255',
             'experience' => 'nullable|string|max:255',
-            'availability' => 'nullable|string|in:Full Time,Part Time,Consultant',
+            'availability' => 'nullable|string|in:Full Time,Part Time,Consultant,Contract,Remote',
             'description' => 'required|string',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'social_links_json' => 'nullable|array',
-            'social_links_json.*.platform' => 'required|string|in:facebook,twitter,linkedin,instagram,tiktok',
-            'social_links_json.*.url' => 'required|url',
-            'skills_json' => 'nullable|array',
-            'skills_json.*.title' => 'required|string|max:255',
-            'skills_json.*.value' => 'required|integer|min:0|max:100',
+            'social_links_json' => 'nullable|string',
+            'skills_json' => 'nullable|string',
             'is_active' => 'boolean',
         ];
     }
@@ -77,12 +73,9 @@ class TeamMemberRequest extends FormRequest
         return [
             'image.image' => 'The profile photo must be an image file.',
             'image.max' => 'The profile photo size must be less than 2MB.',
-            'social_links_json.*.platform.required' => 'Each social media link must have a platform selected.',
-            'social_links_json.*.url.required' => 'Each social media link must have a URL.',
-            'social_links_json.*.url.url' => 'Each social media URL must be a valid URL.',
-            'skills_json.*.title.required' => 'Each skill must have a title.',
-            'skills_json.*.value.required' => 'Each skill must have a proficiency value.',
-            'skills_json.*.value.max' => 'Skill proficiency cannot exceed 100%.',
+            'availability.in' => 'Please select a valid availability option.',
+            'website.url' => 'Please enter a valid website URL.',
+            'email.email' => 'Please enter a valid email address.',
         ];
     }
 }

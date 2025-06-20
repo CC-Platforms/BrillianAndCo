@@ -16,6 +16,7 @@ class Property extends Model
         'title',
         'slug',
         'price',
+        'price_numeric',
         'period',
         'location',
         'beds',
@@ -28,6 +29,8 @@ class Property extends Model
         'is_featured',
         'is_active',
     ];
+
+    protected $appends = ['price_numeric'];
 
     protected $casts = [
         'is_featured' => 'boolean',
@@ -64,6 +67,30 @@ class Property extends Model
                 $this->attributes['slug'] = $originalSlug . '-' . $counter;
                 $counter++;
             }
+        }
+    }
+
+    /**
+     * Handle the virtual price_numeric field
+     */
+    public function setPriceNumericAttribute($value)
+    {
+        if (is_numeric($value) && $value > 0) {
+            $this->attributes['price'] = number_format($value, 0, '.', ',') . ' XAF';
+        }
+    }
+
+    /**
+     * Automatically add XAF currency to price when saving
+     */
+    public function setPriceAttribute($value)
+    {
+        // If it's a number (from form), add XAF
+        if (is_numeric($value)) {
+            $this->attributes['price'] = number_format($value, 0, '.', ',') . ' XAF';
+        } else {
+            // If it already has XAF or is a string, keep as is
+            $this->attributes['price'] = $value;
         }
     }
 
@@ -124,6 +151,18 @@ class Property extends Model
         // If it's a storage file (uploaded file), return the relative path for storage() helper
         // This handles uploaded files that are stored in storage/app/public/
         return $value;
+    }
+
+    /**
+     * Get numeric price value (without XAF) for editing
+     */
+    public function getPriceNumericAttribute()
+    {
+        if (!$this->attributes['price'] ?? null) return null;
+        
+        // Extract numbers from price string
+        $numeric = preg_replace('/[^0-9]/', '', $this->attributes['price']);
+        return $numeric ? (int)$numeric : null;
     }
 
     /**

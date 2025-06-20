@@ -103,9 +103,10 @@ class PropertyCrudController extends CrudController
             ->hint('e.g., Molyko, Buea, South West Region, Cameroon')
             ->wrapper(['class' => 'form-group col-md-6']);
         
-        CRUD::field('price')->type('text')->label('Price (XAF)')
-            ->hint('e.g., 100,000 or 1,500,000')
-            ->attributes(['placeholder' => '100,000'])
+        CRUD::field('price_numeric')->type('number')->label('Price')
+            ->hint('Enter amount in XAF (currency will be added automatically)')
+            ->attributes(['placeholder' => '100000', 'min' => '0', 'step' => '1'])
+            ->suffix(' XAF')
             ->wrapper(['class' => 'form-group col-md-3']);
         
         CRUD::field('period')->type('select_from_array')->label('Period')
