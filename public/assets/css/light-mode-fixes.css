@@ -1,0 +1,52 @@
+/* Light Mode Visibility Fixes for Backpack */
+
+/* Fix active navigation links in light mode */
+[data-bs-theme="light"] .sidebar .nav-link.active {
+    color: #1a73e8 !important; /* Blue color for active links */
+    background-color: rgba(26, 115, 232, 0.1) !important;
+}
+
+/* Fix hover state for navigation links in light mode */
+[data-bs-theme="light"] .sidebar .nav-link:hover {
+    color: #1a73e8 !important; /* Blue color on hover */
+    background-color: rgba(26, 115, 232, 0.05) !important;
+}
+
+/* Fix text color for sidebar navigation in light mode */
+[data-bs-theme="light"] .sidebar .nav-link {
+    color: #495057 !important; /* Dark gray for normal links */
+}
+
+/* Fix breadcrumb text in light mode */
+[data-bs-theme="light"] .breadcrumb-item a {
+    color: #1a73e8 !important;
+}
+
+/* Fix dropdown menu items in light mode */
+[data-bs-theme="light"] .dropdown-menu .dropdown-item:hover {
+    color: #1a73e8 !important;
+    background-color: rgba(26, 115, 232, 0.1) !important;
+}
+
+/* Fix table action buttons in light mode */
+[data-bs-theme="light"] .btn-link {
+    color: #1a73e8 !important;
+}
+
+/* Fix pagination links in light mode */
+[data-bs-theme="light"] .page-link {
+    color: #1a73e8 !important;
+}
+
+[data-bs-theme="light"] .page-link:hover {
+    color: #0d47a1 !important;
+}
+
+/* Fix tab navigation in light mode */
+[data-bs-theme="light"] .nav-tabs .nav-link.active {
+    color: #1a73e8 !important;
+}
+
+[data-bs-theme="light"] .nav-tabs .nav-link:hover {
+    color: #1a73e8 !important;
+}

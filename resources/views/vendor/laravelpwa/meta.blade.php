@@ -12,7 +12,18 @@
 <meta name="apple-mobile-web-app-capable" content="{{ $config['display'] == 'standalone' ? 'yes' : 'no' }}">
 <meta name="apple-mobile-web-app-status-bar-style" content="{{  $config['status_bar'] }}">
 <meta name="apple-mobile-web-app-title" content="{{ $config['short_name'] }}">
-<link rel="apple-touch-icon" href="{{ data_get(end($config['icons']), 'src') }}">
+
+<!-- Apple Touch Icons for better iOS support -->
+<link rel="apple-touch-icon" sizes="180x180" href="{{ data_get(end($config['icons']), 'src') }}">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/icons/icon-152x152.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/icons/icon-144x144.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/images/icons/icon-128x128.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/images/icons/icon-128x128.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/images/icons/icon-72x72.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/images/icons/icon-72x72.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/images/icons/icon-72x72.png">
+<link rel="apple-touch-icon" sizes="57x57" href="/images/icons/icon-72x72.png">
+<link rel="apple-touch-icon" href="/images/icons/icon-192x192.png">
 
 
 <link href="{{ $config['splash']['640x1136'] }}" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
