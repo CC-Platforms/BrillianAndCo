@@ -3,8 +3,8 @@
 return [
     'name' => 'BrillianCoPWA',
     'manifest' => [
-        'name' => 'Brillian & Co Real Estate',
-        'short_name' => 'BrillianCo',
+        'name' => 'BRICORE',
+        'short_name' => 'BRICORE',
         'start_url' => '/',
         'background_color' => '#ffffff',
         'theme_color' => '#3058af',

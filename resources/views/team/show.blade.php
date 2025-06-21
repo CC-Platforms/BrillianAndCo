@@ -4,13 +4,13 @@
     <!-- BREADCRUMB SECTION START -->
     <div class="ul-breadcrumb">
         <div class="wow animate__fadeInUp">
-            <h2 class="ul-breadcrumb-title">{{ $teamMember['name'] }}</h2>
+            <h2 class="ul-breadcrumb-title">{{ $teamMember->name }}</h2>
             <div class="ul-breadcrumb-nav">
                 <a href="{{ route('home.index') }}">Home</a>
                 <span class="separator"><i class="flaticon-aro-left"></i></span>
                 <a href="{{ url('/team') }}">Team</a>
                 <span class="separator"><i class="flaticon-aro-left"></i></span>
-                <span class="current-page">{{ $teamMember['name'] }}</span>
+                <span class="current-page">{{ $teamMember->name }}</span>
             </div>
         </div>
     </div>
@@ -21,32 +21,42 @@
         <div class="ul-container">
             <div class="ul-team-details">
                 <div class="ul-team-details-img wow animate__fadeInUp">
-                    <img src="{{ asset($teamMember['image']) }}" alt="{{ $teamMember['name'] }}">
+                    <img src="{{ asset($teamMember->image) }}" alt="{{ $teamMember->name }}">
                 </div>
 
                 <!-- txt -->
                 <div class="txt wow animate__fadeInUp">
-                    <h3 class="ul-team-details-name">{{ $teamMember['name'] }}</h3>
-                    <h6 class="ul-team-details-role">{{ $teamMember['position'] }}</h6>
-                    <p class="ul-team-details-descr">{!! $teamMember['description'] !!}</p>
+                    <h3 class="ul-team-details-name">{{ $teamMember->name }}</h3>
+                    <h6 class="ul-team-details-role">{{ $teamMember->position }}</h6>
+                    <p class="ul-team-details-descr">{!! $teamMember->description !!}</p>
                     <ul class="ul-team-details-infos">
                         <li class="ul-team-details-info"> <span class="key">Phone Number:</span> <a
-                            href="tel:{{ $teamMember['phone'] }}">{{ $teamMember['phone'] }}</a></li>
+                            href="tel:{{ $teamMember->phone }}">{{ $teamMember->phone }}</a></li>
                         <li class="ul-team-details-info"><span class="key">Email:</span> <a
-                                href="mailto:bricore161@gmail.com">{{ $teamMember['phone'] }}</a></li>
-                        <li class="ul-team-details-info"><span class="key">Experience:</span> {{ $teamMember['experience']
+                                href="mailto:{{ $teamMember->email }}">{{ $teamMember->email }}</a></li>
+                        <li class="ul-team-details-info"><span class="key">Experience:</span> {{ $teamMember->experience
                             }}</li>
                         <li class="ul-team-details-info"><span class="key">Availability:</span> {{
-                            $teamMember['availability'] }}</li>
+                            $teamMember->availability }}</li>
                     </ul>
 
                     <!-- social links -->
+                    @php
+                        $socialLinks = json_decode($teamMember->social_links_json, true) ?? [];
+                    @endphp
                     <div class="ul-team-details-socials">
-                        <a href="{{ $teamMember['social']['facebook'] }}"><i class="flaticon-facebook"></i></a>
-                        @if(isset($teamMember['social']['instagram']) && $teamMember['social']['instagram'])
-                            <a href="{{ $teamMember['social']['instagram'] }}"><i class="flaticon-instagram"></i></a>
+                        @if(isset($socialLinks['facebook']) && $socialLinks['facebook'])
+                            <a href="{{ $socialLinks['facebook'] }}"><i class="flaticon-facebook"></i></a>
                         @endif
-                        <a href="{{ $teamMember['social']['tiktok'] }}"><i class="fab fa-tiktok"></i></a>
+                        @if(isset($socialLinks['instagram']) && $socialLinks['instagram'])
+                            <a href="{{ $socialLinks['instagram'] }}"><i class="flaticon-instagram"></i></a>
+                        @endif
+                        @if(isset($socialLinks['tiktok']) && $socialLinks['tiktok'])
+                            <a href="{{ $socialLinks['tiktok'] }}"><i class="fab fa-tiktok"></i></a>
+                        @endif
+                        @if(isset($socialLinks['linkedin']) && $socialLinks['linkedin'])
+                            <a href="{{ $socialLinks['linkedin'] }}"><i class="fab fa-linkedin"></i></a>
+                        @endif
                     </div>
                 </div>
             </div>
