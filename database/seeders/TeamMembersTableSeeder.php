@@ -21,7 +21,7 @@ class TeamMembersTableSeeder extends Seeder
                 'email' => 'bricore161@gmail.com',
                 'phone' => null,
                 'website' => null,
-                'experience' => '8 Years',
+                'experience' => '10 Years',
                 'availability' => 'Full Time',
                 'description' => 'Pah Brillian Beng is a seasoned real estate agent with extensive experience in residential and commercial properties in Buea and Limbe.',
                 'image' => 'assets/img/brillian/ceo_image.jpg',
