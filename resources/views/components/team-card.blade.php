@@ -12,13 +12,13 @@
             <div class="ul-team-card-socials" style="margin-top: auto;">
                 <div class="ul-team-card-socials-links" style="display: flex; gap: 12px; justify-content: center;">
                     @if($socialLinks && is_array($socialLinks))
-                        @foreach($socialLinks as $network => $url)
-                            @if($url)
-                                <a href="{{ $url }}" class="" target="_blank" rel="noopener noreferrer">
-                                    <i class="fab fa-{{ $network }}"></i>
-                                </a>
-                            @endif
-                        @endforeach
+                    @foreach($socialLinks as $network => $url)
+                        @if($url)
+                            <a href="{{ $url }}" class="" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-{{ $network }}"></i>
+                            </a>
+                        @endif
+                    @endforeach
                     @endif
                 </div>
             </div>
