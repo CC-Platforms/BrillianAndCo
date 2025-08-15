@@ -10,6 +10,7 @@ use App\Http\Controllers\Web\ProjectController;
 use App\Http\Controllers\Web\SalesController;
 use App\Http\Controllers\Web\ServiceController;
 use App\Http\Controllers\Web\TeamController;
+use App\Http\Controllers\Web\GalleryController;
 use App\Models\Property;
 use Illuminate\Support\Facades\Route;
 
@@ -57,6 +58,10 @@ Route::middleware('track.visitors')->group(function () {
         Route::post('/buyer', 'buyerSend')->name('buyer.send');
         Route::get('/seller', 'sellerIndex')->name('seller.index');
         Route::post('/seller', 'sellerSend')->name('seller.send');
+    });
+
+    Route::controller(GalleryController::class)->group(function() {
+        Route::get('gallery', 'index')->name('gallery.index');
     });
 
     Route::controller(NewsletterController::class)->group(function() {
