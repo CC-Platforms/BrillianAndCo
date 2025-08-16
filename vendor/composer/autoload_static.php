@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit88970a0117c062eed55fa8728fc43833
+class ComposerStaticInit820f26f2b1e3d929da93f33cd64ab14b
 {
     public static $files = array (
         '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
@@ -125,11 +125,6 @@ class ComposerStaticInit88970a0117c062eed55fa8728fc43833
             'NunoMaduro\\Collision\\' => 21,
             'Nette\\' => 6,
         ),
-        'N' => 
-        array (
-            'NunoMaduro\\Collision\\' => 21,
-            'Nette\\' => 6,
-        ),
         'M' => 
         array (
             'Monolog\\' => 8,
@@ -168,7 +163,6 @@ class ComposerStaticInit88970a0117c062eed55fa8728fc43833
         'F' => 
         array (
             'Fruitcake\\Cors\\' => 15,
-
             'Firebase\\JWT\\' => 13,
             'Faker\\' => 6,
         ),
@@ -621,6 +615,7 @@ class ComposerStaticInit88970a0117c062eed55fa8728fc43833
 
     public static $classMap = array (
         'App\\Http\\Controllers\\Admin\\FacilityCrudController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/FacilityCrudController.php',
+        'App\\Http\\Controllers\\Admin\\GalleryCrudController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/GalleryCrudController.php',
         'App\\Http\\Controllers\\Admin\\LandCrudController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/LandCrudController.php',
         'App\\Http\\Controllers\\Admin\\PropertyCrudController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/PropertyCrudController.php',
         'App\\Http\\Controllers\\Admin\\ServiceCrudController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/ServiceCrudController.php',
@@ -655,6 +650,7 @@ class ComposerStaticInit88970a0117c062eed55fa8728fc43833
         'App\\Mail\\BuyerFormSubmitted' => __DIR__ . '/../..' . '/app/Mail/BuyerFormSubmitted.php',
         'App\\Mail\\SellerFormSubmitted' => __DIR__ . '/../..' . '/app/Mail/SellerFormSubmitted.php',
         'App\\Models\\Facility' => __DIR__ . '/../..' . '/app/Models/Facility.php',
+        'App\\Models\\Gallery' => __DIR__ . '/../..' . '/app/Models/Gallery.php',
         'App\\Models\\Land' => __DIR__ . '/../..' . '/app/Models/Land.php',
         'App\\Models\\Project' => __DIR__ . '/../..' . '/app/Models/Project.php',
         'App\\Models\\Property' => __DIR__ . '/../..' . '/app/Models/Property.php',
@@ -5176,6 +5172,7 @@ class ComposerStaticInit88970a0117c062eed55fa8728fc43833
         'PHPUnit\\Runner\\CodeCoverage' => __DIR__ . '/..' . '/phpunit/phpunit/src/Runner/CodeCoverage.php',
         'PHPUnit\\Runner\\DeprecationCollector\\Collector' => __DIR__ . '/..' . '/phpunit/phpunit/src/Runner/DeprecationCollector/Collector.php',
         'PHPUnit\\Runner\\DeprecationCollector\\Facade' => __DIR__ . '/..' . '/phpunit/phpunit/src/Runner/DeprecationCollector/Facade.php',
+        'PHPUnit\\Runner\\DeprecationCollector\\InIsolationCollector' => __DIR__ . '/..' . '/phpunit/phpunit/src/Runner/DeprecationCollector/InIsolationCollector.php',
         'PHPUnit\\Runner\\DeprecationCollector\\Subscriber' => __DIR__ . '/..' . '/phpunit/phpunit/src/Runner/DeprecationCollector/Subscriber/Subscriber.php',
         'PHPUnit\\Runner\\DeprecationCollector\\TestPreparedSubscriber' => __DIR__ . '/..' . '/phpunit/phpunit/src/Runner/DeprecationCollector/Subscriber/TestPreparedSubscriber.php',
         'PHPUnit\\Runner\\DeprecationCollector\\TestTriggeredDeprecationSubscriber' => __DIR__ . '/..' . '/phpunit/phpunit/src/Runner/DeprecationCollector/Subscriber/TestTriggeredDeprecationSubscriber.php',
@@ -7847,9 +7844,9 @@ class ComposerStaticInit88970a0117c062eed55fa8728fc43833
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit88970a0117c062eed55fa8728fc43833::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit88970a0117c062eed55fa8728fc43833::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit88970a0117c062eed55fa8728fc43833::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit820f26f2b1e3d929da93f33cd64ab14b::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit820f26f2b1e3d929da93f33cd64ab14b::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit820f26f2b1e3d929da93f33cd64ab14b::$classMap;
 
         }, null, ClassLoader::class);
     }

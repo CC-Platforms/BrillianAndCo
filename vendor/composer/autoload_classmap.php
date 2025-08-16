@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Http\\Controllers\\Admin\\FacilityCrudController' => $baseDir . '/app/Http/Controllers/Admin/FacilityCrudController.php',
+    'App\\Http\\Controllers\\Admin\\GalleryCrudController' => $baseDir . '/app/Http/Controllers/Admin/GalleryCrudController.php',
     'App\\Http\\Controllers\\Admin\\LandCrudController' => $baseDir . '/app/Http/Controllers/Admin/LandCrudController.php',
     'App\\Http\\Controllers\\Admin\\PropertyCrudController' => $baseDir . '/app/Http/Controllers/Admin/PropertyCrudController.php',
     'App\\Http\\Controllers\\Admin\\ServiceCrudController' => $baseDir . '/app/Http/Controllers/Admin/ServiceCrudController.php',
@@ -41,6 +42,7 @@ return array(
     'App\\Mail\\BuyerFormSubmitted' => $baseDir . '/app/Mail/BuyerFormSubmitted.php',
     'App\\Mail\\SellerFormSubmitted' => $baseDir . '/app/Mail/SellerFormSubmitted.php',
     'App\\Models\\Facility' => $baseDir . '/app/Models/Facility.php',
+    'App\\Models\\Gallery' => $baseDir . '/app/Models/Gallery.php',
     'App\\Models\\Land' => $baseDir . '/app/Models/Land.php',
     'App\\Models\\Project' => $baseDir . '/app/Models/Project.php',
     'App\\Models\\Property' => $baseDir . '/app/Models/Property.php',
@@ -4562,6 +4564,7 @@ return array(
     'PHPUnit\\Runner\\CodeCoverage' => $vendorDir . '/phpunit/phpunit/src/Runner/CodeCoverage.php',
     'PHPUnit\\Runner\\DeprecationCollector\\Collector' => $vendorDir . '/phpunit/phpunit/src/Runner/DeprecationCollector/Collector.php',
     'PHPUnit\\Runner\\DeprecationCollector\\Facade' => $vendorDir . '/phpunit/phpunit/src/Runner/DeprecationCollector/Facade.php',
+    'PHPUnit\\Runner\\DeprecationCollector\\InIsolationCollector' => $vendorDir . '/phpunit/phpunit/src/Runner/DeprecationCollector/InIsolationCollector.php',
     'PHPUnit\\Runner\\DeprecationCollector\\Subscriber' => $vendorDir . '/phpunit/phpunit/src/Runner/DeprecationCollector/Subscriber/Subscriber.php',
     'PHPUnit\\Runner\\DeprecationCollector\\TestPreparedSubscriber' => $vendorDir . '/phpunit/phpunit/src/Runner/DeprecationCollector/Subscriber/TestPreparedSubscriber.php',
     'PHPUnit\\Runner\\DeprecationCollector\\TestTriggeredDeprecationSubscriber' => $vendorDir . '/phpunit/phpunit/src/Runner/DeprecationCollector/Subscriber/TestTriggeredDeprecationSubscriber.php',
