@@ -125,6 +125,11 @@ class ComposerStaticInit88970a0117c062eed55fa8728fc43833
             'NunoMaduro\\Collision\\' => 21,
             'Nette\\' => 6,
         ),
+        'N' => 
+        array (
+            'NunoMaduro\\Collision\\' => 21,
+            'Nette\\' => 6,
+        ),
         'M' => 
         array (
             'Monolog\\' => 8,
@@ -163,6 +168,7 @@ class ComposerStaticInit88970a0117c062eed55fa8728fc43833
         'F' => 
         array (
             'Fruitcake\\Cors\\' => 15,
+
             'Firebase\\JWT\\' => 13,
             'Faker\\' => 6,
         ),
@@ -627,6 +633,7 @@ class ComposerStaticInit88970a0117c062eed55fa8728fc43833
         'App\\Http\\Controllers\\Web\\AboutController' => __DIR__ . '/../..' . '/app/Http/Controllers/Web/AboutController.php',
         'App\\Http\\Controllers\\Web\\BlogController' => __DIR__ . '/../..' . '/app/Http/Controllers/Web/BlogController.php',
         'App\\Http\\Controllers\\Web\\ContactController' => __DIR__ . '/../..' . '/app/Http/Controllers/Web/ContactController.php',
+        'App\\Http\\Controllers\\Web\\GalleryController' => __DIR__ . '/../..' . '/app/Http/Controllers/Web/GalleryController.php',
         'App\\Http\\Controllers\\Web\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/Web/HomeController.php',
         'App\\Http\\Controllers\\Web\\NewsletterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Web/NewsletterController.php',
         'App\\Http\\Controllers\\Web\\PortfolioController' => __DIR__ . '/../..' . '/app/Http/Controllers/Web/PortfolioController.php',
