@@ -11,8 +11,8 @@
             <a href="{{ route('contact.index') }}">Contact</a>
 
             @guest
-                <a href="{{ route('login') }}" class="login-btn">Login</a>
-                <a href="{{ route('register') }}" class="register-btn">Register</a>
+                <a href="{{ route('login') }}" class="nav-login-btn">Login</a>
+                <a href="{{ route('register') }}" class="nav-register-btn">Register</a>
             @else
                 <div class="user-dropdown">
                     <div class="user-avatar-wrapper" onclick="toggleDropdown()">
