@@ -11,6 +11,7 @@ class GalleryController extends Controller
 {
     public function index(): View
     {
+        
         $projects = Property::where('is_active', true)
             ->orderBy('created_at', 'desc')
             ->limit(6)

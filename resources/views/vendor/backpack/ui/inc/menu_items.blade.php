@@ -7,3 +7,4 @@
 <x-backpack::menu-item title="Lands" icon="la la-map" :link="backpack_url('land')" />
 <x-backpack::menu-item title="Team Members" icon="la la-users" :link="backpack_url('team-member')" />
 <x-backpack::menu-item title="Facilities" icon="la la-tools" :link="backpack_url('facility')" />
+<x-backpack::menu-item title="Galleries" icon="la la-image" :link="backpack_url('gallery')" />

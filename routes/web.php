@@ -61,7 +61,7 @@ Route::middleware('track.visitors')->group(function () {
     });
 
     Route::controller(GalleryController::class)->group(function() {
-        Route::get('gallery', 'index')->name('gallery.index');
+        Route::get('gallery', 'index')->name('gallery');
     });
 
     Route::controller(NewsletterController::class)->group(function() {
