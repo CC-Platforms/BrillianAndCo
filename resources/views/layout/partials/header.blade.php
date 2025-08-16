@@ -5,7 +5,7 @@
             <!-- header left -->
             <div class="header-bottom-left">
                 <div class="logo-container">
-                    <a href="{{ route('home.index') }}" class="d-inline-block"><img src="{{ asset('assets/img/brillian/company_logo_circle.png') }}" alt="logo" class="logo"></a>
+                    <a href="{{ route('home.index') }}" class="d-inline-block"><img src="{{ asset('assets/img/circle_logo_update.png') }}" alt="logo" class="logo"></a>
                 </div>
             </div>
 

@@ -19,7 +19,7 @@
         <link rel="stylesheet" href="{{ url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css') }}">
 
 
-        <link rel="icon" href="{{ asset('assets/img/brillian/company_logo_circle.png') }}" type="image/x-icon">
+        <link rel="icon" href="{{ asset('assets/img/circle_logo_update.png') }}" type="image/x-icon">
         <!-- custom CSS -->
         <link rel="stylesheet" href="{{ asset("assets/css/style.css") }}">
         <link rel="stylesheet" href="{{ asset("assets/css/form.css") }}">
