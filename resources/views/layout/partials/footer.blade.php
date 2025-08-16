@@ -7,16 +7,20 @@
                     <div class="header-bottom-left">
                         <div class="logo-container">
                             <a href="{{ route('home.index') }}" class="d-inline-block"><img
-                                    src="{{ asset('assets/img/brillian/company_logo_circle.png') }}" width="200"
+                                    src="{{ asset('assets/img/circle_logo_update.png') }}" width="200"
                                     height="200"></a>
                         </div>
                     </div>
                     <p class="ul-footer-about-txt">Your premier Real Estate Enterprise, we deliver exceptional results
                         and unparalleled service to our clients.</p>
                     <div class="ul-footer-socials">
-                        <a href="{{ url('https://www.facebook.com/share/15VZkFmxTA/?mibextid=wwXIfr') }}"><i class="flaticon-facebook"></i></a>
-                        <a href="{{ url('https://www.instagram.com/agentbrillian1?igsh=NjVkMjQ4cGF2NXpp&utm_source=qr') }}"><i class="flaticon-instagram"></i></a>
-                        <a href="{{ url('https://www.tiktok.com/@agentbrillian1?_t=ZM-8w12VJkFaSN&_r=1') }}"><i class="fab fa-tiktok"></i></a>
+                        <a href="{{ url('https://www.facebook.com/share/15VZkFmxTA/?mibextid=wwXIfr') }}"><i
+                                class="flaticon-facebook"></i></a>
+                        <a
+                            href="{{ url('https://www.instagram.com/agentbrillian1?igsh=NjVkMjQ4cGF2NXpp&utm_source=qr') }}"><i
+                                class="flaticon-instagram"></i></a>
+                        <a href="{{ url('https://www.tiktok.com/@agentbrillian1?_t=ZM-8w12VJkFaSN&_r=1') }}"><i
+                                class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
 
@@ -39,7 +43,7 @@
 
                         <div class="ul-footer-widget-links">
                             @foreach($footerServices as $service)
-                                <a href="{{ route('services.show', $service->slug) }}">{{ $service->title }}</a>
+                            <a href="{{ route('services.show', $service->slug) }}">{{ $service->title }}</a>
                             @endforeach
                         </div>
                     </div>
@@ -56,13 +60,17 @@
                 </div>
             </div>
             <!-- NEWSLETTER SUBSCRIBE SECTION -->
-            <div class="newsletter-subscribe-section py-5 px-4 rounded-4 shadow-lg mt-5 text-white" style="background-color: #000929;">
+            <div class="newsletter-subscribe-section py-5 px-4 rounded-4 shadow-lg mt-5 text-white"
+                style="background-color: #000929;">
                 <h4 class="fw-bold">Subscribe to our Newsletter</h4>
                 <p class="mb-4">Subscribe to read from us in order to get more information on available assets.</p>
-                <form action="{{ route('newsletter.subscribe') }}" method="POST" class="d-flex flex-column flex-md-row gap-3 align-items-start align-items-md-center">
+                <form action="{{ route('newsletter.subscribe') }}" method="POST"
+                    class="d-flex flex-column flex-md-row gap-3 align-items-start align-items-md-center">
                     @csrf
-                    <input type="email" name="email" class="form-control rounded-pill px-4 py-2" placeholder="Your email address..." required>
-                    <button type="submit" class="btn px-4 py-2 rounded-pill fw-semibold" style="background-color: #3058af; color: white;">Subscribe</button>
+                    <input type="email" name="email" class="form-control rounded-pill px-4 py-2"
+                        placeholder="Your email address..." required>
+                    <button type="submit" class="btn px-4 py-2 rounded-pill fw-semibold"
+                        style="background-color: #3058af; color: white;">Subscribe</button>
                 </form>
             </div>
         </div>
@@ -73,7 +81,7 @@
 
     <!-- footer bottom -->
     <div class="ul-footer-bottom col">
-        <p class="copyright-txt">&copy;{{ date('Y') }} Brillian and Co Real Estate. All rights reserved</p>
+        <p class="copyright-txt">&copy;{{ date('Y') }} Brillian and Co. Group Ltd. All rights reserved</p>
         <p class="copyright-txt">Designed by <a href="https://cyrixtechsolutions.com">Cyrix Tech Solutions</a></p>
     </div>
 

@@ -29,7 +29,9 @@
                             <h4 class="ul-service-details-sidebar-widget-title">Our Services</h4>
                             <ul class="service-list">
                                 @foreach($footerServices as $sidebarService)
-                                    <li><a href="{{ route('services.show', $sidebarService->slug) }}" class="{{ $service->slug == $sidebarService->slug ? 'current' : '' }}">{{ $sidebarService->title }} <i class="flaticon-read-more-icon"></i></a></li>
+                                <li><a href="{{ route('services.show', $sidebarService->slug) }}"
+                                        class="{{ $service->slug == $sidebarService->slug ? 'current' : '' }}">{{
+                                        $sidebarService->title }} <i class="flaticon-read-more-icon"></i></a></li>
                                 @endforeach
                             </ul>
                         </div>
@@ -47,14 +49,18 @@
                     <div class="ul-service-details-txt wow animate__fadeInUp">
                         <h4 class="ul-service-details-title">{{ $service->title }}</h4>
                         <p class="ul-service-details-descr">{!! $service->full_description !!}</p>
-                        
+
                         <div class="ul-service-details-cover-img">
                             <img src="{{ asset('assets/img/brillia6.jpg') }}" alt="Image" class="img-1">
                             <img src="{{ asset('assets/img/brillia13.jpg') }}" alt="Image" class="img-2">
                         </div>
-                        
-                        <h4 class="ul-service-details-title">Why Choose Brillian And Co Real Estate</h4>
-                        <p class="ul-service-details-descr">With a passion for innovation, a commitment to excellence, and deep understanding of the local market, we're revolutionizing the way people Buy, Sell, Rent and invest in Real Estate. Our team of experts ensures that your real estate journey is smooth, profitable, and stress-free. Your trust is our commitment, and we work tirelessly to exceed your expectations.</p>
+
+                        <h4 class="ul-service-details-title">Why Choose Brillian and Co. Group Ltd</h4>
+                        <p class="ul-service-details-descr">With a passion for innovation, a commitment to excellence,
+                            and deep understanding of the local market, we're revolutionizing the way people Buy, Sell,
+                            Rent and invest in Real Estate. Our team of experts ensures that your real estate journey is
+                            smooth, profitable, and stress-free. Your trust is our commitment, and we work tirelessly to
+                            exceed your expectations.</p>
                     </div>
 
                     <!-- faq -->
@@ -67,7 +73,10 @@
                                 </div>
 
                                 <div class="ul-single-accordion-item__body">
-                                    <p>Our process begins with a consultation to understand your needs and goals. We then develop a customized plan tailored to your specific situation. Throughout the process, our team of experts guides you every step of the way, ensuring a smooth and successful real estate experience.</p>
+                                    <p>Our process begins with a consultation to understand your needs and goals. We
+                                        then develop a customized plan tailored to your specific situation. Throughout
+                                        the process, our team of experts guides you every step of the way, ensuring a
+                                        smooth and successful real estate experience.</p>
                                 </div>
                             </div>
                             <div class="ul-single-accordion-item">
@@ -77,17 +86,25 @@
                                 </div>
 
                                 <div class="ul-single-accordion-item__body">
-                                    <p>Brillian And Co Real Estate serves various local markets with a deep understanding of each area's unique characteristics. Our expertise in these markets allows us to provide valuable insights and identify the best opportunities for our clients.</p>
+                                    <p>Brillian and Co. Group Ltd serves various local markets with a deep understanding
+                                        of each area's unique characteristics. Our expertise in these markets allows us
+                                        to provide valuable insights and identify the best opportunities for our
+                                        clients.</p>
                                 </div>
                             </div>
                             <div class="ul-single-accordion-item">
                                 <div class="ul-single-accordion-item__header">
-                                    <h3 class="ul-single-accordion-item__title">What makes Brillian And Co different?</h3>
+                                    <h3 class="ul-single-accordion-item__title">What makes Brillian And Co different?
+                                    </h3>
                                     <i class="fas fa-regular fa-arrow-down"></i>
                                 </div>
 
                                 <div class="ul-single-accordion-item__body">
-                                    <p>What sets us apart is our commitment to innovation, excellence, and personalized service. We combine deep market knowledge with cutting-edge technology to deliver exceptional results. Our motto "Your Trust is Our Commitment" reflects our dedication to building lasting relationships with our clients based on trust and integrity.</p>
+                                    <p>What sets us apart is our commitment to innovation, excellence, and personalized
+                                        service. We combine deep market knowledge with cutting-edge technology to
+                                        deliver exceptional results. Our motto "Your Trust is Our Commitment" reflects
+                                        our dedication to building lasting relationships with our clients based on trust
+                                        and integrity.</p>
                                 </div>
                             </div>
                         </div>

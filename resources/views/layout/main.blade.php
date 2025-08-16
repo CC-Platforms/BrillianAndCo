@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Brillian & Co Real Estate Agency</title>
+        <title>Brillian and Co. Group Ltd</title>
 
         <!-- PWA Meta Tags -->
         @laravelPWA
