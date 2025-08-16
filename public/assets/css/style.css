@@ -238,17 +238,17 @@ button {
 
 /* Login and Register btns */
 
-.login-btn {
+.nav-login-btn {
     border: 2px solid white;
     border-radius: 5px;
     padding: 0px 7px;
 }
 
-.login-btn:hover {
+.nav-login-btn:hover {
     background-color: white;
 }
 
-.register-btn {
+.nav-register-btn {
     border: none;
     background-color: #3058af;
     border-radius: 5px;
@@ -256,7 +256,7 @@ button {
     color: #ffffff;
 }
 
-.register-btn:hover {
+.nav-register-btn:hover {
     background-color: white;
 }
 
