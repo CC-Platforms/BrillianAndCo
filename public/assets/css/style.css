@@ -236,6 +236,30 @@ button {
     animation-duration: 1s !important;
 }
 
+/* Login and Register btns */
+
+.login-btn {
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 0px 7px;
+}
+
+.login-btn:hover {
+    background-color: white;
+}
+
+.register-btn {
+    border: none;
+    background-color: #3058af;
+    border-radius: 5px;
+    padding: 0px 7px;
+    color: #ffffff;
+}
+
+.register-btn:hover {
+    background-color: white;
+}
+
 /* Section Header Styles */
 .ul-section-header {
     margin-bottom: 2.5rem;

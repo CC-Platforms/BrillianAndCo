@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\Auth\GoogleController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Web\AboutController;
 use App\Http\Controllers\Web\BlogController;
 use App\Http\Controllers\Web\ContactController;
@@ -12,8 +15,24 @@ use App\Http\Controllers\Web\ServiceController;
 use App\Http\Controllers\Web\TeamController;
 use App\Http\Controllers\Web\GalleryController;
 use App\Models\Property;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
+// Manual login/register
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [LoginController::class, 'login'])->name('sign-in');
+Route::get('/register', [RegisterController::class, 'showRegisterForm'])->name('register');
+Route::post('/register', [RegisterController::class, 'register'])->name('sign-up');
+ 
+// Logout
+Route::post('/logout', function () {
+    Auth::logout();
+    return redirect()->route('home.index');
+})->name('logout');
+
+// Google OAuth
+Route::get('/auth/google', [GoogleController::class, 'redirectToGoogle'])->name('auth.google');
+Route::get('/auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
 // PWA Offline Route
 Route::get('/offline', function () {
     // Get projects for the sidebar (same as other pages)

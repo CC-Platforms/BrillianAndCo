@@ -5,13 +5,18 @@
             <!-- txt -->
             <div class="col">
                 <div class="ul-about-txt ul-inner-about-txt">
-                    <h2 class="ul-section-title">Welcome to Brillian and Co Real Estate</h2>
+                    <h2 class="ul-section-title">Welcome to Brillian and Co. Group Ltd</h2>
                     <div>
                         <p>
-                            At Brillian and Co Real Estate, we are committed to redefining real estate in Cameroon with integrity, professionalism, and a client-first approach. Whether you're buying, selling, or investing, our experienced team ensures a smooth and rewarding experience every step of the way.
+                            At Brillian and Co. Group Ltd, we are committed to redefining real estate in Cameroon with
+                            integrity, professionalism, and a client-first approach. Whether you're buying, selling, or
+                            investing, our experienced team ensures a smooth and rewarding experience every step of the
+                            way.
                         </p>
                         <p>
-                            Located in Bonduma, Buea, we specialize in property sales, rentals, and land transactions. Our deep knowledge of the local market and dedication to transparency set us apart in the fast-evolving real estate landscape.
+                            Located in Bonduma, Buea, we specialize in property sales, rentals, and land transactions.
+                            Our deep knowledge of the local market and dedication to transparency set us apart in the
+                            fast-evolving real estate landscape.
                         </p>
                     </div>
 
@@ -29,7 +34,7 @@
             <!-- img -->
             <div class="col">
                 <div class="ul-about-img ul-inner-about-img">
-                    <img src="{{ asset('assets/img/brillia14.jpg') }}" alt="Brillian and Co Real Estate">
+                    <img src="{{ asset('assets/img/brillia14.jpg') }}" alt="Brillian and Co. Group Ltd">
                 </div>
             </div>
         </div>
