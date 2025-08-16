@@ -6,6 +6,7 @@
             <a href="{{ route('about.index') }}">About</a>
             <a href="{{ route('projects.index') }}">Properties</a>
             <a href="{{ route('services.index') }}">Services</a>
+            <a href="{{ route('gallery') }}">Gallery</a>
             <a href="{{ route('team.index') }}">Team</a>
             <a href="{{ route('contact.index') }}">Contact</a>
         </nav>
