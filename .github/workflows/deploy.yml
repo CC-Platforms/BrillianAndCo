@@ -40,50 +40,36 @@ jobs:
       - name: Build NPM Assets
         run: npm run build
         
-      - name: Deploy to Hostinger
-        uses: easingthemes/ssh-deploy@v2.1.5
-        with:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          ARGS: "-rlgoDzvc -i --delete"
-          SOURCE: "."
-          REMOTE_HOST: "82.25.96.67"
-          REMOTE_PORT: "65002"
-          REMOTE_USER: "u995357878"
-          TARGET: "/home/u995357878/domains/brillianandco.group/public_html"
-          EXCLUDE: "/node_modules/, /.git/, /.github/, /.env.example, /tests/, /*.md, /.gitignore, /storage/, /.env"
-          SCRIPT_BEFORE: |
-            # Backup current deployment
-            if [ -d "/home/u995357878/domains/brillianandco.group/public_html_backup" ]; then
-              rm -rf /home/u995357878/domains/brillianandco.group/public_html_backup
-            fi
-            if [ -d "/home/u995357878/domains/brillianandco.group/public_html" ]; then
-              cp -r /home/u995357878/domains/brillianandco.group/public_html /home/u995357878/domains/brillianandco.group/public_html_backup
-            fi
-          SCRIPT_AFTER: |
-            cd /home/u995357878/domains/brillianandco.group/public_html
-            
-            # Set proper permissions
-            find . -type f -exec chmod 644 {} \;
-            find . -type d -exec chmod 755 {} \;
-            chmod -R 755 storage bootstrap/cache
-            
-            # Create storage directories if they don't exist
-            mkdir -p storage/app/public
-            mkdir -p storage/framework/cache
-            mkdir -p storage/framework/sessions
-            mkdir -p storage/framework/views
-            mkdir -p storage/logs
-            
-            # Create symbolic link for storage
-            if [ -L "public/storage" ]; then
-              rm public/storage
-            fi
-            ln -sf ../storage/app/public public/storage
-            
-            # Create assets symlink if needed
-            if [ ! -L "assets" ] && [ -d "public/assets" ]; then
-              ln -sf public/assets assets
-            fi
+      - name: Create rsync exclude file
+        run: |
+          cat > rsync-exclude.txt << EOF
+          node_modules/
+          .git/
+          .github/
+          .env.example
+          tests/
+          *.md
+          .gitignore
+          storage/
+          .env
+          *.tar.gz
+          EOF
+          
+      - name: Deploy to Hostinger via rsync
+        run: |
+          # Setup SSH key
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          
+          # Add host to known_hosts
+          ssh-keyscan -p 65002 -H 82.25.96.67 >> ~/.ssh/known_hosts
+          
+          # Deploy with rsync
+          rsync -rlgoDzvc -i --delete \
+            --exclude-from=rsync-exclude.txt \
+            -e "ssh -p 65002 -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no" \
+            ./ u995357878@82.25.96.67:/home/u995357878/domains/brillianandco.group/public_html/
             
       - name: Execute Laravel Post-Deployment Commands
         uses: appleboy/ssh-action@v1.0.3
