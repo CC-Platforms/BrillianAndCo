@@ -19,7 +19,7 @@
                             <div class="row align-items-center flex-sm-row flex-column-reverse">
                                 <!-- banner text -->
                                 <div class="col-md-9 col-sm-8">
-                                    <span class="ul-banner-slide-shadow-title">Brillian and Co. Group Ltd</span>
+                                    <span class="ul-banner-slide-shadow-title">Brillian And Co. Group Ltd</span>
                                     <div class="ul-banner-slide-txt wow animate__fadeInUp">
                                         <span class="ul-banner-slide-sub-title">Your Premier Real Estate Partner</span>
                                         <h1 class="ul-banner-slide-title">Your Trust is Our Commitment</h1>
@@ -43,7 +43,7 @@
                             <div class="row align-items-center flex-sm-row flex-column-reverse">
                                 <!-- banner text -->
                                 <div class="col-md-9 col-sm-8">
-                                    <span class="ul-banner-slide-shadow-title">Brillian and Co. Group Ltd</span>
+                                    <span class="ul-banner-slide-shadow-title">Brillian And Co. Group Ltd</span>
                                     <div class="ul-banner-slide-txt wow animate__fadeInUp">
                                         <span class="ul-banner-slide-sub-title">Your Dream Property Awaits</span>
                                         <h1 class="ul-banner-slide-title">Exceptional Properties in Buea</h1>
@@ -68,7 +68,7 @@
                             <div class="row align-items-center flex-sm-row flex-column-reverse">
                                 <!-- banner text -->
                                 <div class="col-md-9 col-sm-8">
-                                    <span class="ul-banner-slide-shadow-title">Brillian and Co. Group Ltd</span>
+                                    <span class="ul-banner-slide-shadow-title">Brillian And Co. Group Ltd</span>
                                     <div class="ul-banner-slide-txt wow animate__fadeInUp">
                                         <span class="ul-banner-slide-sub-title">Professional Real Estate Services</span>
                                         <h1 class="ul-banner-slide-title">Expert Guidance Every Step of the Way</h1>

@@ -26,11 +26,11 @@
                     </div>
                     
                     <div class="dropdown-menu" id="userDropdown">
-                        {{-- <div class="dropdown-header">
+                        <div class="dropdown-header">
                             <span class="user-name">{{ Auth::user()->name }}</span>
                             <span class="user-email">{{ Auth::user()->email }}</span>
                         </div>
-                        <div class="dropdown-divider"></div> --}}
+                        <div class="dropdown-divider"></div>
                         <form method="POST" action="{{ route('logout') }}" class="dropdown-form">
                             @csrf
                             <button type="submit" class="dropdown-item logout-btn">

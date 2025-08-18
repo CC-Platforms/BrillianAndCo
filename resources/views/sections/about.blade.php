@@ -5,10 +5,10 @@
             <!-- txt -->
             <div class="col">
                 <div class="ul-about-txt ul-inner-about-txt">
-                    <h2 class="ul-section-title">Welcome to Brillian and Co. Group Ltd</h2>
+                    <h2 class="ul-section-title">Welcome to Brillian And Co. Group Ltd</h2>
                     <div>
                         <p>
-                            At Brillian and Co. Group Ltd, we are committed to redefining real estate in Cameroon with
+                            At Brillian And Co. Group Ltd, we are committed to redefining real estate in Cameroon with
                             integrity, professionalism, and a client-first approach. Whether you're buying, selling, or
                             investing, our experienced team ensures a smooth and rewarding experience every step of the
                             way.
@@ -34,7 +34,7 @@
             <!-- img -->
             <div class="col">
                 <div class="ul-about-img ul-inner-about-img">
-                    <img src="{{ asset('assets/img/brillia14.jpg') }}" alt="Brillian and Co. Group Ltd">
+                    <img src="{{ asset('assets/img/brillia14.jpg') }}" alt="Brillian And Co. Group Ltd">
                 </div>
             </div>
         </div>

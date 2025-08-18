@@ -43,7 +43,7 @@
 
     <div class="ul-sidebar-header-nav-wrapper d-block d-lg-none"></div>
 
-    <p class="ul-sidebar-descr d-none d-lg-flex">At Brillinan and Co Real Estate, we specialize in connecting people to their ideal homes. Whether you're looking to rent, buy, or invest,
+    <p class="ul-sidebar-descr d-none d-lg-flex">At Brillian And Co. Group Ltd, we specialize in connecting people to their ideal homes. Whether you're looking to rent, buy, or invest,
         our mission is to simplify your real estate journey with expert guidance and trusted listings.</p>
 
         <div class="slider-wrapper">
