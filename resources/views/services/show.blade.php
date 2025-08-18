@@ -55,7 +55,7 @@
                             <img src="{{ asset('assets/img/brillia13.jpg') }}" alt="Image" class="img-2">
                         </div>
 
-                        <h4 class="ul-service-details-title">Why Choose Brillian and Co. Group Ltd</h4>
+                        <h4 class="ul-service-details-title">Why Choose Brillian And Co. Group Ltd</h4>
                         <p class="ul-service-details-descr">With a passion for innovation, a commitment to excellence,
                             and deep understanding of the local market, we're revolutionizing the way people Buy, Sell,
                             Rent and invest in Real Estate. Our team of experts ensures that your real estate journey is
@@ -86,7 +86,7 @@
                                 </div>
 
                                 <div class="ul-single-accordion-item__body">
-                                    <p>Brillian and Co. Group Ltd serves various local markets with a deep understanding
+                                    <p>Brillian And Co. Group Ltd serves various local markets with a deep understanding
                                         of each area's unique characteristics. Our expertise in these markets allows us
                                         to provide valuable insights and identify the best opportunities for our
                                         clients.</p>

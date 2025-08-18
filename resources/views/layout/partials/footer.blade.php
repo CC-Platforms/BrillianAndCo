@@ -7,8 +7,7 @@
                     <div class="header-bottom-left">
                         <div class="logo-container">
                             <a href="{{ route('home.index') }}" class="d-inline-block"><img
-                                    src="{{ asset('assets/img/circle_logo_update.png') }}" width="200"
-                                    height="200"></a>
+                                    src="{{ asset('assets/img/circle_logo_update.png') }}" width="200" height="200"></a>
                         </div>
                     </div>
                     <p class="ul-footer-about-txt">Your premier Real Estate Enterprise, we deliver exceptional results
@@ -81,7 +80,7 @@
 
     <!-- footer bottom -->
     <div class="ul-footer-bottom col">
-        <p class="copyright-txt">&copy;{{ date('Y') }} Brillian and Co. Group Ltd. All rights reserved</p>
+        <p class="copyright-txt">&copy;{{ date('Y') }} Brillian And Co. Group Ltd. All rights reserved</p>
         <p class="copyright-txt">Designed by <a href="https://cyrixtechsolutions.com">Cyrix Tech Solutions</a></p>
     </div>
 
