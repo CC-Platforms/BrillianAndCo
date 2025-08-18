@@ -2,7 +2,7 @@
 <section class="ul-why-choose-us ul-section-spacing wow animate__fadeInUp">
     <div class="ul-container">
         @include('sections.section-header', [
-            'title' => 'Why Choose Brillian & Co Real Estate',
+            'title' => 'Why Choose Brillian And Co. Group Ltd',
             'subtitle' => 'Your Trust is Our Commitment - We deliver top-tier real estate services, tailored to your needs.'
         ])
 
