@@ -40,17 +40,6 @@ jobs:
       - name: Build NPM Assets
         run: npm run build
         
-      - name: Create deployment archive
-        run: |
-          tar --exclude='node_modules' \
-              --exclude='.git' \
-              --exclude='.github' \
-              --exclude='.env.example' \
-              --exclude='tests' \
-              --exclude='*.md' \
-              --exclude='.gitignore' \
-              -czf deployment.tar.gz .
-              
       - name: Deploy to Hostinger
         uses: easingthemes/ssh-deploy@v2.1.5
         with:
