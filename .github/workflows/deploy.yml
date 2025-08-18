@@ -11,82 +11,137 @@ jobs:
     
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: 8.4
+          extensions: mbstring, xml, ctype, iconv, intl, pdo_sqlite, dom, filter, gd, iconv, json, mbstring, pdo
           
+      - name: Copy Environment File
+        run: cp .env.example .env
+        
       - name: Install Composer Dependencies
         run: composer install --optimize-autoloader --no-dev --no-progress --no-interaction --prefer-dist
         
-      - name: Install Node
-        uses: actions/setup-node@v3
+      - name: Generate Application Key
+        run: php artisan key:generate
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: "20"
+          cache: 'npm'
           
       - name: Install NPM Dependencies
-        run: npm install
+        run: npm ci
         
       - name: Build NPM Assets
         run: npm run build
         
+      - name: Create deployment archive
+        run: |
+          tar --exclude='node_modules' \
+              --exclude='.git' \
+              --exclude='.github' \
+              --exclude='.env.example' \
+              --exclude='tests' \
+              --exclude='*.md' \
+              --exclude='.gitignore' \
+              -czf deployment.tar.gz .
+              
       - name: Deploy to Hostinger
         uses: easingthemes/ssh-deploy@v2.1.5
-        env:
+        with:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          ARGS: "-rlgoDzvc -i --delete"
           SOURCE: "."
           REMOTE_HOST: "82.25.96.67"
           REMOTE_PORT: "65002"
           REMOTE_USER: "u995357878"
           TARGET: "/home/u995357878/domains/brillianandco.group/public_html"
-          EXCLUDE: "node_modules/, .git/, .github/, .env.example"
-          
-      - name: Execute Post-Deployment Commands
-        uses: appleboy/ssh-action@v0.1.6
+          EXCLUDE: "/node_modules/, /.git/, /.github/, /.env.example, /tests/, /*.md, /.gitignore, /storage/, /.env"
+          SCRIPT_BEFORE: |
+            # Backup current deployment
+            if [ -d "/home/u995357878/domains/brillianandco.group/public_html_backup" ]; then
+              rm -rf /home/u995357878/domains/brillianandco.group/public_html_backup
+            fi
+            if [ -d "/home/u995357878/domains/brillianandco.group/public_html" ]; then
+              cp -r /home/u995357878/domains/brillianandco.group/public_html /home/u995357878/domains/brillianandco.group/public_html_backup
+            fi
+          SCRIPT_AFTER: |
+            cd /home/u995357878/domains/brillianandco.group/public_html
+            
+            # Set proper permissions
+            find . -type f -exec chmod 644 {} \;
+            find . -type d -exec chmod 755 {} \;
+            chmod -R 755 storage bootstrap/cache
+            
+            # Create storage directories if they don't exist
+            mkdir -p storage/app/public
+            mkdir -p storage/framework/cache
+            mkdir -p storage/framework/sessions
+            mkdir -p storage/framework/views
+            mkdir -p storage/logs
+            
+            # Create symbolic link for storage
+            if [ -L "public/storage" ]; then
+              rm public/storage
+            fi
+            ln -sf ../storage/app/public public/storage
+            
+            # Create assets symlink if needed
+            if [ ! -L "assets" ] && [ -d "public/assets" ]; then
+              ln -sf public/assets assets
+            fi
+            
+      - name: Execute Laravel Post-Deployment Commands
+        uses: appleboy/ssh-action@v1.0.3
         with:
           host: "82.25.96.67"
           port: "65002"
           username: "u995357878"
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          timeout: 300s
           script: |
             cd /home/u995357878/domains/brillianandco.group/public_html
             
-            # Create symbolic link for assets if it doesn't exist
-            if [ ! -L "assets" ]; then
-              ln -s /home/u995357878/domains/brillianandco.group/public_html/public/assets /home/u995357878/domains/brillianandco.group/public_html/assets
+            # Check if we're in a Laravel directory
+            if [ ! -f "artisan" ]; then
+              echo "Error: artisan file not found. Not in Laravel directory."
+              exit 1
             fi
             
-            # Ensure proper storage symlink structure
-            if [ -L "public/storage" ]; then
-              rm public/storage
-            fi
-            ln -s ../storage/app/public public/storage
+            # Set proper permissions again
+            chmod -R 755 storage bootstrap/cache
             
-            # Create web-accessible storage symlink if it doesn't exist
-            if [ -L "storage" ] && [ ! -d "storage" ]; then
-              rm storage
-            fi
-            if [ ! -L "storage" ]; then
-              ln -s public/storage storage
-            fi
+            # Clear all caches before running commands
+            php artisan optimize:clear || true
+            php artisan config:clear || true
+            php artisan route:clear || true
+            php artisan view:clear || true
+            php artisan cache:clear || true
             
             # Run database migrations
             php artisan migrate --force
             
-            # Clear all Laravel caches
-            php artisan optimize:clear
-            php artisan view:clear
-            php artisan config:clear
-            php artisan route:clear
-            
-            # CRITICAL: Backpack Basset commands for production
-            php artisan basset:clear
-            php artisan basset:cache
+            # Clear and cache Backpack Basset assets
+            php artisan basset:clear || true
+            php artisan basset:cache || true
             
             # Optimize Laravel for production
             php artisan config:cache
             php artisan route:cache
             php artisan view:cache
             php artisan optimize
+            
+            # Final permission check
+            chmod -R 755 storage bootstrap/cache
+            
+            echo "Deployment completed successfully!"
+            
+      - name: Health Check
+        run: |
+          sleep 10
+          curl -f https://brillianandco.group || echo "Health check failed - site may still be starting up"
