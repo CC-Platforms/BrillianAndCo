@@ -39,7 +39,7 @@ jobs:
           REMOTE_HOST: "82.25.96.67"
           REMOTE_PORT: "65002"
           REMOTE_USER: "u995357878"
-          TARGET: "/home/u995357878/domains/bricoree.com/public_html"
+          TARGET: "/home/u995357878/domains/brillianandco.group/public_html"
           EXCLUDE: "node_modules/, .git/, .github/, .env.example"
 
       - name: Execute Post-Deployment Commands
@@ -50,11 +50,11 @@ jobs:
           username: "u995357878"
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /home/u995357878/domains/bricoree.com/public_html
+            cd /home/u995357878/domains/brillianandco.group/public_html
 
             # Create symbolic link for assets if it doesn't exist
             if [ ! -L "assets" ]; then
-              ln -s /home/u995357878/domains/bricoree.com/public_html/public/assets /home/u995357878/domains/bricoree.com/public_html/assets
+              ln -s /home/u995357878/domains/brillianandco.group/public_html/public/assets /home/u995357878/domains/brillianandco.group/public_html/assets
             fi
 
             # Ensure proper storage symlink structure (based on our manual deployment)
