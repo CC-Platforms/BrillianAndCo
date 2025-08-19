@@ -120,7 +120,7 @@ For manual deployment or troubleshooting:
 ```bash
 # SSH into your server
 ssh -p 65002 u995357878@82.25.96.67
-cd domains/bricoree.com/public_html/
+cd domains/brillianandco.group/public_html/
 
 # Pull latest changes
 git pull origin main
