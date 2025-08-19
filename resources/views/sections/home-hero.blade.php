@@ -22,7 +22,7 @@
                                     <span class="ul-banner-slide-shadow-title">Brillian And Co. Group Ltd</span>
                                     <div class="ul-banner-slide-txt wow animate__fadeInUp">
                                         <span class="ul-banner-slide-sub-title">Your Premier Real Estate Partner</span>
-                                        <h1 class="ul-banner-slide-title">Your Trust, Our Commitment</h1>
+                                        <h1 class="ul-banner-slide-title">YOUR TRUST, OUR COMMITMENT</h1>
                                         <p class="ul-banner-slide-descr">We are revolutionizing the way people buy,
                                             sell, rent, and invest in real estate across Buea, Cameroon.</p>
                                         <div class="ul-banner-slide-btns">

@@ -102,7 +102,7 @@
                                 <div class="ul-single-accordion-item__body">
                                     <p>What sets us apart is our commitment to innovation, excellence, and personalized
                                         service. We combine deep market knowledge with cutting-edge technology to
-                                        deliver exceptional results. Our motto "Your Trust, Our Commitment" reflects
+                                        deliver exceptional results. Our motto "YOUR TRUST, OUR COMMITMENT" reflects
                                         our dedication to building lasting relationships with our clients based on trust
                                         and integrity.</p>
                                 </div>
