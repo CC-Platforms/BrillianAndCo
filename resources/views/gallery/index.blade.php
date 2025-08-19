@@ -19,92 +19,53 @@
     <div class="ul-inner-page-content-wrapper">
         <!-- Gallery Grid -->
         <div class="gallery-grid" id="galleryGrid">
+
+            <div class="gallery-item">
+                <img src="{{ asset('assets/img/gallery/logo_update.jpg') }}" alt="brillian and co group ltd logo" loading="lazy">
+                <div class="gallery-overlay">
+                    <div class="overlay-content">
+                        <h3>Company Logo</h3>
+                        <p>The official Brillian &amp; Co Group Ltd brand identity</p>
+                    </div>
+                </div>
+            </div>
+
             <!-- Sample Images - Replace with your actual images -->
-            <div class="gallery-item" data-image="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
-                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Mountain Landscape" loading="lazy">
+            <div class="gallery-item">
+                <img src="{{ asset('assets/img/gallery/mockup_cup.jpg') }}" alt="mockup cup" loading="lazy">
                 <div class="gallery-overlay">
                     <div class="overlay-content">
-                        <h3>Mountain Landscape</h3>
-                        <p>Beautiful mountain vista with morning fog</p>
+                        <h3>Custom Branded Cup</h3>
+                        <p>Promotional mockup showcasing a stylish company cup design</p>
                     </div>
                 </div>
             </div>
 
-            <div class="gallery-item" data-image="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
-                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Forest Path" loading="lazy">
+            <div class="gallery-item">
+                <img src="{{ asset('assets/img/gallery/mockup_phone.jpg') }}" alt="mockup phone" loading="lazy">
                 <div class="gallery-overlay">
                     <div class="overlay-content">
-                        <h3>Forest Path</h3>
-                        <p>Peaceful walking trail through the woods</p>
+                        <h3>Mobile Mockup</h3>
+                        <p>A clean branded phone concept highlighting mobile engagement</p>
                     </div>
                 </div>
             </div>
 
-            <div class="gallery-item" data-image="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
-                <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Lake Reflection" loading="lazy">
+            <div class="gallery-item">
+                <img src="{{ asset('assets/img/gallery/mockup_shirt.jpg') }}" alt="mockup shirt" loading="lazy">
                 <div class="gallery-overlay">
                     <div class="overlay-content">
-                        <h3>Lake Reflection</h3>
-                        <p>Crystal clear water reflecting the sky</p>
+                        <h3>Custom Apparel</h3>
+                        <p>Mockup shirt design featuring company branding for merchandise</p>
                     </div>
                 </div>
             </div>
-
-            <div class="gallery-item" data-image="https://images.unsplash.com/photo-1518837695005-2083093ee35b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
-                <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Ocean Waves" loading="lazy">
-                <div class="gallery-overlay">
-                    <div class="overlay-content">
-                        <h3>Ocean Waves</h3>
-                        <p>Powerful waves crashing against the shore</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="gallery-item" data-image="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80">
-                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="City Skyline" loading="lazy">
-                <div class="gallery-overlay">
-                    <div class="overlay-content">
-                        <h3>City Skyline</h3>
-                        <p>Urban architecture at golden hour</p>
-                    </div>
-                </div>
-            </div>
-
            
             <!-- Add more gallery items as needed -->
         </div>
-
-        <!-- Load More Button -->
-        <div class="load-more-container">
-            <button class="load-more-btn" id="loadMoreBtn">Load More Images</button>
-        </div>
-    </div>
-
-    <!-- Image Modal -->
-    <div class="image-modal" id="imageModal">
-        <div class="modal-overlay" onclick="closeModal()"></div>
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal()">&times;</button>
-            <img id="modalImage" src="" alt="">
-            <div class="modal-info">
-                <h3 id="modalTitle"></h3>
-                <p id="modalDescription"></p>
-                <div class="modal-details">
-                    <div class="detail-item">
-                        <span class="detail-label">Added:</span>
-                        <span>{{ date('M d, Y') }}</span>
-                    </div>
-                    <div class="detail-item">
-                        <span class="detail-label">Views:</span>
-                        <span id="modalViews">1,234</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <button class="modal-nav prev" onclick="navigateModal(-1)">❮</button>
-        <button class="modal-nav next" onclick="navigateModal(1)">❯</button>
     </div>
 </main>
+
 
 <style>
     /* Gallery Styles */
@@ -140,7 +101,7 @@
     }
 
     .gallery-item img {
-        width: 100%;
+        width: fit-content;
         height: auto;
         display: block;
         transition: transform 0.3s ease;
