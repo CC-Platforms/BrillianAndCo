@@ -13,7 +13,7 @@
 
     <!-- updated description -->
     <p class="ul-sidebar-descr d-none d-lg-flex">
-        At Brillinan and Co Real Estate, we specialize in connecting people to their ideal homes. Whether you're looking to rent, buy, or invest,
+        At Brillian and Co. Group Ltd, we specialize in connecting people to their ideal homes. Whether you're looking to rent, buy, or invest,
         our mission is to simplify your real estate journey with expert guidance and trusted listings.
     </p>
 

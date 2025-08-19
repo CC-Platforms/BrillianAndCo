@@ -3,7 +3,7 @@
     <div class="ul-container">
         @include('sections.section-header', [
             'title' => 'Why Choose Brillian And Co. Group Ltd',
-            'subtitle' => 'Your Trust is Our Commitment - We deliver top-tier real estate services, tailored to your needs.'
+            'subtitle' => 'Your Trust, Our Commitment - We deliver top-tier real estate services, tailored to your needs.'
         ])
 
         <div class="ul-why-choose-us-content">
