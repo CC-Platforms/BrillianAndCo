@@ -21,7 +21,7 @@
 
 @basset(base_path('vendor/backpack/crud/src/resources/assets/css/common.css'))
 
-{{-- @if (backpack_theme_config('styles') && count(backpack_theme_config('styles')))
+@if (backpack_theme_config('styles') && count(backpack_theme_config('styles')))
     @foreach (backpack_theme_config('styles') as $path)
         @if(is_array($path))
             @basset(...$path)
@@ -39,4 +39,4 @@
 
 @if (backpack_theme_config('vite_styles') && count(backpack_theme_config('vite_styles')))
     @vite(backpack_theme_config('vite_styles'))
-@endif --}}
+@endif
