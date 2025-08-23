@@ -1,4 +1,4 @@
-{{-- @basset('https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.compat.css')
+@basset('https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.compat.css')
 @basset('https://cdn.jsdelivr.net/npm/noty@3.2.0-beta-deprecated/lib/noty.css')
 
 @basset('https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css')
@@ -10,13 +10,13 @@
 @basset('https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/fonts/la-brands-400.woff')
 @basset('https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/fonts/la-regular-400.ttf')
 @basset('https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/fonts/la-solid-900.ttf')
-@basset('https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/fonts/la-brands-400.ttf') --}}
+@basset('https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/fonts/la-brands-400.ttf')
 
-<link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.compat.css">
+{{-- <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.compat.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/noty@3.2.0-beta-deprecated/lib/noty.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta19/dist/css/tabler.min.css">
-<script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta19/dist/js/tabler.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta19/dist/js/tabler.min.js"></script> --}}
 
 
 @basset(base_path('vendor/backpack/crud/src/resources/assets/css/common.css'))
