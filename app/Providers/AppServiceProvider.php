@@ -7,6 +7,7 @@ use App\Models\Property;
 use App\Models\Land;
 use App\Models\Service;
 use App\Models\Speciality;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
 
@@ -17,7 +18,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        if (App::environment('prod')) {
+            $this->app->bind('path.public', function() {
+                return base_path('../../public_html');
+            });
+        }
     }
 
     /**
