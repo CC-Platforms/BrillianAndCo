@@ -35,7 +35,7 @@ jobs:
       - name: Deploy to Hostinger
         uses: easingthemes/ssh-deploy@v2.1.5
         env:
-          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+          SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_KEY }}
           SOURCE: "."
           REMOTE_HOST: "82.25.96.67"
           REMOTE_PORT: "65002"
