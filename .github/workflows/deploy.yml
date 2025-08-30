@@ -35,7 +35,7 @@ jobs:
       - name: Deploy to Hostinger
         uses: easingthemes/ssh-deploy@v2.1.5
         env:
-          SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_KEY }}
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           SOURCE: "."
           REMOTE_HOST: "82.25.96.67"
           REMOTE_PORT: "65002"
@@ -49,7 +49,7 @@ jobs:
           host: "82.25.96.67"
           port: "65002"
           username: "u995357878"
-          key: ${{ secrets.DEPLOY_KEY }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             cd /home/u995357878/domains/brillianandco.group/public_html
 
