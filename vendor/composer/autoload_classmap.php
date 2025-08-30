@@ -52,6 +52,8 @@ return array(
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
     'App\\Models\\Visitor' => $baseDir . '/app/Models/Visitor.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
+    'App\\View\\Components\\PropertyCard' => $baseDir . '/app/View/Components/PropertyCard.php',
+    'App\\View\\Components\\TeamCard' => $baseDir . '/app/View/Components/TeamCard.php',
     'Attribute' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
     'Backpack\\Basset\\BassetManager' => $vendorDir . '/backpack/basset/src/BassetManager.php',
     'Backpack\\Basset\\BassetServiceProvider' => $vendorDir . '/backpack/basset/src/BassetServiceProvider.php',

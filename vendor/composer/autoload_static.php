@@ -660,6 +660,8 @@ class ComposerStaticInit820f26f2b1e3d929da93f33cd64ab14b
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Models\\Visitor' => __DIR__ . '/../..' . '/app/Models/Visitor.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
+        'App\\View\\Components\\PropertyCard' => __DIR__ . '/../..' . '/app/View/Components/PropertyCard.php',
+        'App\\View\\Components\\TeamCard' => __DIR__ . '/../..' . '/app/View/Components/TeamCard.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Backpack\\Basset\\BassetManager' => __DIR__ . '/..' . '/backpack/basset/src/BassetManager.php',
         'Backpack\\Basset\\BassetServiceProvider' => __DIR__ . '/..' . '/backpack/basset/src/BassetServiceProvider.php',
